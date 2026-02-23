@@ -1,0 +1,41 @@
+.leaflet-control-zoom-in,
+.leaflet-control-zoom-out {
+  display: none !important;
+  background-color: black !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 1rem !important;
+  font-size: 20px !important;
+  width: 3rem !important;
+  height: 3rem !important;
+  line-height: 2rem !important;
+  /* box-shadow: 0 2px 6px rgba(0,0,0,0.3); */
+  padding: .4rem 2rem 0rem 0 !important;
+}
+
+.leaflet-control-zoom-in:hover,
+.leaflet-control-zoom-out:hover {
+  background-color: white !important;
+  color: black !important;
+}
+
+.leaflet-control-attribution {
+  display: none;
+}
+
+.leaflet-control{
+    border: none !important;
+    background-color: transparent !important;
+    align-items: center !important;
+    text-align: center !important;
+
+}
+
+.map-container {
+  border: none !important; /* override any existing border */
+  outline: none !important;           /* also remove focus outline if desired */
+}
+
+.leaflet-container {   /* Leaflet's default class for the map container */
+  border: none !important;
+}

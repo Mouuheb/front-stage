@@ -1,0 +1,181 @@
+.update-Single-Team{
+    /* background-color: aqua; */
+    height: fit-content;
+    width: 90%;
+    margin: 5rem 5%;
+}
+
+.update-Single-Team form{
+    width: 60%;
+    margin: 0 10%;
+    /* background-color: aqua; */
+    padding: 2rem;
+    border-radius: 1rem;
+    border: solid var(--color-2) ;
+    
+}
+
+.update-Single-Team form .row{
+    
+    /* background-color: blue; */
+    /* width: 60%; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1rem 0;
+
+}
+
+.update-Single-Team form .row input,
+.update-Single-Team form .row select,
+.update-Single-Team form .row textarea
+{
+    width: 15rem;
+    background-color: var(--color-light);
+    color: var(--color-2);
+    border-radius: .5rem;
+    height: 2rem;
+    padding: 0.2rem;
+}
+
+.update-Single-Team form .row textarea{
+    height: 4rem;
+    
+}
+
+.update-Single-Team form button{
+    background-color: var(--color-2);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    color: var(--color-light);
+}
+
+
+
+/* --------------------------------------------------------------------- */
+
+
+.team-create{
+    /* background-color: aqua; */
+    height: fit-content;
+    width: 90%;
+    margin: 5rem 5%;
+}
+
+.team-create form{
+    width: 60%;
+    margin: 0 10%;
+    /* background-color: aqua; */
+    padding: 2rem;
+    border-radius: 1rem;
+    border: solid var(--color-2) ;
+    
+}
+
+.team-create form .row{
+    
+    /* background-color: blue; */
+    /* width: 60%; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1rem 0;
+
+}
+
+.team-create form .row input,
+.team-create form .row select,
+.team-create form .row textarea
+{
+    width: 15rem;
+    background-color: var(--color-light);
+    color: var(--color-2);
+    border-radius: .5rem;
+    height: 2rem;
+    padding: 0.2rem;
+}
+
+.team-create form .row textarea{
+    height: 4rem;
+    
+}
+
+.team-create form button{
+    background-color: var(--color-2);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    color: var(--color-light);
+}
+
+.team .btn-cnt{
+    margin: 3rem 1rem;
+    padding: .6rem;
+    border-radius: 1rem;
+    width: fit-content;
+    background-color: var(--color-2);
+    /* color: ; */
+}
+.team .btn-cnt label, .team .btn-cnt a{
+    color: var(--color-light);
+    font-style: normal;  
+    text-decoration: none; 
+}
+
+.single-team-admin {
+    /* background-color: aqua; */
+    width: 90%;
+    margin: 5rem 5%;
+    padding: 2rem;
+    /* text-align: center; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.single-team-admin .p1{
+    /* background-color: blue; */
+    width: 40%;
+    text-align: center;
+
+}
+.single-team-admin .p2{
+    /* background-color: blue; */
+    width: 50%;
+    
+}
+
+.single-team-admin .p1 .img-cnt{
+    border-radius: 50rem;
+    /* background-color: aquamarine; */
+    height: 10rem;
+    width: 25rem;
+    height: 25rem;
+    overflow: hidden;
+}
+.single-team-admin .p1 .img-cnt img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.single-team-admin .p2 .btns-cnt{
+    display: flex;
+    flex-direction: row;
+    /* background-color: burlywood; */
+    justify-content: space-between;
+    padding: 0 10%;
+}
+
+.single-team-admin .p2 .btns-cnt .btn-cnt{
+    margin: 3rem 1rem;
+    padding: .6rem;
+    border-radius: 1rem;
+    width: fit-content;
+    background-color: var(--color-2);
+    /* color: ; */
+}
+.single-team-admin .p2 .btns-cnt label,
+.single-team-admin .p2 .btns-cnt a{
+    color: var(--color-light);
+    font-style: normal;  
+    text-decoration: none; 
+}

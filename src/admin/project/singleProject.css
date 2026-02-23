@@ -1,0 +1,316 @@
+@media screen and (min-width: 1200px) {
+    .singleproject {
+        width: 90%;
+        margin: 7rem 5%;
+        background-color: var(--color-white);
+        /* background-color: aqua; */
+
+    }
+
+    .singleproject .header {
+        margin: 5rem 0;
+        display: flex;
+        flex-direction: row;
+        width: 60%;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .singleproject .header .title {
+        width: 45%;
+    }
+
+    .singleproject .header h1 {
+        align-items: center;
+        width: fit-content;
+        color: var(--color-text);
+        background-color: var(--color-bg-pr);
+        border-radius: 0.5rem;
+        padding: .0rem 0.2rem;
+    }
+
+    .singleproject .header p {
+        color: var(--color-text);
+        font-weight: 400;
+        font-size: 0.9rem;
+    }
+
+    .singleproject .card {
+        
+        width: 100%;
+        padding: 0rem;
+        margin: 1rem 0;
+        display: flex;
+        flex-direction: column;
+        /* background-color: rgb(255, 187, 0); */
+    }
+    .singleproject .card .img-cmp{
+        width: 100%;
+        height: fit-content;
+        /* max-height: 60vh ; */
+        /* background-color: rgb(183, 0, 255); */
+        overflow: hidden;
+        border-radius: 0.6rem;
+        overflow: hidden;
+    }
+    
+
+     .singleproject .card .txt-cmp{
+        /* background-color: aquamarine; */
+        padding: 0 .5rem ;
+        gap: 1rem;
+        /* width: 60%; */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+     }
+
+
+     .singleproject .card .img-cmp img{
+        width: 100%;
+        height: 100%;
+        border-radius: 2rem;
+    }
+
+     .singleproject .card .txt-cmp p{
+        margin: 3.5rem 0;
+     }
+
+     .singleproject .card .txt-cmp a{
+        text-align: right;
+        background-color: var(--color-dark);
+        margin: 0rem 1rem 0 0rem;
+        padding: 1rem;
+        text-align: center;
+
+    
+        border-radius: 1rem;
+        color: var(--color-white);
+        margin-top: 3rem;
+        min-width: 12rem;
+        width: fit-content;
+     }
+
+     .singleproject .card .txt-cmp .btn-cmp{
+        /* background-color: blueviolet; */
+        width: 100%;
+        /* display: flex; */
+        text-align: right; 
+     }
+
+
+
+
+
+
+     .singleproject .map-cnt{
+        width: 50%;
+        margin: 0;
+        border-radius: 2rem;
+        overflow: hidden;
+     }
+     .singleproject .imgs-cnt{
+        /* background-color: rgb(255, 0, 212); */
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        
+
+        height: 30rem;          /* or max-height */
+
+        overflow-x: auto;        /* Enables horizontal scrollbar when needed */
+        white-space: nowrap;     /* Prevents items from wrapping */
+      /* Optional */
+
+        overflow-x: auto;                    /* enables horizontal scroll */
+        gap: 10px;                           /* optional spacing between items */
+
+     }
+     .singleproject .imgs-cnt .sng-img{
+        /* background-color: blue; */
+        overflow: hidden;
+        
+        width: 50rem;
+     }
+
+     .singleproject .imgs-cnt .sng-img img{
+        width: 100%;
+        /* border: 1px solid white; */
+        overflow: hidden;
+        border-radius: .75rem;
+        height: 100%;
+
+     }
+     
+     .singleproject iframe{
+        width: 100%;
+        /* border: 1px solid white; */
+        overflow: hidden;
+        border-radius: .75rem;
+        height: 100%;
+     }
+
+
+
+    /* Prevent child elements from shrinking */
+    .singleproject .imgs-cnt > * {
+    flex: 0 0 auto;                      /* or set a fixed width like width: 200px; */
+    /* width: 200px; */                  /* uncomment if you want fixed width */
+    }
+    .singleproject .txt-b-cmp{
+        margin-top: 3rem;
+        /* background-color: bisque; */
+        height: fit-content;
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+    }
+    .singleproject .txt-b-cmp .desc-cmp{
+        padding:0 2rem ;
+        /* background-color: brown; */
+        width: 50%;
+        height: fit-content;
+    }
+    .singleproject .txt-a-cmp{
+        padding-left: 2rem;
+    }
+
+     
+
+
+    
+
+
+}
+
+/* @media screen and (min-width: 801px) and (max-width: 1199px){
+    .singleproject {
+        width: 90%;
+        margin: 7rem 5%;
+        background-color: var(--color-white);
+
+    }
+
+    .singleproject .header {
+        margin: 5rem 0;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .singleproject .header .title {
+        width: 45%;
+    }
+
+    .singleproject .header h1 {
+        align-items: center;
+        width: fit-content;
+        color: var(--color-text);
+        background-color: var(--color-bg-pr);
+        border-radius: 0.5rem;
+        padding: .0rem 0.2rem;
+    }
+
+    .singleproject .header p {
+        color: var(--color-text);
+        font-weight: 400;
+        font-size: 0.9rem;
+    }
+
+    .singleproject .card {
+        width: 100%;
+        border-radius: 2rem;
+        padding: 2rem;
+        margin: 1rem 0;
+        box-shadow: 0rem .3rem .04rem var(--color-dark);
+        border: solid 2px var(--color-dark);
+        
+    }
+} */
+/* 
+@media screen and (max-width: 800px) {
+    .singleproject {
+        width: 96%;
+        margin: 1rem 2%;
+        background-color: var(--color-white);
+
+    }
+
+    .singleproject .header {
+        margin: 5rem 0;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 0rem;
+        align-items: center;
+    }
+
+    
+
+    .singleproject .header h1 {
+        align-items: center;
+        width: fit-content;
+        color: var(--color-text);
+        background-color: var(--color-bg-pr);
+        border-radius: 0.5rem;
+        padding: .0rem 0.2rem;
+    }
+
+    .singleproject .header p {
+        color: var(--color-text);
+        font-weight: 400;
+        font-size: 0.9rem;
+    }
+
+    .singleproject .card {
+        width: 100%;
+        border-radius: 4rem;
+        padding: 2rem;
+        margin: 1rem 0;
+        box-shadow: 0rem .3rem .04rem var(--color-dark);
+        border: solid 2px var(--color-dark);
+    }
+
+    .singleproject .aa {
+        background-color: var(--color-bg-pr);
+
+    }
+
+    .singleproject .bb {
+        background-color: var(--color-light);
+
+    }
+
+    .singleproject .card .p1-componment {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .singleproject .card .p1-componment h1 {
+        font-size: small;
+
+    }
+    .singleproject .card .p1-componment span {
+        font-size: large;
+
+    }
+
+    .singleproject .card .p1-componment .icon {
+        background-color: var(--color-white);
+        color: var(--color-text);
+        font-size: 1.5rem;
+        border-radius: 100%;
+        border: solid 1px var(--color-text);
+    }
+
+    .singleproject .card hr {
+        border: 1px solid var(--color-text);
+    }
+
+    .singleproject .diff {
+        font-size: 3.5rem;
+    }
+} */

@@ -1,0 +1,347 @@
+@media screen and (min-width: 1200px) {
+    .contact {
+        width: 90%;
+        margin: 0 5%;
+        margin-top: 5rem;
+        background-color: var(--color-white);
+    }
+
+    .contact .header {
+        margin-bottom: 5rem;
+        display: flex;
+        flex-direction: row;
+        width: 60%;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .contact .header .title {
+        width: 35%;
+    }
+
+    .contact .header h1 {
+        width: fit-content;
+        color: var(--color-text);
+        background-color: var(--color-bg-pr);
+        border-radius: 0.5rem;
+        padding: .0rem 0.2rem;
+    }
+
+    .contact .header p {
+        color: var(--color-text);
+        font-weight: 400;
+        font-size: 0.9rem;
+    }
+
+    .contact .form {
+        display: flex;
+        flex-direction: row;
+        background-color: var(--color-light);
+        border-radius: 2rem;
+        padding: 5rem 0rem 5rem 5rem;
+        /* text-align: center; */
+    }
+
+    .contact .form .p1 {
+        height: 100%;
+        width: 80%;
+    }
+
+    .contact .form .p2 {
+        width: 20%;
+        overflow: hidden;
+    }
+
+    .contact .form .p1 .radios {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        align-items: center;
+        /* height: 1rem; */
+
+    }
+
+    .contact .form .p1 .radios label {
+        color: var(--color-text);
+        font-size: 1.5rem;
+        /* margin-top: 5rem; */
+    }
+
+    /* .contact .form .p1 .radios {
+
+} */
+
+
+
+    .contact .form .p1 .radios .custom-radio {
+        /* margin-top: 1rem; */
+        accent-color: var(--color-bg-pr);
+        width: 1.4rem;
+        height: 1.4rem;
+    }
+
+    .contact .form .p1 p {
+        color: var(--color-text);
+
+    }
+
+    .contact .form .txt {
+        width: 50%;
+        height: 3.5rem;
+        border-radius: 1rem;
+        padding: 1rem 2rem;
+
+    }
+
+    .contact .form textarea {
+        width: 50%;
+        height: 8.5rem;
+        border-radius: 1rem;
+        padding: 1rem 2rem;
+
+    }
+
+    .contact .form .btn {
+        width: 50%;
+        background-color: var(--color-dark);
+        border: none;
+        color: var(--color-white);
+        /* height: 3.5rem; */
+        border-radius: 1rem;
+        padding: 1rem 2rem;
+        margin-top: 2rem;
+
+    }
+}
+
+@media screen and (min-width: 801px) and (max-width: 1199px){
+    .contact {
+        width: 90%;
+        margin: 0 5%;
+        margin-top: 5rem;
+        background-color: var(--color-white);
+    }
+
+    .contact .header {
+        margin-bottom: 5rem;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        gap: 2rem;
+        align-items: center;
+    }
+
+
+    .contact .header h1 {
+        width: fit-content;
+        color: var(--color-text);
+        background-color: var(--color-bg-pr);
+        border-radius: 0.5rem;
+        padding: .0rem 0.2rem;
+    }
+
+    .contact .header p {
+        color: var(--color-text);
+        font-weight: 400;
+        font-size: 0.9rem;
+    }
+
+    .contact .form {
+        display: flex;
+        flex-direction: row;
+        background-color: var(--color-light);
+        border-radius: 2rem;
+        padding: 1.2rem;
+        /* text-align: center; */
+    }
+
+    .contact .form .p1 {
+        height: 100%;
+        width: 100%;
+        /* background-color: aqua; */
+    }
+
+    .contact .form .p2 {
+        display: none;
+    }
+
+
+    .contact .form .p1 .radios {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        align-items: center;
+        /* height: 1rem; */
+
+    }
+
+    .contact .form .p1 .radios label {
+        color: var(--color-text);
+        font-size: 1rem;
+        /* margin-top: 5rem; */
+    }
+
+    /* .contact .form .p1 .radios {
+
+} */
+
+
+
+    .contact .form .p1 .radios .custom-radio {
+        /* margin-top: 1rem; */
+        accent-color: var(--color-bg-pr);
+        width: 1.4rem;
+        height: 1.4rem;
+    }
+
+    .contact .form .p1 p {
+        color: var(--color-text);
+
+    }
+
+    .contact .form .txt {
+        width: 100%;
+        height: 3.5rem;
+        border-radius: 1rem;
+        padding: 1rem 2rem;
+
+    }
+
+    .contact .form textarea {
+        width: 100%;
+        height: 6.5rem;
+        border-radius: 1rem;
+        padding: 1rem 2rem;
+
+    }
+
+
+    .contact .form .btn {
+        width: 100%;
+        background-color: var(--color-dark);
+        border: none;
+        color: var(--color-white);
+        /* height: 3.5rem; */
+        border-radius: 1rem;
+        padding: 1rem 2rem;
+        margin-top: 2rem;
+
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+    .contact {
+        width: 96%;
+        margin: 0 2%;
+        margin-top: 1rem;
+        background-color: var(--color-white);
+    }
+
+    .contact .header {
+        margin-bottom: 5rem;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 2rem;
+        align-items: center;
+        text-align: center;
+    }
+
+
+    .contact .header h1 {
+        width: fit-content;
+        color: var(--color-text);
+        background-color: var(--color-bg-pr);
+        border-radius: 0.5rem;
+        padding: .0rem 0.2rem;
+    }
+
+    .contact .header p {
+        color: var(--color-text);
+        font-weight: 400;
+        font-size: 0.9rem;
+    }
+
+    .contact .form {
+        display: flex;
+        flex-direction: row;
+        background-color: var(--color-light);
+        border-radius: 2rem;
+        padding: 1.2rem;
+        /* text-align: center; */
+    }
+
+    .contact .form .p1 {
+        height: 100%;
+        width: 100%;
+        /* background-color: aqua; */
+    }
+
+    .contact .form .p2 {
+        display: none;
+    }
+
+
+    .contact .form .p1 .radios {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        align-items: center;
+        /* height: 1rem; */
+
+    }
+
+    .contact .form .p1 .radios label {
+        color: var(--color-text);
+        font-size: 1rem;
+        /* margin-top: 5rem; */
+    }
+
+    /* .contact .form .p1 .radios {
+
+} */
+
+
+
+    .contact .form .p1 .radios .custom-radio {
+        /* margin-top: 1rem; */
+        accent-color: var(--color-bg-pr);
+        width: 1.4rem;
+        height: 1.4rem;
+    }
+
+    .contact .form .p1 p {
+        color: var(--color-text);
+
+    }
+
+    .contact .form .txt {
+        width: 100%;
+        height: 3.5rem;
+        border-radius: 1rem;
+        padding: 1rem 2rem;
+
+    }
+
+    .contact .form textarea {
+        width: 100%;
+        height: 6.5rem;
+        border-radius: 1rem;
+        padding: 1rem 2rem;
+
+    }
+
+
+    .contact .form .btn {
+        width: 100%;
+        background-color: var(--color-dark);
+        border: none;
+        color: var(--color-white);
+        /* height: 3.5rem; */
+        border-radius: 1rem;
+        padding: 1rem 2rem;
+        margin-top: 2rem;
+
+    }
+}

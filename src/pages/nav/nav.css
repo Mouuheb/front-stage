@@ -1,0 +1,263 @@
+@media screen and (min-width: 1200px) {
+    .nav {
+        align-items: center;
+        top: 0;
+        left: 0;
+        position: fixed;
+        z-index: 9;
+        width: 100%;
+        height: 5rem;
+        background-color: var(--color-white);
+        margin: 0;
+        padding: 0 5%;
+    }
+
+    .nav .logo {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        align-items: center;
+        gap: 0.1rem;
+    }
+
+    .nav .logo .img-cnt {
+        /* size: 12rem; */
+        height: 4rem;
+        width: 4rem;
+        color: var(--color-text);
+
+    }
+
+    .nav .logo .img-cnt img {
+        /* size: 12rem; */
+        height: fit-content;
+        width: 100%;
+
+    }
+
+    .nav .logo h1 {
+        color: var(--color-text);
+        font-weight: 500;
+    }
+
+
+
+
+    .nav .p1 {
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+
+
+    .nav .p1 .p2 a {
+        margin: 0 1rem;
+        color: var(--color-text);
+        text-decoration: none;
+
+    }
+
+    .nav .p1 .p2 a:hover {
+        margin: 0 1rem;
+        color: var(--color-text);
+        text-decoration: double;
+
+    }
+
+    .nav .p1 .btn {
+        border-radius: .6rem;
+        border: solid 1px var(--color-text);
+        align-items: center;
+        text-align: center;
+        padding: .8rem;
+    }
+}
+
+@media screen and (min-width: 801px) and (max-width: 1199px)  {
+    .nav {
+        align-items: center;
+        top: 0;
+        left: 0;
+        position: fixed;
+        z-index: 9;
+        width: 100%;
+        height: 5rem;
+        padding: 1rem;
+        /* background-color: aqua; */
+        background-color: var(--color-white);
+        /* margin: 0 2%; */
+    }
+
+    .nav .logo {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        align-items: center;
+        gap: 0.1rem;
+    }
+
+    .nav .logo .icon {
+        size: 12rem;
+        height: 2rem;
+        width: 2rem;
+        color: var(--color-text);
+    }
+
+    .nav .logo h1 {
+        color: var(--color-text);
+        font-weight: 500;
+        font-size: large;
+    }
+
+
+
+
+    .nav .p1 {
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+
+
+    .nav .p1 .p2 a {
+        margin: 0 0.5rem;
+        color: var(--color-text);
+        text-decoration: none;
+
+    }
+
+    .nav .p1 .p2 a:hover {
+        margin: 0 1rem;
+        color: var(--color-text);
+        text-decoration: double;
+
+    }
+
+    .nav .p1 .btn {
+        display: none;
+        font-size: .8rem;
+        border-radius: .6rem;
+        border: solid 1px var(--color-text);
+        align-items: center;
+        text-align: center;
+        padding: .5rem;
+    }
+}
+
+@media screen and (max-width: 800px){
+
+    .nav {
+        align-items: center;
+        top: 0;
+        left: 0;
+        position: flex;
+        z-index: 9;
+        width: 90%;
+        height: 5rem;
+        background-color: var(--color-white);
+        margin: 0 5%;
+    }
+
+    .nav .logo {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        align-items: center;
+        gap: 0.1rem;
+    }
+
+    .nav .logo .icon {
+        size: 12rem;
+        height: 2rem;
+        width: 2rem;
+        color: var(--color-text);
+    }
+
+    .nav .logo h1 {
+        color: var(--color-text);
+        font-weight: 500;
+        font-size: 1.5rem;
+    }
+
+
+
+
+    .nav .p1 {
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+    .nav .p1 .btn {
+        display: none;
+        border-radius: .6rem;
+        border: solid 1px var(--color-text);
+        align-items: center;
+        text-align: center;
+        padding: .2em;
+    }
+
+
+
+
+
+    .nav .p2 .links{
+        display: none;
+    }
+
+
+}
+
+/* Add this base style for all links (outside media queries) */
+.nav .p1 .p2 a {
+  display: inline-block;        /* Needed for transform to work predictably */
+  transition: all 0.2s ease;    /* Smooth scaling and underline */
+  text-decoration: none;        /* Remove default underline if any */
+  /* Keep your existing margin/padding */
+}
+
+/* Hover effect – you can place this in each media query or once globally */
+.nav .p1 .p2 a:hover {
+  transform: scale(1.1);         /* Scale up the link */
+  border-bottom: 2px solid black; /* Black underline */
+  /* If you prefer text-decoration underline, use:
+     text-decoration: underline;
+     text-decoration-color: black;
+     text-underline-offset: 4px; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

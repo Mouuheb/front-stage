@@ -1,0 +1,177 @@
+.create-equ-admin{
+    /* background-color: aqua; */
+    height: fit-content;
+    width: 90%;
+    margin: 5rem 5%;
+}
+
+.create-equ-admin form{
+    width: 60%;
+    margin: 0 10%;
+    /* background-color: aqua; */
+    padding: 2rem;
+    border-radius: 1rem;
+    border: solid var(--color-2) ;
+    
+}
+
+.create-equ-admin form .row{
+    
+    /* background-color: blue; */
+    /* width: 60%; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1rem 0;
+
+}
+
+.create-equ-admin form .row input,
+.create-equ-admin form .row select,
+.create-equ-admin form .row textarea
+{
+    width: 15rem;
+    background-color: var(--color-light);
+    color: var(--color-2);
+    border-radius: .5rem;
+    height: 2rem;
+    padding: 0.2rem;
+}
+
+.create-equ-admin form .row textarea{
+    height: 4rem;
+    
+}
+
+.create-equ-admin form button{
+    background-color: var(--color-2);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    color: var(--color-light);
+}
+/*  */
+
+
+.update-eq-admin{
+    /* background-color: aqua; */
+    height: fit-content;
+    width: 90%;
+    margin: 5rem 5%;
+}
+
+.update-eq-admin form{
+    width: 60%;
+    margin: 0 10%;
+    /* background-color: aqua; */
+    padding: 2rem;
+    border-radius: 1rem;
+    border: solid var(--color-2) ;
+    
+}
+
+.update-eq-admin form .row{
+    
+    /* background-color: blue; */
+    /* width: 60%; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1rem 0;
+
+}
+
+.update-eq-admin form .row input,
+.update-eq-admin form .row select,
+.update-eq-admin form .row textarea
+{
+    width: 15rem;
+    background-color: var(--color-light);
+    color: var(--color-2);
+    border-radius: .5rem;
+    height: 2rem;
+    padding: 0.2rem;
+}
+
+.update-eq-admin form .row textarea{
+    height: 4rem;
+    
+}
+
+.update-eq-admin form button{
+    background-color: var(--color-2);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    color: var(--color-light);
+}
+
+
+
+/* -------------------------------------------------------------- */
+.equipment-admin{
+    /* background-color: aqua; */
+    width: 90%;
+    margin: 7rem 5%;
+}
+
+.equipment-admin .card{
+    /* background-color: blue; */
+    border: solid var(--color-2);
+    border-radius: 2rem;
+    padding: 2rem 1rem;
+    margin:  1rem 0;
+}
+
+
+.equipment-admin .btn-cnt{
+    /* margin: 3rem 1rem; */
+    padding: .6rem;
+    border-radius: 1rem;
+    width: fit-content;
+    background-color: var(--color-2);
+    /* color: ; */
+}
+.equipment-admin label,
+.equipment-admin a{
+    color: var(--color-light);
+    font-style: normal;  
+    text-decoration: none; 
+}
+
+
+/* ----------------------------------------------- */
+
+.single-equipment-admin{
+    /* background-color: aqua; */
+    width: 90%;
+    margin: 7rem 5%;
+    padding: 2rem;
+}
+
+
+.single-equipment-admin .btn-cnt{
+    /* margin: 3rem 1rem; */
+    padding: .6rem;
+    border-radius: 1rem;
+    width: fit-content;
+    background-color: var(--color-2);
+    /* color: ; */
+}
+.single-equipment-admin label,
+.single-equipment-admin a{
+    color: var(--color-light);
+    font-style: normal;  
+    text-decoration: none; 
+}
+
+.single-equipment-admin .btns-cnt{
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    gap: 1rem;
+    /* background-color: burlywood; */
+    justify-content: space-between;
+}
+
+.single-equipment-admin .lik{
+    color: var(--color-2);
+}

@@ -1,0 +1,325 @@
+@media screen and (min-width: 1200px) {
+    .admin-project {
+        width: 90%;
+        margin: 7rem 5%;
+        background-color: var(--color-white);
+        /* background-color: aqua; */
+
+    }
+
+    .admin-project .header {
+        margin: 5rem 0;
+        display: flex;
+        flex-direction: row;
+        width: 60%;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .admin-project .header .title {
+        width: 45%;
+    }
+
+    .admin-project .header h1 {
+        align-items: center;
+        width: fit-content;
+        /* color: var(--color-text); */
+        /* background-color: var(--color-bg-pr); */
+        border-radius: 0.5rem;
+        padding: .0rem 0.2rem;
+    }
+
+    .admin-project .header p {
+        color: var(--color-text);
+        font-weight: 400;
+        font-size: 0.9rem;
+    }
+
+    .admin-project .card {
+        
+        width: 100%;
+        height: 25vh;
+        border-radius: 1rem;
+        /* padding: 0.25rem; */
+        margin: .75rem 0;
+        box-shadow: 0rem .3rem .04rem var(--color-dark);
+        border: solid 2px var(--color-dark);
+        /* display: flex; */
+        /* flex-direction: row; */
+        position: relative;
+        overflow: hidden;
+    }
+    .admin-project .card .img-cmp{
+        width: 100%;
+        height: 100% ;
+        /* background-color: aqua; */
+        overflow: hidden;
+        border-radius: 1rem;
+        overflow: hidden;
+        position: absolute;
+        z-index: 1;
+    }
+    
+
+     .admin-project .card .txt-cmp{
+        z-index: 2;
+        /* background-color: aquamarine; */
+        padding: .25rem 0 0 1rem;
+        gap: 0rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: absolute;
+        height: 100%;
+
+        background-color: rgba(0, 0, 0, 0.3); /* semi-transparent white */
+        backdrop-filter: blur(1px);                /* blur the background */
+        -webkit-backdrop-filter: blur(1px);        /* for Safari support */
+                      
+
+     }
+     .admin-project .card .img-cmp img{
+        width: 100%;
+        height: max-content;
+        object-fit: cover;     /* Crop to fill both dimensions, keep aspect ratio */
+        object-position: center;
+    }
+    .admin-project .card .img-cmp img{
+        width: 100%;
+        height: 100%;
+        
+    }
+
+     .admin-project .card .txt-cmp p,.admin-project .card .txt-cmp small ,.admin-project .card .txt-cmp h5{
+        
+        /* color: var(--color-white); */
+        color: var(--color-dark);
+        background-color: var(--color-white);
+        width: fit-content;
+        padding: .1rem;
+     }
+
+     .admin-project .card .txt-cmp a{
+        text-align: right;
+        background-color: var(--color-dark);
+        padding: .7rem;
+        border-radius: 1rem;
+        color: var(--color-white);
+        margin-top: .3rem;
+        min-width: 5rem;
+        font-size: .75rem;
+     }
+
+     .admin-project .footer-work .btn{
+        text-align: right;
+        background-color: var(--color-dark);
+        margin: 0rem 1rem 0 0rem;
+        padding: 1rem;
+    
+        border-radius: 1rem;
+        color: var(--color-white);
+        margin-top: 3rem;
+        min-width: 5rem;
+     }
+
+
+
+     .admin-project .footer-work {
+        width: 100%;
+        text-align: center;
+     }
+
+
+     /* .admin-project .footer-work .btn:hover{
+        background-color: var(--color-4);
+        color: var(--color-2);
+        text-decoration: underline;
+        font-weight: bold;
+        font-weight: bolder;
+        
+
+     } */
+
+     
+
+
+    
+
+
+}
+
+/* @media screen and (min-width: 801px) and (max-width: 1199px){
+    .admin-project {
+        width: 90%;
+        margin: 7rem 5%;
+        background-color: var(--color-white);
+
+    }
+
+    .admin-project .header {
+        margin: 5rem 0;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .admin-project .header .title {
+        width: 45%;
+    }
+
+    .admin-project .header h1 {
+        align-items: center;
+        width: fit-content;
+        color: var(--color-text);
+        background-color: var(--color-bg-pr);
+        border-radius: 0.5rem;
+        padding: .0rem 0.2rem;
+    }
+
+    .admin-project .header p {
+        color: var(--color-text);
+        font-weight: 400;
+        font-size: 0.9rem;
+    }
+
+    .admin-project .card {
+        width: 100%;
+        border-radius: 2rem;
+        padding: 2rem;
+        margin: 1rem 0;
+        box-shadow: 0rem .3rem .04rem var(--color-dark);
+        border: solid 2px var(--color-dark);
+        
+    }
+} */
+/* 
+@media screen and (max-width: 800px) {
+    .admin-project {
+        width: 96%;
+        margin: 1rem 2%;
+        background-color: var(--color-white);
+
+    }
+
+    .admin-project .header {
+        margin: 5rem 0;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 0rem;
+        align-items: center;
+    }
+
+    
+
+    .admin-project .header h1 {
+        align-items: center;
+        width: fit-content;
+        color: var(--color-text);
+        background-color: var(--color-bg-pr);
+        border-radius: 0.5rem;
+        padding: .0rem 0.2rem;
+    }
+
+    .admin-project .header p {
+        color: var(--color-text);
+        font-weight: 400;
+        font-size: 0.9rem;
+    }
+
+    .admin-project .card {
+        width: 100%;
+        border-radius: 4rem;
+        padding: 2rem;
+        margin: 1rem 0;
+        box-shadow: 0rem .3rem .04rem var(--color-dark);
+        border: solid 2px var(--color-dark);
+    }
+
+    .admin-project .aa {
+        background-color: var(--color-bg-pr);
+
+    }
+
+    .admin-project .bb {
+        background-color: var(--color-light);
+
+    }
+
+    .admin-project .card .p1-componment {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .admin-project .card .p1-componment h1 {
+        font-size: small;
+
+    }
+    .admin-project .card .p1-componment span {
+        font-size: large;
+
+    }
+
+    .admin-project .card .p1-componment .icon {
+        background-color: var(--color-white);
+        color: var(--color-text);
+        font-size: 1.5rem;
+        border-radius: 100%;
+        border: solid 1px var(--color-text);
+    }
+
+    .admin-project .card hr {
+        border: 1px solid var(--color-text);
+    }
+
+    .admin-project .diff {
+        font-size: 3.5rem;
+    }
+} */
+
+.admin-project .split-page{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.admin-project .split-page .map-cnt{
+    width: 55%;
+    background-color: aqua;
+    margin-right: 5% ;
+    overflow: hidden;
+    /* height: 85vh; */
+    height: fit-content;
+    border-radius:1rem ;
+}
+.admin-project .split-page .project-list{
+    /* background-color: blue; */
+    width: 40%;
+    overflow: hidden;
+    height: 65vh;
+    overflow-y: auto;
+    
+}
+
+.admin-project .project-list .btn-cnt{
+    /* width: 100%; */
+    text-align: right;
+    padding: 1rem;
+    /* align-items: end; */
+    /* background-color: bisque; */
+}
+
+.admin-project .btn-cnt label{
+    color: var(--color-3);
+    background-color: var(--color-2);
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+.admin-project .btn-cnt {
+    /* background-color: aqua; */
+    height: 5rem;
+}

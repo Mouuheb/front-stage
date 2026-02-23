@@ -1,0 +1,269 @@
+@media screen and (min-width: 1200px) {
+    *::-webkit-scrollbar {
+        display: none;
+    }
+
+    .testimonial {
+        width: 90%;
+        margin: 0rem 5%;
+        margin-top: 15rem;
+        background-color: var(--color-white);
+    }
+
+    .testimonial .header {
+        margin-bottom: 5rem;
+        display: flex;
+        flex-direction: row;
+        width: 60%;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .testimonial .header .title {
+        width: 35%;
+    }
+
+    .testimonial .header h1 {
+        width: fit-content;
+        color: var(--color-text);
+        background-color: var(--color-bg-pr);
+        border-radius: 0.5rem;
+        padding: .0rem 0.2rem;
+    }
+
+    .testimonial .header p {
+        color: var(--color-text);
+        font-weight: 400;
+        font-size: 0.9rem;
+
+    }
+
+    .testimonial .element {
+        width: 100%;
+        background-color: var(--color-dark);
+        display: flex;
+        flex-direction: row;
+        gap: 3rem;
+        border-radius: 2rem;
+        /* margin-left: 25%; */
+        overflow-x: hidden;
+        padding-left: 25%;
+        overflow-x: auto;
+
+
+    }
+
+    .testimonial .element .card {
+        margin-left: 0%;
+        /* width: 50%; */
+    }
+
+    .testimonial .element .comment {
+        width: 35rem;
+
+
+        margin: 8rem 2rem 4rem;
+        /* border: 1px solid var(--color-bg-pr); */
+    }
+
+    .testimonial .element .comment .txt {
+        padding: 4rem 2rem;
+        border-radius: 2rem;
+        color: var(--color-white);
+        border: 1px solid var(--color-bg-pr);
+    }
+
+    .testimonial .element .comment h2 {
+        padding: 3rem 4rem 0rem;
+        border-radius: 2rem;
+        color: var(--color-bg-pr);
+    }
+
+    .testimonial .element .comment .sub {
+        padding: 0rem 4rem 0rem;
+        border-radius: 2rem;
+        color: var(--color-white);
+    }
+}
+
+@media screen and (min-width: 801px) and (max-width: 1199px){
+    *::-webkit-scrollbar {
+        display: none;
+    }
+
+    .testimonial {
+        width: 90%;
+        margin: 0rem 5%;
+        margin-top: 15rem;
+        background-color: var(--color-white);
+    }
+
+    .testimonial .header {
+        margin-bottom: 5rem;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .testimonial .header .title {
+        width: 35%;
+    }
+
+    .testimonial .header h1 {
+        width: fit-content;
+        color: var(--color-text);
+        background-color: var(--color-bg-pr);
+        border-radius: 0.5rem;
+        padding: .0rem 0.2rem;
+    }
+
+    .testimonial .header p {
+        color: var(--color-text);
+        font-weight: 400;
+        font-size: 0.9rem;
+
+    }
+
+    .testimonial .element {
+        width: 100%;
+        background-color: var(--color-dark);
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        border-radius: 2rem;
+        /* margin-left: 25%; */
+        overflow-x: hidden;
+        padding-left: 0%;
+        overflow-x: auto;
+
+
+    }
+
+    .testimonial .element .card {
+        margin-left: 0%;
+        width: 100%;
+    }
+
+    .testimonial .element .comment {
+        width: 100%;
+
+
+        margin: 1rem 6.5rem 0rem 0.5rem;
+        /* border: 1px solid var(--color-bg-pr); */
+    }
+
+    .testimonial .element .comment .txt {
+        padding: 4rem 2rem;
+        border-radius: 2rem;
+        color: var(--color-white);
+        border: 1px solid var(--color-bg-pr);
+    }
+
+    .testimonial .element .comment h2 {
+        padding: 3rem 10rem 0rem;
+        border-radius: 2rem;
+        color: var(--color-bg-pr);
+    }
+
+    .testimonial .element .comment .sub {
+        padding: 0rem 4rem 0rem;
+        border-radius: 2rem;
+        color: var(--color-white);
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+    *::-webkit-scrollbar {
+        display: none;
+    }
+
+    .testimonial {
+        width: 96%;
+        margin: 0rem 2%;
+        margin-top: 1rem;
+        background-color: var(--color-white);
+    }
+
+    .testimonial .header {
+        text-align: center;
+        margin-bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .testimonial .header .title {
+        /* width: 100%; */
+        text-align: center;
+        /* background-color: aqua; */
+    }
+
+    .testimonial .header h1 {
+        width: fit-content;
+        
+        text-align: center;
+        color: var(--color-text);
+        background-color: var(--color-bg-pr);
+        border-radius: 0.5rem;
+        padding: .0rem 0.2rem;
+    }
+
+    .testimonial .header p {
+        color: var(--color-text);
+        font-weight: 400;
+        font-size: 0.9rem;
+
+    }
+
+    .testimonial .element {
+        width: 100%;
+        background-color: var(--color-dark);
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        border-radius: 2rem;
+        /* margin-left: 25%; */
+        overflow-x: hidden;
+        padding-left: 0%;
+        overflow-x: auto;
+
+
+    }
+
+    .testimonial .element .card {
+        margin-left: 0%;
+        width: 100%;
+    }
+
+    .testimonial .element .comment {
+        width: 100%;
+
+
+        margin: 1rem 6.5rem 0rem 0.5rem;
+        /* border: 1px solid var(--color-bg-pr); */
+    }
+
+    .testimonial .element .comment .txt {
+        padding: 4rem 2rem;
+        border-radius: 2rem;
+        color: var(--color-white);
+        border: 1px solid var(--color-bg-pr);
+    }
+
+    .testimonial .element .comment h2 {
+        padding: 3rem 4rem 0rem;
+        border-radius: 2rem;
+        color: var(--color-bg-pr);
+    }
+
+    .testimonial .element .comment .sub {
+        padding: 0rem 4rem 0rem;
+        border-radius: 2rem;
+        color: var(--color-white);
+    }
+}

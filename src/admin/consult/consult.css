@@ -1,0 +1,109 @@
+
+.update-const-admin{
+    /* background-color: aqua; */
+    height: fit-content;
+    width: 90%;
+    margin: 5rem 5%;
+}
+
+.update-const-admin form{
+    width: 60%;
+    margin: 0 10%;
+    /* background-color: aqua; */
+    padding: 2rem;
+    border-radius: 1rem;
+    border: solid var(--color-2) ;
+    
+}
+
+.update-const-admin form .row{
+    
+    /* background-color: blue; */
+    /* width: 60%; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1rem 0;
+
+}
+
+.update-const-admin form .row input,
+.update-const-admin form .row select,
+.update-const-admin form .row textarea
+{
+    width: 15rem;
+    background-color: var(--color-light);
+    color: var(--color-2);
+    border-radius: .5rem;
+    height: 2rem;
+    padding: 0.2rem;
+}
+
+.update-const-admin form .row textarea{
+    height: 4rem;
+    
+}
+
+.update-const-admin form button{
+    background-color: var(--color-2);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    color: var(--color-light);
+}
+
+
+/* create-consult-admin */
+
+
+
+.create-consult-admin{
+    /* background-color: aqua; */
+    height: fit-content;
+    width: 90%;
+    margin: 5rem 5%;
+}
+
+.create-consult-admin form{
+    width: 60%;
+    margin: 0 10%;
+    /* background-color: aqua; */
+    padding: 2rem;
+    border-radius: 1rem;
+    border: solid var(--color-2) ;
+    
+}
+
+.create-consult-admin form .row{
+    
+    /* background-color: blue; */
+    /* width: 60%; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1rem 0;
+
+}
+
+.create-consult-admin form .row input,
+.create-consult-admin form .row select,
+.create-consult-admin form .row textarea
+{
+    width: 15rem;
+    background-color: var(--color-light);
+    color: var(--color-2);
+    border-radius: .5rem;
+    height: 2rem;
+    padding: 0.2rem;
+}
+
+.create-consult-admin form .row textarea{
+    height: 4rem;
+    
+}
+
+.create-consult-admin form button{
+    background-color: var(--color-2);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    color: var(--color-light);
+}

@@ -1,0 +1,210 @@
+@media screen and (min-width: 1200px){
+    .home{
+        margin: 5rem 0%;
+        width: 100%;
+        height: 100%;
+        background-color: var(--color-white);
+
+
+        background: rgba(119, 119, 119, 0.2);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px); /* Safari */
+    }
+    
+    .home .containner{
+        display: flex;
+        flex-direction: row;
+        margin: 5rem 0rem;
+        align-items: center;
+        /* padding: 10rem; */
+    
+    }
+    
+    .home .containner .contnent-containner .image-containner-ph{
+        display: none;
+    }
+    
+    
+    
+    .home .containner .contnent-containner{
+        width: 50%;
+        padding-left: 5%;
+        padding-right: 5% ;
+
+        /* background-color: beige; */
+    }
+    .home .containner .image-containner{
+        width: 50%;
+        /* background-color: aqua; */
+    }
+
+    .home .containner .image-containner img{
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+    }
+    
+    .home .containner .contnent-containner h1{
+        /* font-size: xx-large; */
+        font-size: 3.2rem;
+        /* size: 5rem; */
+        
+    }
+    .home .containner .contnent-containner p{
+        /* font-size: xx-large; */
+        /* font-size: 3.2rem; */
+        /* size: 5rem; */
+        margin: 3rem 0;
+        
+    }
+    
+    .home .containner .contnent-containner .btn{
+        background-color: var(--color-dark);
+        margin: 0rem 1rem 0 0rem;
+        padding: 1rem;
+    
+        border-radius: 1rem;
+        color: var(--color-white);
+        
+    }
+    
+}
+
+@media screen and (min-width: 801px) and (max-width: 1199px){
+    .home{
+        /* align-items: center; */
+        margin: 5rem 5%;
+        width: 90%;
+        height: 100%;
+        background-color: var(--color-white);
+        /* background-color: aqua; */
+    }
+    
+    .home .containner{
+        display: flex;
+        flex-direction: row;
+        margin: 5rem 0rem;
+        align-items: center;
+        /* padding: 10rem; */
+    
+    }
+    
+    .home .containner .contnent-containner .image-containner-ph{
+        display: none;
+    }
+    
+    
+    
+    .home .containner .contnent-containner{
+        width: 50%;
+        /* background-color: beige; */
+    }
+    .home .containner .image-containner{
+        width: 50%;
+        /* background-color: aqua; */
+    }
+
+    .home .containner .image-containner img{
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+    }
+    
+    .home .containner .contnent-containner h1{
+        /* font-size: xx-large; */
+        font-size: 3.2rem;
+        /* size: 5rem; */
+        
+    }
+    .home .containner .contnent-containner p{
+        /* font-size: xx-large; */
+        /* font-size: 3.2rem; */
+        /* size: 5rem; */
+        margin: 3rem 0;
+        
+    }
+    
+    .home .containner .contnent-containner .btn{
+        background-color: var(--color-dark);
+        margin: 0rem 1rem 0 0rem;
+        padding: 1rem;
+    
+        border-radius: 1rem;
+        color: var(--color-white);
+        
+    }
+
+}
+
+
+@media screen and (max-width: 800px){
+    .home{
+        margin: 0rem 2%;
+        width: 96%;
+        height: 100%;
+        background-color: var(--color-white);
+    }
+    
+    
+    .home .containner{
+        /* background-color: blueviolet; */
+        display: flex;
+        flex-direction: column;
+        margin: 0rem 0;
+        align-items: center;
+        /* padding: 10rem; */
+        width: 96%;
+    
+    }
+    .home .containner .contnent-containner .image-containner-ph{
+        /* display: flex; */
+        box-sizing: border-box;
+        /* background-color: aqua; */
+        width: 100%;
+        height: 20rem; 
+    }
+    .home .containner .contnent-containner .image-containner-ph img{
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+    }
+    .home .containner .image-containner{
+        display: none;
+    }
+    .home .containner .contnent-containner{
+        width: 100%;
+    }
+    .home .containner .contnent-containner h1{
+        /* font-size: xx-large; */
+        font-size: 2.0rem;
+        /* size: 5rem; */
+        
+    }
+    .home .containner .contnent-containner p{
+        /* font-size: xx-large; */
+        /* font-size: 3.2rem; */
+        /* size: 5rem; */
+        margin: 1.2rem 0;
+        
+    }
+    .home .containner .contnent-containner .btn{
+        text-align: center;
+        width: 100%;
+        background-color: var(--color-dark);
+        padding: 1rem 0%;
+        text-align: center;
+        border-radius: 1rem;
+        color: var(--color-white);
+        
+        
+    }
+    .home .containner .contnent-containner .btn-cmp{
+        text-align: center;
+        /* background-color: aqua; */
+        height: fit-content;
+        margin-top: 2rem ;
+       
+        
+    }
+
+}

@@ -1,0 +1,80 @@
+.admin-cnsultation{
+    /* background-color: aqua; */
+    width: 90%;
+    margin:  5rem 5% ;
+}
+
+.admin-cnsultation a{
+    font-style: normal;  
+    text-decoration: none; 
+}
+
+.admin-cnsultation .btn-cnt{
+    margin: 2rem 1rem 0;
+    padding: .6rem;
+    border-radius: 1rem;
+    width: fit-content;
+    background-color: var(--color-2);
+    /* color: ; */
+}
+.admin-cnsultation  label,
+.admin-cnsultation  a{
+    color: var(--color-light);
+    font-style: normal;  
+    text-decoration: none; 
+}
+.admin-cnsultation .card{
+    /* background-color: blue; */
+    padding: 3rem 2rem;
+    margin: 1rem 2rem;
+    border: solid var(--color-2);
+    border-radius: 2rem;
+}
+
+.admin-cnsultation .lik{
+    color: var(--color-2);
+}
+
+/* -------------------------------------------------- */
+
+.single-consultation-admin{
+    /* background-color: aqua ; */
+    width: 80%;
+    margin: 7rem 10%;
+    
+}
+
+.single-consultation-admin .cnt{
+    padding: 1rem 5rem;
+}
+
+.single-consultation-admin .lik{
+    color: var(--color-2);
+}
+
+
+
+
+.single-consultation-admin .btns-cnt{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    /* background-color: burlywood; */
+    justify-content: space-between;
+    /* padding: 0 1%; */
+}
+
+.single-consultation-admin .btns-cnt .btn-cnt{
+    margin: 3rem 1rem;
+    padding: .6rem;
+    border-radius: 1rem;
+    width: fit-content;
+    background-color: var(--color-2);
+    /* color: ; */
+}
+.single-consultation-admin .btns-cnt label,
+.single-consultation-admin .btns-cnt a{
+    color: var(--color-light);
+    font-style: normal;  
+    text-decoration: none; 
+}

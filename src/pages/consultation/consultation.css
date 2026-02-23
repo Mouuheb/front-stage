@@ -1,0 +1,391 @@
+@media screen and (min-width: 1200px) {
+    .cs {
+        width: 90%;
+        margin: 0 5%;
+        margin-top: 5rem;
+        background-color: var(--color-white);
+    }
+
+    .cs .header {
+        margin-bottom: 5rem;
+        display: flex;
+        flex-direction: row;
+        width: 60%;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .cs .header .title {
+        width: 35%;
+    }
+
+    .cs .header h1 {
+        width: fit-content;
+        color: var(--color-text);
+        background-color: var(--color-bg-pr);
+        border-radius: 0.5rem;
+        padding: .0rem 0.2rem;
+    }
+
+    .cs .header p {
+        color: var(--color-text);
+        font-weight: 400;
+        font-size: 0.9rem;
+    }
+
+    .cs .form {
+        display: flex;
+        flex-direction: row;
+        background-color: var(--color-light);
+        border-radius: 2rem;
+        padding: 5rem 0rem 5rem 5rem;
+        /* text-align: center; */
+    }
+
+    .cs .form .p1 {
+        height: 100%;
+        width: 80%;
+    }
+
+    .cs .form .p2 {
+        width: 20%;
+        overflow: hidden;
+    }
+
+    .cs .form .p1 .radios {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        align-items: center;
+        /* height: 1rem; */
+
+    }
+
+    .cs .form .p1 .radios label {
+        color: var(--color-text);
+        font-size: 1.5rem;
+        /* margin-top: 5rem; */
+    }
+
+    /* .cs .form .p1 .radios {
+
+} */
+
+
+
+    .cs .form .p1 .radios .custom-radio {
+        /* margin-top: 1rem; */
+        accent-color: var(--color-bg-pr);
+        width: 1.4rem;
+        height: 1.4rem;
+    }
+
+    .cs .form .p1 p {
+        color: var(--color-text);
+
+    }
+
+    .cs .form .txt {
+        width: 50%;
+        height: 3.5rem;
+        border-radius: 1rem;
+        padding: 1rem 2rem;
+
+    }
+
+    .cs .form textarea {
+        width: 50%;
+        height: 8.5rem;
+        border-radius: 1rem;
+        padding: 1rem 2rem;
+
+    }
+    /* .cs .form .doc {
+        
+        background-color: var(--color-dark);
+        border: none;
+        color: var(--color-white);
+        
+        border-radius: 1rem;
+        padding: 1rem 2rem;
+        margin-top: 2rem;
+
+    } */
+
+    .cs .form .btn {
+        width: 50%;
+        background-color: var(--color-dark);
+        border: none;
+        color: var(--color-white);
+        /* height: 3.5rem; */
+        border-radius: 1rem;
+        padding: 1rem 2rem;
+        margin-top: 2rem;
+
+    }
+}
+
+@media screen and (min-width: 801px) and (max-width: 1199px){
+    .cs {
+        width: 90%;
+        margin: 0 5%;
+        margin-top: 5rem;
+        background-color: var(--color-white);
+    }
+
+    .cs .header {
+        margin-bottom: 5rem;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        gap: 2rem;
+        align-items: center;
+    }
+
+
+    .cs .header h1 {
+        width: fit-content;
+        color: var(--color-text);
+        background-color: var(--color-bg-pr);
+        border-radius: 0.5rem;
+        padding: .0rem 0.2rem;
+    }
+
+    .cs .header p {
+        color: var(--color-text);
+        font-weight: 400;
+        font-size: 0.9rem;
+    }
+
+    .cs .form {
+        display: flex;
+        flex-direction: row;
+        background-color: var(--color-light);
+        border-radius: 2rem;
+        padding: 1.2rem;
+        /* text-align: center; */
+    }
+
+    .cs .form .p1 {
+        height: 100%;
+        width: 100%;
+        /* background-color: aqua; */
+    }
+
+    .cs .form .p2 {
+        display: none;
+    }
+
+
+    .cs .form .p1 .radios {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        align-items: center;
+        /* height: 1rem; */
+
+    }
+
+    .cs .form .p1 .radios label {
+        color: var(--color-text);
+        font-size: 1rem;
+        /* margin-top: 5rem; */
+    }
+
+    /* .cs .form .p1 .radios {
+
+} */
+
+
+
+    .cs .form .p1 .radios .custom-radio {
+        /* margin-top: 1rem; */
+        accent-color: var(--color-bg-pr);
+        width: 1.4rem;
+        height: 1.4rem;
+    }
+
+    .cs .form .p1 p {
+        color: var(--color-text);
+
+    }
+
+    .cs .form .txt {
+        width: 100%;
+        height: 3.5rem;
+        border-radius: 1rem;
+        padding: 1rem 2rem;
+
+    }
+
+    .cs .form textarea {
+        width: 100%;
+        height: 6.5rem;
+        border-radius: 1rem;
+        padding: 1rem 2rem;
+
+    }
+
+
+    .cs .form .btn {
+        width: 100%;
+        background-color: var(--color-dark);
+        border: none;
+        color: var(--color-white);
+        /* height: 3.5rem; */
+        border-radius: 1rem;
+        padding: 1rem 2rem;
+        margin-top: 2rem;
+
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+    .cs {
+        width: 96%;
+        margin: 0 2%;
+        margin-top: 1rem;
+        background-color: var(--color-white);
+    }
+
+    .cs .header {
+        margin-bottom: 5rem;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 2rem;
+        align-items: center;
+        text-align: center;
+    }
+
+
+    .cs .header h1 {
+        width: fit-content;
+        color: var(--color-text);
+        background-color: var(--color-bg-pr);
+        border-radius: 0.5rem;
+        padding: .0rem 0.2rem;
+    }
+
+    .cs .header p {
+        color: var(--color-text);
+        font-weight: 400;
+        font-size: 0.9rem;
+    }
+
+    .cs .form {
+        display: flex;
+        flex-direction: row;
+        background-color: var(--color-light);
+        border-radius: 2rem;
+        padding: 1.2rem;
+        /* text-align: center; */
+    }
+
+    .cs .form .p1 {
+        height: 100%;
+        width: 100%;
+        /* background-color: aqua; */
+    }
+
+    .cs .form .p2 {
+        display: none;
+    }
+
+
+    .cs .form .p1 .radios {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        align-items: center;
+        /* height: 1rem; */
+
+    }
+
+    .cs .form .p1 .radios label {
+        color: var(--color-text);
+        font-size: 1rem;
+        /* margin-top: 5rem; */
+    }
+
+    /* .cs .form .p1 .radios {
+
+} */
+
+
+
+    .cs .form .p1 .radios .custom-radio {
+        /* margin-top: 1rem; */
+        accent-color: var(--color-bg-pr);
+        width: 1.4rem;
+        height: 1.4rem;
+    }
+
+    .cs .form .p1 p {
+        color: var(--color-text);
+
+    }
+
+    .cs .form .txt {
+        width: 100%;
+        height: 3.5rem;
+        border-radius: 1rem;
+        padding: 1rem 2rem;
+
+    }
+
+    .cs .form textarea {
+        width: 100%;
+        height: 6.5rem;
+        border-radius: 1rem;
+        padding: 1rem 2rem;
+
+    }
+
+
+    .cs .form .btn {
+        width: 100%;
+        background-color: var(--color-dark);
+        border: none;
+        color: var(--color-white);
+        /* height: 3.5rem; */
+        border-radius: 1rem;
+        padding: 1rem 2rem;
+        margin-top: 2rem;
+
+    }
+}
+
+
+
+.doc {
+  padding: 12px;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  /* background: linear-gradient(rgba(255, 255, 255, 0), white) padding-box; */
+              
+    background-color: transparent ;
+  cursor: pointer;
+  width: 100%;
+  max-width: 350px;
+  color: #333;
+}
+
+.doc::file-selector-button {
+  background: var(--color-dark);
+  color: var(--color-white);
+  padding: 10px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-right: 16px;
+  font-weight: 600;
+  transition: transform 0.2s;
+}
+
+.doc::file-selector-button:hover {
+  transform: scale(1.05);
+  
+}
+

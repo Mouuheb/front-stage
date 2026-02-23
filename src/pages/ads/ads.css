@@ -1,0 +1,90 @@
+@media screen and (min-width: 800px){
+    .ads{
+        width: 90%;
+        height: 5rem;
+        margin: 0 5%;
+        /* background-color: aqua; */
+        background-color: var(--color-white);
+    
+    
+    }
+    .ads .ad-list{
+        display: flex;
+        flex-direction: row;
+        /* background-color: aqua; */
+        height: 5rem;
+        align-items: center;
+        overflow: hidden;
+        
+    }
+    
+    .ads .ad-list img{
+        height: 3.0rem;
+        margin: 1rem;
+        
+    }
+    .ads .ad-list-2{
+        display: none;
+    }
+
+}
+
+
+@media screen and (max-width: 800px){
+    .ads{
+        width: 96%;
+        height: 3rem;
+        margin: 1rem 2%;
+        /* background-color: aqua; */
+        /* background-color: var(--color-white); */
+    
+    
+    }
+    .ads .ad-list{
+        display: flex;
+        flex-direction: row;
+        margin-top: 1rem;
+        /* background-color: aqua; */
+        height: 3rem;
+        align-items: center;
+        overflow: hidden;
+        
+    }
+    
+    .ads .ad-list img{
+        height: 3rem;
+        margin: 1rem;
+        
+        
+    }
+    .ads .ad-list-2{
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: row;
+        /* background-color: aqua; */
+        height: 3rem;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .ads .ad-list-2 img{
+        height: 3rem;
+        margin: 1rem;
+        
+        
+    }
+
+}
+
+.ads .add{
+    animation: scroll 15s linear infinite;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}

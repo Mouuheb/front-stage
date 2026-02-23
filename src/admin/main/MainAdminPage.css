@@ -1,0 +1,22 @@
+.MAP{
+    margin-top: 5rem;
+    width:100%;
+    height: 50rem;
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+}
+
+.MAP .sidebar{
+    width: 30%;
+    height: 100%;
+    background-color: blueviolet;
+    overflow: hidden;
+}
+.MAP .main{
+    width: 60%;
+    height: 100%;
+    background-color: blueviolet;
+    overflow: hidden;
+}

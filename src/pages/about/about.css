@@ -1,0 +1,31 @@
+.about-cmp{
+    /* background-color: aqua; */
+    padding: 0 5%;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.about-cmp .txt-cmp{
+    padding: 5%;
+    /* background-color: beige; */
+    width: 50%;
+    
+
+}
+
+.about-cmp .img-cmp{
+    padding: 5%;
+    /* background-color: beige; */
+    width: 50%;
+    /* background-color: blueviolet; */
+
+}
+
+.about-cmp .img-cmp img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+
+}
+
