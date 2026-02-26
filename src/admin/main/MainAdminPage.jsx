@@ -5,11 +5,13 @@ import TeamAdmin from '../team/TeamAdmin'
 import Consult from '../consult/Consult'
 import EquipAdmin from '../equipment/EquipAdmin'
 import '../admin.css'
+// import LocationFinder from '../../client/map/LocationFinder'
 
 const MainAdminPage = () => {
   return (
     <div>
       MainAdminPage
+      {/* <LocationFinder/> */}
       <Project/>
       <Cat/>
       <TeamAdmin/>

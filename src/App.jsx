@@ -35,6 +35,9 @@ import SingleEquipAdmin from './admin/equipment/SingleEquipAdmin'
 import UpdateEquipAdmin from './admin/equipment/UpdateEquipAdmin'
 import CreateEquipAdmin from './admin/equipment/CreateEquipAdmin'
 import NavAdmin from './admin/nav/NavAdmin'
+import LocationFinder from './client/map/LocationFinder'
+import MapWithPolygonDraw from './client/map/MapWithPolygonDraw'
+import AreaMap from './client/map/AreaMap'
 // import EarthCanvas from './3d/Drone'
 
 // import './App.css'
@@ -44,14 +47,15 @@ function App() {
   const hideNavPaths = ['/register', '/sgprj/'];
   // const hideNav = location.pathname.includes('/admin') || hideNavPaths.some(path => location.pathname.startsWith(path));
   const hideNav = location.pathname.includes('/admin') || hideNavPaths.some(path => location.pathname.startsWith(path));
+  const hideNav2 = location.pathname.includes('/clt')
   // const hideNavPaths = ['/admin/', '/register', "/admin/prj", "/admin/cat","/sgprj/"]; // add paths where Nav should be hidden
 
 
   return (
     <>
       {/* {!hideNav.includes(location.pathname) ? <Nav /> : null} */}
-      {!hideNav && <Nav />}
-      {hideNav && <NavAdmin />}
+      {!hideNav &&!hideNav2 && <Nav />}
+      {hideNav &&!hideNav2 && <NavAdmin />}
 
       <Routes>
         <Route path="/" element={<Homepage />}>
@@ -96,11 +100,13 @@ function App() {
         <Route path="/admin/upsgeq/:id" element={<UpdateEquipAdmin />} />
         <Route path="/admin/creq/" element={<CreateEquipAdmin />} />
 
-        {/* <Route path="/drone" element={<EarthCanvas />} /> */}
+        <Route path="/clt" element={<LocationFinder />} />
+        <Route path="/clt2" element={<MapWithPolygonDraw />} />
+        <Route path="/clt3" element={<AreaMap />} />
 
 
       </Routes>
-      <Footer />
+      {!hideNav2 &&<Footer />}
     </>
   )
 }
