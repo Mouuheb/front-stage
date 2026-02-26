@@ -2,6 +2,7 @@ import React from 'react'
 import './home.css'
 import data from '../../data/data'
 import { useNavigate } from 'react-router-dom';
+import DroneCanvas from '../../3d/Drone';
 const Home = () => {
     const navigate = useNavigate();
 
@@ -34,7 +35,8 @@ const Home = () => {
 
             </div>
             <div className='image-containner'>
-                <img src={data.header.img} />
+                <DroneCanvas/>
+                {/* <img src={data.header.img} /> */}
             </div>
 
         </div>

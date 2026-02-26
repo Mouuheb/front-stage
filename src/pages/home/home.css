@@ -33,10 +33,52 @@
 
         /* background-color: beige; */
     }
-    .home .containner .image-containner{
+    /* .home .containner .image-containner{
         width: 50%;
-        /* background-color: aqua; */
-    }
+        background: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background-image: url("/img/dr1.jpg");
+    } */
+
+
+    .home .containner .image-containner {
+    position: relative;
+    width: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.home .containner .image-containner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("/img/dr1.jpg");
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px);
+    transform: scale(1.1); /* prevents blur edges cut */
+    z-index: -1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     .home .containner .image-containner img{
         width: 100%;

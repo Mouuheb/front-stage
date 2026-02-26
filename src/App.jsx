@@ -35,6 +35,7 @@ import SingleEquipAdmin from './admin/equipment/SingleEquipAdmin'
 import UpdateEquipAdmin from './admin/equipment/UpdateEquipAdmin'
 import CreateEquipAdmin from './admin/equipment/CreateEquipAdmin'
 import NavAdmin from './admin/nav/NavAdmin'
+// import EarthCanvas from './3d/Drone'
 
 // import './App.css'
 
@@ -94,6 +95,8 @@ function App() {
         <Route path="/admin/sgeq/:id" element={<SingleEquipAdmin />} />
         <Route path="/admin/upsgeq/:id" element={<UpdateEquipAdmin />} />
         <Route path="/admin/creq/" element={<CreateEquipAdmin />} />
+
+        {/* <Route path="/drone" element={<EarthCanvas />} /> */}
 
 
       </Routes>
