@@ -1,0 +1,32 @@
+.profile-main-cnt{
+    /* background-color: aqua; */
+    margin: 7rem 0;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.profile-main-cnt .p1{
+    width: 50%;
+    /* background-color: blue; */
+}
+.profile-main-cnt .p2{
+    width: 50%;
+    min-height: 20rem;
+    /* background-color: rgb(4, 124, 58); */
+}
+
+.profile-main-cnt .profile-cnt{
+    max-Width :50rem;
+    margin: 5rem;
+}
+
+.profile-main-cnt .profile-cnt button{
+    background-color: var(--color-text);
+    width: 6rem;
+    height: 2.5rem;
+    border-radius: 1rem;
+    font-size: medium;
+    font-weight: bold;
+    color: var(--color-white);
+}

@@ -23,11 +23,11 @@ const data = {
             path:'/cs',
             out:true
         },
-        // {
-        //     name:'Contact',
-        //     path:'#contact',
-        //     out:false,
-        // }
+        {
+            name:'profile',
+            path:'/authset',
+            out:false,
+        }
         
 
     ],
@@ -380,6 +380,50 @@ const data = {
         titre2:'Découvrez Un Nouveau Monde Vue Du Ciel',
         p:'Notre entreprise spécialisée dans la photogrammétrie par drone, la topographie, les SIG et la formation, vous offre des solutions de haute qualité pour vos besoins professionnels. Profitez de notre savoir-faire et découvrez un nouveau monde vu du ciel.',
         img:'img/about.jpg'
+    },
+    chat:{
+        btn1Txt:'chat',
+        title:'Ask a quation',
+        you:'you',
+        ai:'ai',
+        btn2Txt:'send',
+        placeholder:'Type your message'
+    },
+    auth:{
+        btnLogin:'Log in',
+        titleLogin:'Log in',
+        username:'username',
+        password:'password',
+        btn2Txt:'send',
+        placeholder:'Type your message',
+        create:'create account',
+        forgetpass:'Forget password',
+        email:'email',
+        fname:'first name',
+        lname:'last name',
+        tel:'phone number',
+        cpwd:'Confirm Password',
+        sup:'create account',
+        mess1:'Already have an account?',
+        title2:'Create Account',
+        title3:'My Profile',
+        logout:'logout'
+    },
+    conversation:{
+        title:'your converstatoins',
+        loadmessage:'Loading conversations...',
+        noCnvMess:'You have no conversations yet',
+        startCnv:'Start a Conversation',
+        creating:'Creating...',
+        cnvId:'Conversation',
+        cnvParticipants:'Participants',
+        unknown:'Unknown',
+        placeholder:'type message...',
+        send:'send',
+        sending:'sending'
+
+
+
     }
 
 };

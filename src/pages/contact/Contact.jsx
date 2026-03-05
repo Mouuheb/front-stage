@@ -15,11 +15,13 @@ const Contact = () => {
             <div className='p1' >
                 <div className='radios' >
                 <div className='radio'>
-                <input type='radio' name='r1' className='custom-radio' /><label>Say Hi</label>
+                <input type='radio' name='r1' className='custom-radio' /><label>formation</label>
                 </div>
                 <div>
-                <input type='radio' name='r1' className='custom-radio' /><label>Get a quote</label>
-                
+                <input type='radio' name='r1' className='custom-radio' /><label>Consultation</label>
+                <div>
+                <input type='radio' name='r1' className='custom-radio' /><label>Musure</label>
+                </div>
                 </div>
 
                 </div>

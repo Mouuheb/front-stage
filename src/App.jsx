@@ -4,7 +4,6 @@ import viteLogo from '/vite.svg'
 import Nav from './pages/nav/Nav'
 import Homepage from './pages/rooter/Homepage'
 import Projects from './pages/rooter/projects'
-// import{Routes, Route} from 'react-router-dom';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Teampage from './pages/rooter/Teampage'
 import Consultationpage from './pages/rooter/Consultationpage'
@@ -38,11 +37,19 @@ import NavAdmin from './admin/nav/NavAdmin'
 import LocationFinder from './client/map/LocationFinder'
 import MapWithPolygonDraw from './client/map/MapWithPolygonDraw'
 import AreaMap from './client/map/AreaMap'
+import Chat from './ai/Chat'
+import Login from './auth/Login'
+import CreateAcc from './auth/CreateAcc'
+import Profile from './auth/Profile'
+import ConversationList from './Messages/Conversation'
+import ConversationDetail from './Messages/ConversationDetail'
 // import EarthCanvas from './3d/Drone'
 
-// import './App.css'
+import './App.css'
+import NavAuth from './auth/NavAuth'
 
 function App() {
+  const[open,setOpen]=useState(false);
   const location = useLocation();
   const hideNavPaths = ['/register', '/sgprj/'];
   // const hideNav = location.pathname.includes('/admin') || hideNavPaths.some(path => location.pathname.startsWith(path));
@@ -53,9 +60,20 @@ function App() {
 
   return (
     <>
+    
       {/* {!hideNav.includes(location.pathname) ? <Nav /> : null} */}
       {!hideNav &&!hideNav2 && <Nav />}
       {hideNav &&!hideNav2 && <NavAdmin />}
+      
+      {!hideNav2 &&
+      <div className='chat-cnt'>
+        {open && <div className='chat-bx'><Chat/></div>}
+        <p className='chat-btn-op click-btn' onClick={()=>(setOpen(!open))}>Chat</p>
+        
+        
+        
+
+      </div>}
 
       <Routes>
         <Route path="/" element={<Homepage />}>
@@ -100,9 +118,21 @@ function App() {
         <Route path="/admin/upsgeq/:id" element={<UpdateEquipAdmin />} />
         <Route path="/admin/creq/" element={<CreateEquipAdmin />} />
 
-        <Route path="/clt" element={<LocationFinder />} />
-        <Route path="/clt2" element={<MapWithPolygonDraw />} />
-        <Route path="/clt3" element={<AreaMap />} />
+        {/* <Route path="/clt" element={<LocationFinder/>} /> */}
+        {/* <Route path="/clt2" element={<MapWithPolygonDraw />} /> */}
+        {/* <Route path="/clt3" element={<AreaMap />} /> */}
+        <Route path="/chat" element={<Chat />} />
+
+
+        {/* auth */}
+        <Route path="/clt/login" element={<Login />} />
+        <Route path="/clt/cracc" element={<CreateAcc />} />
+        <Route path="/prfl" element={<Profile/>} />
+        <Route path="/authset" element={<NavAuth/>} />
+
+        {/* message */}
+        <Route path="/allcnv" element={<ConversationList/>} />
+        <Route path="/conversations/:id" element={<ConversationDetail />} />
 
 
       </Routes>

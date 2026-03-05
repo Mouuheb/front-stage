@@ -34,6 +34,11 @@ const data = {
             path:'/admin/eq',
             out:true
         },
+        {
+            name:'profile',
+            path:'/authset',
+            out:false,
+        }
         
 
     ],

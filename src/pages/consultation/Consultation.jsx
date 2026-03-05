@@ -10,7 +10,7 @@
 //     const [tel, setTel] = useState(null);
 //     const [doc, setDoc] = useState(null);
 //     const [mess, setMess] = useState('');
-    
+
 
 //     const handleSubmit = async (e) => {
 //         e.preventDefault();
@@ -170,14 +170,14 @@
 //             const data = await response.json();
 //             console.log('Success:', data);
 //             setSuccess(true);
-            
+
 //             // Reset form
 //             setName('');
 //             setEmail('');
 //             setTel('');
 //             setDoc(null);
 //             setMess('');
-            
+
 //             // Reset file input
 //             e.target.reset();
 
@@ -293,17 +293,18 @@
 
 // export default Consultation;
 
- //-----------------------------------------------------------
+//-----------------------------------------------------------
 
 
- import React, { useState } from 'react';
+import React, { useState } from 'react';
 import './consultation.css';
 import data from '../../data/data';
 import { redirect, useNavigate } from 'react-router-dom';
+import LocationFinder from '../../client/map/LocationFinder';
 
 const Consultation = () => {
     const navigate = useNavigate();
-    
+
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [tel, setTel] = useState(null); // Number, initialized as null
@@ -340,16 +341,16 @@ const Consultation = () => {
         const formData = new FormData();
         formData.append('nom', name);
         formData.append('sujet', mess);
-        
+
         // Handle tel - send as number or null
         if (tel !== null && !isNaN(tel)) {
             formData.append('phone_number', tel);
         } else {
             formData.append('phone_number', '');
         }
-        
+
         formData.append('email', email);
-        
+
         // Only append document if it exists
         if (doc) {
             formData.append('document', doc);
@@ -367,16 +368,16 @@ const Consultation = () => {
 
             const responseData = await response.json();
             console.log('Success:', responseData);
-            
+
             setSuccess(true);
-            
+
             // Reset form
             setName('');
             setEmail('');
             setTel(null); // Reset to null
             setDoc(null);
             setMess('');
-            
+
             // Reset file input
             e.target.reset();
 
@@ -410,7 +411,7 @@ const Consultation = () => {
                     Consultation submitted successfully!
                 </div>
 
-                
+
             )
             }
 
@@ -431,13 +432,22 @@ const Consultation = () => {
                 <div className='form'>
                     <div className='p1'>
                         <div className='radios'>
-                            <div className='radio'>
+                            {/* <div className='radio'>
                                 <input type='radio' name='r1' className='custom-radio' />
                                 <label>Say Hi</label>
                             </div>
                             <div>
                                 <input type='radio' name='r1' className='custom-radio' />
                                 <label>Get a quote</label>
+                            </div> */}
+                            <div className='radio'>
+                                <input type='radio' name='r1' className='custom-radio' /><label>formation</label>
+                            </div>
+                            <div>
+                                {/* <input type='radio' name='r1' className='custom-radio' /><label>Consultation</label> */}
+                                <div>
+                                    <input type='radio' name='r1' className='custom-radio' /><label>Musure</label>
+                                </div>
                             </div>
                         </div>
 
@@ -457,7 +467,7 @@ const Consultation = () => {
                             onChange={(e) => setEmail(e.target.value)}
                             placeholder='Email'
                             className='txt'
-                            
+
                         />
 
                         <p>Tel (Optional)</p>
@@ -496,13 +506,13 @@ const Consultation = () => {
                             className='doc'
                             accept=".pdf,.doc,.docx,.jpg,.png,.jpeg"
                         />
-                        
+
                         {/* Show selected file name */}
                         {doc && (
-                            <div style={{ 
-                                marginTop: '8px', 
-                                padding: '5px', 
-                                backgroundColor: '#f5f5f5', 
+                            <div style={{
+                                marginTop: '8px',
+                                padding: '5px',
+                                backgroundColor: '#f5f5f5',
                                 borderRadius: '4px',
                                 fontSize: '14px'
                             }}>
@@ -527,20 +537,20 @@ const Consultation = () => {
                                 </button>
                             </div>
                         )}
-                        
+
                         {/* Show hint when no file selected */}
                         {!doc && (
                             <small style={{ color: '#666', display: 'block', marginTop: '5px' }}>
                                 No file selected (optional)
                             </small>
                         )}
-                        
+
                         <br />
 
                         {data?.Contact?.btn?.vzbl && (
-                            <button 
-                                type="submit" 
-                                className='btn click-btn' 
+                            <button
+                                type="submit"
+                                className='btn click-btn'
                                 disabled={loading}
                                 style={{ opacity: loading ? 0.7 : 1 }}
                             >
@@ -549,7 +559,13 @@ const Consultation = () => {
                         )}
                     </div>
                     <div className='p2'>
-                        {/* <img src={data.Contact.img} alt="contact" /> */}
+                        <div>
+                            <p>choisie votre area :</p>
+                            <br/>
+                        </div>
+                        <div className='map-cnt'>
+                        <LocationFinder/>
+                        </div>
                     </div>
                 </div>
             </form>

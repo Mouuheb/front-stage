@@ -4669,7 +4669,7 @@ const LocationFinder = () => {
   const [userLocation, setUserLocation] = useState(null);
   
   // Drawing states
-  const [drawMode, setDrawMode] = useState(false);         // ON = drawing, OFF = navigating
+  const [drawMode, setDrawMode] = useState(true);         // ON = drawing, OFF = navigating
   const [shapeType, setShapeType] = useState('polygon');   // 'polygon' or 'line'
   const [currentPoints, setCurrentPoints] = useState([]);
   const [drawingActive, setDrawingActive] = useState(false); // true after first point placed
@@ -4972,6 +4972,18 @@ const LocationFinder = () => {
   };
 
   return (
+    <div>
+      {/* <h1>bonjour</h1>
+      <div>
+      <label>nom</label>
+      <input/>
+      </div> */}
+
+      {/* <div>
+      <label>tel</label>
+      <input/>
+      </div> */}
+
     <div style={{ position: 'relative' }}>
       {/* Map container with dynamic cursor */}
       <MapContainer
@@ -5008,44 +5020,44 @@ const LocationFinder = () => {
           fontFamily: 'Arial, sans-serif',
         }}
       >
-        <h3 style={{ marginBottom: '10px' }}>Measurement Results</h3>
+        {/* <h3 style={{ marginBottom: '10px' }}>Measurement Results</h3> */}
 
-        <p>
+        {/* <p>
           <strong>Your location:</strong><br />
           {userLocation
             ? `${userLocation[0].toFixed(5)}, ${userLocation[1].toFixed(5)}`
             : 'Detecting...'}
-        </p>
+        </p> */}
 
-        <p>
+        {/* <p>
           <strong>Area:</strong><br />
           {space || '—'}
-        </p>
+        </p> */}
 
-        {lineLength && (
+        {/* {lineLength && (
           <p>
             <strong>Length:</strong><br />
             {lineLength}
           </p>
-        )}
+        )} */}
 
-        <p>
+        {/* <p>
           <strong>Perimeter:</strong><br />
           {perimeter || '—'}
-        </p>
+        </p> */}
 
-        <p>
+        {/* <p>
           <strong>Distance from X:</strong><br />
           {distanceFromX || '—'}
-        </p>
+        </p> */}
 
-        <p>
-          <strong>Land type:</strong><br />
-          {landType || '—'}
-        </p>
+        {/* <p> */}
+          {/* <strong>Land type:</strong><br /> */}
+          {/* {landType || '—'} */}
+        {/* </p> */}
 
         {/* Draw mode toggle */}
-        <div style={{ marginTop: '15px', display: 'flex', alignItems: 'center', gap: '10px' }}>
+        {/* <div style={{ marginTop: '15px', display: 'flex', alignItems: 'center', gap: '10px' }}>
           <label style={{ fontWeight: 'bold' }}>Draw mode:</label>
           <button
             onClick={() => setDrawMode(!drawMode)}
@@ -5061,10 +5073,11 @@ const LocationFinder = () => {
           >
             {drawMode ? 'ON' : 'OFF'}
           </button>
-        </div>
+        </div> */}
 
         {/* Shape type selector (only when draw mode is on) */}
-        {drawMode && (
+        {/* {drawMode && ( */}
+        {false && (
           <div style={{ marginTop: '10px', display: 'flex', gap: '8px' }}>
             <button
               onClick={() => setShapeType('polygon')}
@@ -5134,10 +5147,8 @@ const LocationFinder = () => {
                 Cancel
               </button>
             </div>
-          </>
-        )}
-
-        <button
+          
+          <button
           onClick={handleDelete}
           style={{
             marginTop: '10px',
@@ -5152,8 +5163,12 @@ const LocationFinder = () => {
         >
           Delete Shape
         </button>
+        </>
+        )}
 
-        <p style={{ fontSize: '0.9em', color: '#666', marginTop: '15px' }}>
+        
+
+        {/* <p style={{ fontSize: '0.9em', color: '#666', marginTop: '15px' }}>
           <strong>How to use:</strong><br />
           • Toggle <strong>Draw mode ON</strong> to start drawing.<br />
           • Choose <strong>Polygon</strong> (area) or <strong>Line</strong> (length).<br />
@@ -5161,8 +5176,9 @@ const LocationFinder = () => {
           • Use <strong>Finish</strong> to complete, <strong>Cancel</strong> to abort.<br />
           • Turn <strong>Draw mode OFF</strong> to pan/zoom normally (double‑click zoom works).<br />
           ⚠️ The map will not jump back to your location after you move it.
-        </p>
+        </p> */}
       </div>
+    </div>
     </div>
   );
 };

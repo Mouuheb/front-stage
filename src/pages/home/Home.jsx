@@ -35,8 +35,8 @@ const Home = () => {
 
             </div>
             <div className='image-containner'>
-                <DroneCanvas/>
-                {/* <img src={data.header.img} /> */}
+                {/* <DroneCanvas/> */}
+                <img src={data.header.img} />
             </div>
 
         </div>

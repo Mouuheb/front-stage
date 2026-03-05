@@ -1,0 +1,35 @@
+.chat-cnt{
+    /* background-color: aqua; */
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    z-index: 1000000;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin: 5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.chat-cnt .chat-btn-op{
+    width: 5rem;
+    height: 5rem;
+    background-color: var(--color-bg-pr);
+    background-color: var(--color-4);
+    border-radius: 5rem;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    color: var(--color-black);
+    font-size: larger;
+    font-weight: bold;
+    border: solid .1rem;
+    /* width: fit-content; */
+    /* height: fit-content; */
+}
+
+.chat-cnt .chat-bx{
+    width: 20rem;
+    height: 30rem;
+    /* border: solid; */
+}
