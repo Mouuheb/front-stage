@@ -7,7 +7,7 @@ const Home = () => {
     const navigate = useNavigate();
 
     const handleClick = () => {
-        navigate('/');
+        // navigate('/');
         // or with state
         navigate('/cs', { state: { from: 'home' } });
     };
@@ -21,15 +21,14 @@ const Home = () => {
                 </div>
                 <p>{data.header.p}</p>
                 <div className='btn-cmp' >
-                {data.header.btn.map((btn,index)=>{
-                    return(
-                        btn.vzbl && <button className='btn click-btn' key={index} onClick={handleClick} >
-                            {btn.btnText}
+                    <button className='btn click-btn' onClick={handleClick} >
+                            {data.header.btn[0].btnText}
 
-                        </button>
+                    </button>
+                    <a className='btn click-btn' href='#contact' >
+                            {data.header.btn[1].btnText}
 
-                    )
-                })}
+                    </a>
                 </div>
                 
 

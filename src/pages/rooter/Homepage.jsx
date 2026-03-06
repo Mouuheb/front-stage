@@ -8,7 +8,6 @@ import Team from '../team/Team'
 import Contact from '../contact/Contact'
 import Footer from '../footer/Footer'
 import About from '../about/About'
-import Consultation from '../consultation/Consultation'
 
 const Homepage = () => {
   return (
@@ -21,8 +20,7 @@ const Homepage = () => {
         <Case/>
         <Work show={true} />
         <Team/>
-        {/* <Contact/> */}
-        <Consultation/>
+        <Contact/>
         
     </>
   )

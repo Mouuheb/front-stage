@@ -1,318 +1,37 @@
-// import React,{useState,useEffect} from 'react'
-// import './consultation.css'
-// import data from '../../data/data'
-// import { redirect } from 'react-router-dom';
-
-// const Consultation = () => {
-
-//     const [name, setName] = useState('');
-//     const [email, setEmail] = useState(null);
-//     const [tel, setTel] = useState(null);
-//     const [doc, setDoc] = useState(null);
-//     const [mess, setMess] = useState('');
-
-
-//     const handleSubmit = async (e) => {
-//         e.preventDefault();
-//         // const formData = new FormData();
-//         // formData.append('document', doc) ||null; // Append the file
-
-
-//         try {
-//             const response = await fetch('http://localhost:8000/api/consultations/create/', {
-//                 method: 'POST',
-//                 headers: {
-//                     'Content-Type': 'application/json',
-//                 },
-//                 body: JSON.stringify({ 'nom':name, "sujet":mess, "phone_number":tel, "email":email, "document":doc }),
-//             });
-
-//             if (!response.ok) {
-//                 throw new Error('Failed to create user');
-//             }
-
-//             const data = await response.json();
-//             console.log('data:', data);
-
-//         } catch (error) {
-//             console.error('Error:', error);
-//         }
-//     };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//     return (
-//         <div className='cs'>
-//             <div className='header' >
-//                 <div className='title' >
-//                     <h1>{data.consultation.title}</h1>
-//                 </div>
-//                 <p>{data.consultation.p}</p>
-//             </div>
-//             <form onSubmit={handleSubmit}>
-//             <div className='form' >
-//                 <div className='p1' >
-//                     <div className='radios' >
-//                         <div className='radio'>
-//                             <input type='radio' name='r1' className='custom-radio' /><label>Say Hi</label>
-//                         </div>
-//                         <div>
-//                             <input type='radio' name='r1' className='custom-radio' /><label>Get a quote</label>
-
-//                         </div>
-
-//                     </div>
-
-//                     <p>Name</p>
-//                     <input
-//                     onChange={(e) => setName(e.target.value)}
-//                      placeholder='name' className='txt' />
-//                     <p>Email</p>
-//                     <input
-//                     onChange={(e) => setEmail(e.target.value)}
-//                      placeholder='Email' className='txt' />
-//                     <p>Tel</p>
-//                     <input
-//                     onChange={(e) => setTel(e.target.value)}
-//                      placeholder='Tel' className='txt' />
-//                     <p>Message</p>
-//                     <textarea
-//                     onChange={(e) => setMess(e.target.value)}
-//                      placeholder='message' >
-//                     </textarea>
-//                     <p>doc</p>
-//                     <input
-//                     onChange={(e) => setDoc(e.target.files[0])}
-//                     // setDoc(e.target.files[0])|| null;
-//                      type="file" className='doc' />
-//                     <br />
-//                     {data.Contact.btn.vzbl && <button type="submit" className='btn'>{data.Contact.btn.txt}</button>}
-
-
-//                 </div>
-//                 <div className='p2' >
-//                     {/* <img src={data.Contact.img} /> */}
-//                 </div>
-
-//             </div>
-//             </form>
-//         </div>
-//     )
-// }
-
-// export default Consultation
-
-//--------------------------------------------
-
-// import React, { useState, useEffect } from 'react';
-// import './consultation.css';
-// import data from '../../data/data';
-// 
-
-// const Consultation = () => {
-//     const [name, setName] = useState('');
-//     const [email, setEmail] = useState('');
-//     const [tel, setTel] = useState(null);
-//     const [doc, setDoc] = useState(null);
-//     const [mess, setMess] = useState('');
-//     const [loading, setLoading] = useState(false);
-//     const [success, setSuccess] = useState(false);
-//     const [error, setError] = useState('');
-
-//     const handleFileChange = (e) => {
-//         setDoc(e.target.files[0])|| null; // Get the actual file object
-//     };
-
-//     const handleSubmit = async (e) => {
-//         e.preventDefault();
-//         setLoading(true);
-//         setError('');
-//         setSuccess(false);
-
-//         // Create FormData object
-//         const formData = new FormData();
-//         formData.append('nom', name);
-//         formData.append('sujet', mess);
-//         formData.append('phone_number', tel);
-//         formData.append('email', email);
-//         formData.append('document', doc); // Append the file
-
-//         try {
-//             const response = await fetch('http://localhost:8000/api/consultations/create/', {
-//                 method: 'POST',
-//                 // DON'T set Content-Type header - browser will set it automatically with boundary
-//                 body: formData,
-//             });
-
-//             if (!response.ok) {
-//                 throw new Error('Failed to submit consultation');
-//             }
-
-//             const data = await response.json();
-//             console.log('Success:', data);
-//             setSuccess(true);
-
-//             // Reset form
-//             setName('');
-//             setEmail('');
-//             setTel('');
-//             setDoc(null);
-//             setMess('');
-
-//             // Reset file input
-//             e.target.reset();
-
-//         } catch (error) {
-//             console.error('Error:', error);
-//             setError(error.message);
-//         } finally {
-//             setLoading(false);
-//         }
-//     };
-
-//     return (
-//         <div className='cs'>
-//             <div className='header'>
-//                 <div className='title'>
-//                     <h1>{data?.consultation?.title}</h1>
-//                 </div>
-//                 <p>{data?.consultation?.p}</p>
-//             </div>
-
-//             {/* Success Message */}
-//             {success && redirect('/')}
-
-//             {/* Error Message */}
-//             {error && (
-//                 <div className="error-message">
-//                     Error: {error}
-//                 </div>
-//             )}
-
-//             <form onSubmit={handleSubmit} encType="multipart/form-data">
-//                 <div className='form'>
-//                     <div className='p1'>
-//                         <div className='radios'>
-//                             <div className='radio'>
-//                                 <input type='radio' name='r1' className='custom-radio' />
-//                                 <label>Say Hi</label>
-//                             </div>
-//                             <div>
-//                                 <input type='radio' name='r1' className='custom-radio' />
-//                                 <label>Get a quote</label>
-//                             </div>
-//                         </div>
-
-//                         <p>Name</p>
-//                         <input
-//                             value={name}
-//                             onChange={(e) => setName(e.target.value)}
-//                             placeholder='Name'
-//                             className='txt'
-//                             required
-//                         />
-
-//                         <p>Email</p>
-//                         <input
-//                             type="email"
-//                             value={email}
-//                             onChange={(e) => setEmail(e.target.value)}
-//                             placeholder='Email'
-//                             className='txt'
-//                             // required
-//                         />
-
-//                         <p>Tel</p>
-//                         <input
-//                             type="tel"
-//                             value={tel}
-//                             onChange={(e) => setTel(e.target.value)}
-//                             placeholder='Tel'
-//                             className='txt'
-//                             // required
-//                         />
-
-//                         <p>Message</p>
-//                         <textarea
-//                             value={mess}
-//                             onChange={(e) => setMess(e.target.value)}
-//                             placeholder='Message'
-//                             required
-//                         />
-
-//                         <p>Document</p>
-//                         <input
-
-//                             onChange={handleFileChange} // Changed to handleFileChange
-//                             type="file"
-//                             className='doc'
-//                             accept=".pdf,.doc,.docx,.jpg,.png" // Specify accepted file types
-//                         />
-//                         {doc && (
-//                             <small>Selected file: {doc.name}</small>
-//                         )}
-//                         <br />
-
-//                         {data?.Contact?.btn?.vzbl && (
-//                             <button 
-//                                 type="submit" 
-//                                 className='btn' 
-//                                 disabled={loading}
-//                             >
-//                                 {loading ? 'Submitting...' : data.Contact.btn.txt}
-//                             </button>
-//                         )}
-//                     </div>
-//                     <div className='p2'>
-//                         {/* <img src={data.Contact.img} alt="contact" /> */}
-//                     </div>
-//                 </div>
-//             </form>
-//         </div>
-//     );
-// };
-
-// export default Consultation;
-
-//-----------------------------------------------------------
-
-
 import React, { useState } from 'react';
 import './consultation.css';
 import data from '../../data/data';
 import { redirect, useNavigate } from 'react-router-dom';
 import LocationFinder from '../../client/map/LocationFinder';
 
+
+
 const Consultation = () => {
     const navigate = useNavigate();
 
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
-    const [tel, setTel] = useState(null); // Number, initialized as null
+    const [tel, setTel] = useState(null);
     const [doc, setDoc] = useState(null);
     const [mess, setMess] = useState('');
     const [loading, setLoading] = useState(false);
     const [success, setSuccess] = useState(false);
     const [error, setError] = useState('');
+
+    const [dis, setDis] = useState(null);
+    const [area, setArea] = useState(null);
+    const [showMap, setShowMap] = useState(false);
+
+    const [note, setNote] = useState('');
+
+    const handleAreaDisChange = (prarea,prdis,point) =>{
+        setArea(prarea);
+        setDis(prdis);
+        console.log('parent'+prarea+' '+prdis+' ',point)
+        setNote('location ~= '+point+' , area ~= '+prarea+'m², distance ~= '+prdis+'km, price ~= '+((prarea/10000*2000)+(prdis/100*60))+' dt');
+    };
+
+        
 
     const handleFileChange = (e) => {
         const file = e.target.files?.[0] || null;
@@ -341,6 +60,7 @@ const Consultation = () => {
         const formData = new FormData();
         formData.append('nom', name);
         formData.append('sujet', mess);
+        formData.append('notes', note);
 
         // Handle tel - send as number or null
         if (tel !== null && !isNaN(tel)) {
@@ -374,9 +94,11 @@ const Consultation = () => {
             // Reset form
             setName('');
             setEmail('');
-            setTel(null); // Reset to null
+            setTel(null);
             setDoc(null);
             setMess('');
+            setArea(0);
+            setDis(0);
 
             // Reset file input
             e.target.reset();
@@ -432,21 +154,13 @@ const Consultation = () => {
                 <div className='form'>
                     <div className='p1'>
                         <div className='radios'>
-                            {/* <div className='radio'>
-                                <input type='radio' name='r1' className='custom-radio' />
-                                <label>Say Hi</label>
-                            </div>
-                            <div>
-                                <input type='radio' name='r1' className='custom-radio' />
-                                <label>Get a quote</label>
-                            </div> */}
                             <div className='radio'>
-                                <input type='radio' name='r1' className='custom-radio' /><label>formation</label>
+                                <input type='radio' name='r1' className='custom-radio' onClick={()=>(setShowMap(false))} /><label>formation</label>
                             </div>
                             <div>
                                 {/* <input type='radio' name='r1' className='custom-radio' /><label>Consultation</label> */}
                                 <div>
-                                    <input type='radio' name='r1' className='custom-radio' /><label>Musure</label>
+                                    <input type='radio' name='r1' className='custom-radio' onClick={()=>(setShowMap(true))} /><label>Musure</label>
                                 </div>
                             </div>
                         </div>
@@ -558,15 +272,15 @@ const Consultation = () => {
                             </button>
                         )}
                     </div>
-                    <div className='p2'>
+                    {showMap&&<div className='p2'>
                         <div>
                             <p>choisie votre area :</p>
                             <br/>
                         </div>
                         <div className='map-cnt'>
-                        <LocationFinder/>
+                        <LocationFinder setinfo={handleAreaDisChange}/>
                         </div>
-                    </div>
+                    </div>}
                 </div>
             </form>
         </div>

@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import './conversation.css'
 import ConversationList from './Conversation';
 import data from '../data/data';
+import { fetchWithAuth } from '../auth/api';
 const API_BASE_URL = 'http://localhost:8000/api';
 
 const ConversationDetail = () => {
@@ -36,7 +37,7 @@ const ConversationDetail = () => {
       }
 
       try {
-        const response = await fetch(`${API_BASE_URL}/conversations/${id}/messages/`, {
+        const response = await fetchWithAuth(`${API_BASE_URL}/conversations/${id}/messages/`, {
           headers: { Authorization: `Bearer ${token}` },
         });
 
@@ -55,7 +56,7 @@ const ConversationDetail = () => {
         setMessages(data);
 
         // Mark messages as read (background)
-        fetch(`${API_BASE_URL}/conversations/${id}/mark-read/`, {
+        fetchWithAuth(`${API_BASE_URL}/conversations/${id}/mark-read/`, {
           method: 'POST',
           headers: { Authorization: `Bearer ${token}` },
         }).catch(err => console.warn('Failed to mark messages as read', err));

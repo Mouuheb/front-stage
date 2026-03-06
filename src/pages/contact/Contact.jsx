@@ -15,13 +15,10 @@ const Contact = () => {
             <div className='p1' >
                 <div className='radios' >
                 <div className='radio'>
-                <input type='radio' name='r1' className='custom-radio' /><label>formation</label>
+                <input type='radio' name='r1' className='custom-radio' /><label>{data.Contact.stage}</label>
                 </div>
                 <div>
-                <input type='radio' name='r1' className='custom-radio' /><label>Consultation</label>
-                <div>
-                <input type='radio' name='r1' className='custom-radio' /><label>Musure</label>
-                </div>
+                <input type='radio' name='r1' className='custom-radio' /><label>{data.Contact.rendivo}</label>
                 </div>
 
                 </div>
@@ -37,7 +34,7 @@ const Contact = () => {
 
                 </textarea>
                 <br/>
-                { data.Contact.btn.vzbl &&<button className='btn'>{data.Contact.btn.txt}</button>}
+                { data.Contact.btn.vzbl &&<button className='btn click-btn2'>{data.Contact.btn.txt}</button>}
                 
 
             </div>

@@ -3,8 +3,19 @@
     /* text-align: center; */
     /* background-color: aqua; */
     padding: 3rem;
+    
 
 }
+
+.conversation-main-page ul{
+    display: flex;
+    flex-direction: column;
+    /* background-color: aqua; */
+}
+    
+
+
+
 .conversation-main-page button{
     border-radius: 1rem;
     height: 3rem;

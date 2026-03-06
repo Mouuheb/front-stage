@@ -1,3 +1,5 @@
+import { Stage } from "@react-three/drei";
+
 const data = {
     name:'Drone Discovery',
     logo:'img/logo.png',
@@ -352,7 +354,10 @@ const data = {
         btn:{
             vzbl:true,
             txt:'send message'
-        }
+        },
+        stage:'stage',
+        rendivo:'render-vouez',
+
     },
     consultation:{
         img:'img/f2.png',

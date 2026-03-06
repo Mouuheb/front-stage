@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './conversation.css'
 import data from '../data/data';
+import { fetchWithAuth } from './../auth/api';
 
 const API_BASE_URL = 'http://localhost:8000/api';
 
@@ -16,19 +17,19 @@ const ConversationList = () => {
     const fetchConversations = async () => {
       const token = localStorage.getItem('access_token');
       if (!token) {
-        navigate('/login');
+        navigate('/clt/login');
         return;
       }
 
       try {
-        const response = await fetch(`${API_BASE_URL}/conversations/`, {
+        const response = await fetchWithAuth(`${API_BASE_URL}/conversations/`, {
           headers: { Authorization: `Bearer ${token}` },
         });
 
         if (!response.ok) {
           if (response.status === 401) {
             localStorage.removeItem('access_token');
-            navigate('/login');
+            navigate('/clt/login');
           }
           throw new Error('Failed to load conversations');
         }
@@ -48,7 +49,7 @@ const ConversationList = () => {
   const handleCreateConversation = async () => {
     const token = localStorage.getItem('access_token');
     if (!token) {
-      navigate('/login');
+      navigate('/clt/login');
       return;
     }
 
@@ -56,7 +57,7 @@ const ConversationList = () => {
     setError('');
 
     try {
-      const response = await fetch(`${API_BASE_URL}/conversations/create/`, {
+      const response = await fetchWithAuth(`${API_BASE_URL}/conversations/create/`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -84,9 +85,12 @@ const ConversationList = () => {
   return (
     <div className='conversation-main-page'>
       <h2>{data.conversation.title}</h2>
+
       {error && <p style={{ color: 'red' }}>{error}</p>}
+
       {conversations.length === 0 ? (
-        <div>
+        
+        <div >
           <p>{data.conversation.noCnvMess}</p>
           <button
             onClick={handleCreateConversation}
@@ -95,6 +99,8 @@ const ConversationList = () => {
             {creating ? data.conversation.creating : data.conversation.startCnv}
           </button>
         </div>
+        
+        
       ) : (
         <ul style={{ listStyle: 'none', padding: 0 }}>
           {conversations.map((conv) => (
