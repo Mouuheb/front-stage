@@ -227,6 +227,8 @@ const data = {
             }
         ],
         footerBtn:'voir plus',
+        searchBtn:'search',
+        serchTxt:'Rechercher un projet...',
     },
     team:{
         title:'Team',
