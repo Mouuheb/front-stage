@@ -4,7 +4,7 @@ import './about.css'
 
 const About = () => {
   return (
-    <div className='about-cmp'>
+    <div className='about-cmp main-cnt-div'>
 
         <div className='img-cmp'>
             <img src={data.about.img} />
