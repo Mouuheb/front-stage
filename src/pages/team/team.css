@@ -1,16 +1,16 @@
 @media screen and (min-width: 1200px) {
     .team {
         width: 90%;
-        margin: 7rem 5%;
-        background-color: var(--color-white);
+        margin: var(--margin-tb) var(--margin-lr);
+        
 
     }
 
     .team .header {
-        margin: 5rem 0;
+        margin-bottom: var(--main-cnt-padding);
         display: flex;
         flex-direction: row;
-        width: 50%;
+        width: 100%;
         gap: 2rem;
         align-items: center;
     }
@@ -23,27 +23,27 @@
         border-radius: 0.5rem;
         padding: .0rem 0.2rem;
     }
-
+    
     .team .header p {
-        color: var(--color-text);
+        color: var(--color-p);
         font-weight: 400;
         font-size: 0.9rem;
     }
 
     .team .element {
         display: grid;
-        /* grid-template-columns: repeat(auto-fill, minmax(50%, 0fr)); */
         grid-template-columns: 1fr 1fr 1fr;
         gap: 2.5%;
     }
 
     .team .element .card {
         width: 100%;
-        background-color: var(--color-white);
-        padding: 2rem;
-        border: solid var(--color-text) 1px;
-        border-radius: 2rem;
-        box-shadow: 0rem .3rem .04rem var(--color-dark);
+        background-color: var(--color-text);
+        padding: var(--margin-tb-div-cnt);
+        border-radius: var(--border-radius-v);
+        box-shadow: 0 0 5px var(--glow-color),
+               0 0 10px var(--glow-color) ,
+               0 0 20px var(--glow-color);
 
     }
 
@@ -51,18 +51,21 @@
         display: flex;
         flex-direction: row;
         gap: 1rem;
-        height: 12rem;
+        /* min-height: 12rem; */
         height: 50%;
-        /* overflow: hidden; */
-        /* display: block; */
+        height: fit-content;
+        padding: 1rem 0;
+    }
+    .team .element .card .p2 {
+        padding: 1rem 0;
     }
 
     .team .element .card .img-containner {
         width: 7rem;
         height: 7rem;
         border-radius: 50rem;
-        background-color: bisque;
-        /* overflow: hidden; */
+        background-color: var(--color-bg-pr);
+        
     }
 
     .team .element .card .img-containner img {
@@ -82,29 +85,27 @@
     }
 
     .team .element .card .p1 .sosial {
-        background-color: azure;
         height: 2rem;
     }
 
     .team .element .card h2 {
         font-size: 1.4rem;
+        color: var(--color-title);
+        margin-bottom: .8rem;
     }
 
     .team .btn-componment {
-        margin: 5rem 0;
+
+        margin-top: var(--margin-tb-div-cnt);
+        
         width: 100%;
+        text-align: end;
         /* background-color: aqua; */
         /* justify-content: end; */
     }
 
     .team .btn-componment .btn {
-
-        padding: 1rem 5rem;
-        background-color: var(--color-dark);
-        text-decoration: none;
-        color: var(--color-white);
-        border-radius: 1rem;
-        float: right;
+        
     }
 }
 

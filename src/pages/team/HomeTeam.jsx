@@ -4,7 +4,7 @@ import data from '../../data/data'
 import { FaLinkedinIn } from "react-icons/fa6";
 import { useNavigate } from 'react-router-dom';
 
-const Team = () => {
+const HomeTeam = () => {
   const [team, setTeam] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -74,29 +74,13 @@ const Team = () => {
         })}
 
       </div>
-      
+      <div className='btn-componment'>
+        {data.team.btn.vzbl && <button className='btn click-btn2 main-btn' onClick={handleClick} href={data.team.btn.path} >
+          {data.team.btn.txt}
+        </button>}
+      </div>
     </div>) : (<div>loading</div>)
   )
 }
 
-export default Team
-
-// --------------------------------------------------------------------------------------
-
-
-function UserList() {
-
-
-
-
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error}</div>;
-
-  return (
-    <ul>
-      {users.map(user => (
-        <li key={user.id}>{user.name}</li>
-      ))}
-    </ul>
-  );
-}
+export default HomeTeam

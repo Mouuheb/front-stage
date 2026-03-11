@@ -3,7 +3,7 @@ import Home from '../home/Home'
 import Ads from '../ads/Ads'
 import Services from '../services/Services'
 import Case from '../case/Case'
-import Team from '../team/Team'
+import HomeTeam from '../team/HomeTeam'
 import Contact from '../contact/Contact'
 import Footer from '../footer/Footer'
 import About from '../about/About'
@@ -19,7 +19,7 @@ const Homepage = () => {
         <Services/>
         <Case/>
         <HomeWork/>
-        <Team/>
+        <HomeTeam/>
         <Contact/>
         
     </>
