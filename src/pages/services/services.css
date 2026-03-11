@@ -1,10 +1,14 @@
 @media screen and (min-width: 1200px) {
     .sev {
         width: 90%;
-        margin: 0 5%;
-        /* margin-bottom: 0rem; */
-        background-color: var(--color-white);
+        margin: 0 var(--margin-lr);
         overflow: hidden;
+    }
+    .sev .containner{
+        display: flex;
+        flex-direction: column;
+        gap: var(--margin-tb-div-cnt);
+        
     }
 
     .sev .header {
@@ -94,15 +98,9 @@
         object-fit: fill;
     }
 
-    /* .sev img {
-        margin: 25% 0;
-        align-items: center;
-    } */
-
     .sev .card h2 {
 
         color: var(--color-text);
-        /* background-color: var(--color-bg-pr); */
         border-radius: 0.5rem;
         padding: .0rem 0.2rem;
         width: fit-content;
@@ -111,15 +109,9 @@
     }
 
     .sev .element .btn {
-
-        /* align-items: center; */
         gap: .5rem;
         display: flex;
         flex-direction: row;
-
-
-
-
     }
 
     .sev .element .btn a {
@@ -128,9 +120,7 @@
         text-decoration: none;
     }
 
-    /* .sev .card .txt-content */
     .sev .txt-content .icon {
-        /* color: var(--color-bg-pr); */
         font-size: 2.0rem;
         border-radius: 100%;
         background-color: var(--color-dark);
@@ -151,7 +141,6 @@
     .sev .footer .card {
         display: flex;
         flex-direction: row;
-        /* background-color: aqua; */
         background-color: var(--color-light);
         width: 100%;
         height: 20rem;
@@ -164,19 +153,9 @@
 
     }
 
-    .sev .footer .card img {
-        align-items: center;
-        margin: -15% 18%;
-        height: 160%;
-    }
 
-    .sev .footer .btn {
-        background-color: var(--color-dark);
-        width: fit-content;
-        padding: 1rem;
-        border-radius: 0.5rem;
-        color: var(--color-white);
-    }
+
+    
 
     .sev .txt-content .icon-aa {
         background-color: var(--color-dark);
@@ -194,6 +173,20 @@
         background-color: var(--color-white);
         color: var(--color-dark);
 
+    }
+
+    .sev  .aa p, .sev  .bb p{
+        margin-top: var(--margin-tb-div-cnt);
+        color: var(--color-text);
+
+    }
+
+    .sev .footer p{
+        color: var(--color-text);
+    }
+
+    .sev .footer .btn {
+        
     }
 }
 

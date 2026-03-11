@@ -5,7 +5,7 @@ import { TiLink } from "react-icons/ti";
 import { Link } from 'react-router-dom';
 const Services = () => {
   return (
-    <div className='sev' >
+    <div className='sev main-cnt-div' >
         <div className='containner' >
           <div className='header' >
             <h1>{data.services.title}</h1>
@@ -53,7 +53,7 @@ const Services = () => {
 
                         </div>
                         <Link to={data.services.footer.path}>
-                        <button className='btn click-btn'>{data.services.footer.btn.txt}</button>
+                        <button className='btn click-btn2 main-btn'>{data.services.footer.btn.txt}</button>
                         </Link>
                         </>
                     )
