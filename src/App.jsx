@@ -43,10 +43,14 @@ import CreateAcc from './auth/CreateAcc'
 import Profile from './auth/Profile'
 import ConversationList from './Messages/Conversation'
 import ConversationDetail from './Messages/ConversationDetail'
+import FileList from './potree/FileList'
+import UploadZip from './potree/UploadZip'
 // import EarthCanvas from './3d/Drone'
 
 import './App.css'
 import NavAuth from './auth/NavAuth'
+import { Stars } from '@react-three/drei'
+import StarsCanvas from './3d/stars'
 
 function App() {
   const[open,setOpen]=useState(false);
@@ -60,6 +64,8 @@ function App() {
 
   return (
     <>
+    <StarsCanvas/>
+    
     
       {/* {!hideNav.includes(location.pathname) ? <Nav /> : null} */}
       {!hideNav &&!hideNav2 && <Nav />}
@@ -133,6 +139,14 @@ function App() {
         {/* message */}
         <Route path="/allcnv" element={<ConversationList/>} />
         <Route path="/conversations/:id" element={<ConversationDetail />} />
+
+
+        {/* potree */}
+        <Route path="/uppotr" element={<UploadZip/>} />
+        <Route path="/potr" element={<FileList/>} />
+
+        
+    
 
 
       </Routes>

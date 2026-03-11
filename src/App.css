@@ -1,5 +1,4 @@
 .chat-cnt{
-    /* background-color: aqua; */
     width: fit-content;
     height: fit-content;
     position: absolute;
@@ -24,12 +23,16 @@
     font-size: larger;
     font-weight: bold;
     border: solid .1rem;
-    /* width: fit-content; */
-    /* height: fit-content; */
 }
 
 .chat-cnt .chat-bx{
     width: 20rem;
     height: 30rem;
-    /* border: solid; */
+}
+
+body{
+    background-image: url("/bg/2.jpg"); 
+    background-size: 320px auto;
+    height: fit-content;
+    background-repeat: repeat;
 }

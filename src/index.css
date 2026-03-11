@@ -8,14 +8,14 @@
   font-optical-sizing: auto;
   /* font-weight: ; */
   font-style: normal;
+  margin: 0;
+  /* filter: invert(0.3); */
 }
 
 
 :root {
   /* color */
   --color-text:#000000;
-  /* --color-bg-pr:#B9FF66; */
-  /* --color-bg-pr:#bb8967; */
   --color-bg-pr:#a7ff95;
   --color-dark:#515257;
   --color-dark-2:#58595e;
@@ -27,6 +27,24 @@
   --color-4: #c6c6c6;
   --color-5: #f0f0f0;
   --color-6: #dd1111;
+
+  --blur-color:#f8f8f836;
+  --color-title:#ffffff;
+  --margin-lr:5%;
+  --margin-tb:5rem;
+  --blur-main-v:10px;
+  --border-radius-v:1rem;
+  --border-color:#ffffff;
+  --border-v: .15rem;
+  --glow-v: 0,0,5;
+  --glow-color: #ebebeb;
+  --main-cnt-padding:2rem;
+  --color-p:#cccccc;
+  --color-bg-btn:#000000;
+
+  --margin-tb-div-cnt:2rem;
+  --btn-padding:1rem;
+
 
   /* --font-family-text:    'Inter', sans-serif; */
 
@@ -95,6 +113,41 @@ body{
      text-underline-offset: 4px; */
 }
 
+
+.main-cnt-div{
+  background: var(--blur-color); 
+  backdrop-filter: blur(var(--blur-main-v));
+  -webkit-backdrop-filter: blur(var(--blur-main-v));
+  border-radius: var(--border-radius-v);
+  border: solid var(--border-color) var(--border-v);
+  box-shadow: 0 0 5px var(--glow-color),
+               0 0 10px var(--glow-color) ,
+               0 0 20px var(--glow-color);
+  padding: var(--main-cnt-padding);
+
+
+}
+
+h1{
+  color: var(--color-title);
+}
+
+p{
+  color: var(--color-p);
+}
+
+.main-btn{
+  background-color: var(--color-bg-btn);
+  
+  margin: 0rem 1rem 0 0rem;
+  padding: var(--btn-padding);
+    
+  border-radius: var(--border-radius-v);
+  color: var(--color-white);
+  box-shadow: 0 0 5px var(--glow-color),
+               0 0 10px var(--glow-color) ,
+               0 0 20px var(--glow-color);
+}
 
 
 

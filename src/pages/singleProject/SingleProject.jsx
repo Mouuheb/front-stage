@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import MapWithLeaflet from '../map/MapWithLeaflet';
 
 const SingleProject = (prop) => {
-    console.log("second id : "+prop)
+    console.log("second id : "+prop.id)
     const [proj, setproject] = useState(prop.id)
     const [project, setProject] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -63,6 +63,7 @@ const SingleProject = (prop) => {
                 setLoading(false);
             });
     }, []);
+    console.log("3333")
     console.log(project);
 
 
@@ -74,7 +75,7 @@ const SingleProject = (prop) => {
 
 
     return (
-        loading === false ? (<div className='singleproject'>
+        loading !== false ? (<div className='singleproject'>
             <div className='header' >
                 <div className='title' >
                     <h1>Nos Projet</h1>
