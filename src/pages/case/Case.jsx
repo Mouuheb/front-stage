@@ -4,7 +4,7 @@ import { TiLink } from "react-icons/ti";
 import data from '../../data/data'
 const Case = () => {
   return (
-    <div className='case'>
+    <div className='case main-cnt-div'>
         <div className='header' >
             <div className='title' >
                 <h1>{data.CaseStudies.title}</h1>

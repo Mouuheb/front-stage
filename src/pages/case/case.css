@@ -1,21 +1,21 @@
 @media screen and (min-width: 1200px) {
     .case {
         width: 90%;
-        margin: 0 5%;
+        margin: var(--margin-tb) var(--margin-lr) 0 var(--margin-lr);
         margin-top: 5rem;
-        background-color: var(--color-white);
     }
 
     .case .header {
         display: flex;
         flex-direction: row;
-        width: 60%;
-        gap: 2rem;
+        width: 100%;
+        gap: var(--margin-tb-div-cnt);
         align-items: center;
     }
 
     .case .header .title {
         width: 35%;
+        
     }
 
     .case .header h1 {
@@ -27,18 +27,18 @@
     }
 
     .case .header p {
-        color: var(--color-text);
+        color: var(--color-p);
         font-weight: 400;
         font-size: 0.9rem;
     }
 
     .case .element {
-        background-color: var(--color-dark);
-        color: var(--color-white);
+        background-color: var(--color-white);
+        color: var(--color-text);
         display: flex;
         flex-direction: row;
-        margin: 5rem 0;
-        border-radius: 2rem;
+        margin: var(--margin-tb-div-cnt) 0 0 0;
+        border-radius: var(--border-radius-v);
         height: 16rem;
         gap: 3rem;
         padding: 1rem 3rem;
