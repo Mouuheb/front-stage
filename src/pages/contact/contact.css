@@ -1,17 +1,15 @@
 @media screen and (min-width: 1200px) {
     .contact {
         width: 90%;
-        margin: 0 5%;
-        margin-top: 5rem;
-        background-color: var(--color-white);
+        margin: var(--margin-tb) var(--margin-lr);
     }
 
     .contact .header {
-        margin-bottom: 5rem;
+        margin-bottom: var(--main-cnt-padding);
         display: flex;
         flex-direction: row;
-        width: 60%;
-        gap: 2rem;
+        width: 100%;
+        gap: var(--main-cnt-padding);
         align-items: center;
     }
 
@@ -28,7 +26,7 @@
     }
 
     .contact .header p {
-        color: var(--color-text);
+        color: var(--color-p);
         font-weight: 400;
         font-size: 0.9rem;
     }
@@ -37,7 +35,7 @@
         display: flex;
         flex-direction: row;
         background-color: var(--color-light);
-        border-radius: 2rem;
+        border-radius: var(--border-radius-v);
         padding: 5rem 0rem 5rem 5rem;
         /* text-align: center; */
     }
@@ -45,6 +43,9 @@
     .contact .form .p1 {
         height: 100%;
         width: 80%;
+        display: flex;
+        flex-direction: column;
+        gap:var(--main-cnt-padding);
     }
 
     .contact .form .p2 {
@@ -67,9 +68,6 @@
         /* margin-top: 5rem; */
     }
 
-    /* .contact .form .p1 .radios {
-
-} */
 
 
 
@@ -88,7 +86,7 @@
     .contact .form .txt {
         width: 50%;
         height: 3.5rem;
-        border-radius: 1rem;
+       border-radius: var(--border-radius-v);
         padding: 1rem 2rem;
 
     }
@@ -96,21 +94,13 @@
     .contact .form textarea {
         width: 50%;
         height: 8.5rem;
-        border-radius: 1rem;
+        border-radius: var(--border-radius-v);
         padding: 1rem 2rem;
 
     }
 
     .contact .form .btn {
         width: 50%;
-        background-color: var(--color-dark);
-        border: none;
-        color: var(--color-white);
-        /* height: 3.5rem; */
-        border-radius: 1rem;
-        padding: 1rem 2rem;
-        margin-top: 2rem;
-
     }
 }
 

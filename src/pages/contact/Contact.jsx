@@ -4,7 +4,7 @@ import './contact.css'
 
 const Contact = () => {
   return (
-    <div className='contact' id="contact" >
+    <div className='contact main-cnt-div' id="contact" >
         <div className='header' >
             <div className='title' >
                 <h1>{data.Contact.title}</h1>
@@ -23,18 +23,18 @@ const Contact = () => {
 
                 </div>
                 
-                <p>Name</p>
+                {/* <p>Name</p> */}
                 <input placeholder='name' className='txt' />
-                <p>Email</p>
+                {/* <p>Email</p> */}
                 <input placeholder='Email' className='txt' />
-                <p>Message</p>
+                {/* <p>Message</p> */}
                 <textarea placeholder='message' >
             
                 
 
                 </textarea>
                 <br/>
-                { data.Contact.btn.vzbl &&<button className='btn click-btn2'>{data.Contact.btn.txt}</button>}
+                { data.Contact.btn.vzbl &&<button className='btn click-btn2 main-btn'>{data.Contact.btn.txt}</button>}
                 
 
             </div>
