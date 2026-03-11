@@ -1,9 +1,7 @@
 @media screen and (min-width: 800px){
     .ads{
-        width: 90%;
+        width: 100%;
         height: 5rem;
-        margin: 0 5%;
-        /* background-color: aqua; */
         background-color: var(--color-white);
     
     
@@ -11,7 +9,6 @@
     .ads .ad-list{
         display: flex;
         flex-direction: row;
-        /* background-color: aqua; */
         height: 5rem;
         align-items: center;
         overflow: hidden;
@@ -35,8 +32,6 @@
         width: 96%;
         height: 3rem;
         margin: 1rem 2%;
-        /* background-color: aqua; */
-        /* background-color: var(--color-white); */
     
     
     }
