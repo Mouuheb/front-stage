@@ -379,8 +379,9 @@ const data = {
             'Address: 03 Rue des usines, Megrine'
 
         ],
-        copyRaight:'© 2023 Positivus. All Rights Reserved',
+        copyRaight:'© 2026 Drone discovery. All Rights Reserved',
         privecy:'Privacy Policy',
+        button:'Subscribe to news',
     },
     about:{
         titre:'À propos',
