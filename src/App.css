@@ -14,20 +14,23 @@
 .chat-cnt .chat-btn-op{
     width: 5rem;
     height: 5rem;
-    background-color: var(--color-bg-pr);
-    background-color: var(--color-4);
+    background-color: var(--color-text);
     border-radius: 5rem;
     padding: 1.5rem 1rem;
     text-align: center;
-    color: var(--color-black);
+    color: var(--color-bg-pr);
     font-size: larger;
     font-weight: bold;
-    border: solid .1rem;
+    border: solid .1rem var(--color-bg-pr);
+    box-shadow: 0 0 5px var(--color-bg-pr),
+               0 0 10px var(--color-bg-pr) ,
+               0 0 20px var(--color-bg-pr);
 }
 
 .chat-cnt .chat-bx{
     width: 20rem;
     height: 30rem;
+    
 }
 
 body{

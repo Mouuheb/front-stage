@@ -74,7 +74,7 @@ function App() {
       {!hideNav2 &&
       <div className='chat-cnt'>
         {open && <div className='chat-bx'><Chat/></div>}
-        <p className='chat-btn-op click-btn' onClick={()=>(setOpen(!open))}>Chat</p>
+        <p className='chat-btn-op click-btn2' onClick={()=>(setOpen(!open))}>Chat</p>
         
         
         
