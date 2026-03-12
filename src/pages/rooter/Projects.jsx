@@ -4,7 +4,7 @@ import Work from '../work/Work'
 const Projects = ({type}) => {
   return (
     <div>
-        <Work show={false}/>
+        
     </div>
   )
 }

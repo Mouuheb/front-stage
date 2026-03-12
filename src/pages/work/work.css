@@ -291,7 +291,7 @@
     width: fit-content;
     overflow: hidden;
     background-color: var(--color-white);
-    border: .1rem var(--color-dark) solid;
+    border: .1rem var(--color-white) solid;
     border-radius: 2rem;
     height: 3.5rem;
     align-items: center;

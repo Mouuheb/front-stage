@@ -74,7 +74,7 @@ const Work = () => {
 
     return (
         loading === false ? (
-            <div className='work'>
+            <div className='work main-cnt-div'>
                 <div className='header'>
                     <div className='title'>
                         <h1>{data.work.title}</h1>
@@ -106,8 +106,8 @@ const Work = () => {
                                         <small>Projet de {item.type}</small>
                                         <small>en {item.address}</small>
                                         <div className='btn-cnt'>
-                                            <Link to={`/sgprj/${item.id}`} className='click-btn'>
-                                                <a>Voir Details</a>
+                                            <Link to={`/sgprj/${item.id}`}>
+                                                <a className='main-btn click-btn2'>Voir Details</a>
                                             </Link>
                                         </div>
                                     </div>

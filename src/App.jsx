@@ -68,8 +68,9 @@ function App() {
     
     
       {/* {!hideNav.includes(location.pathname) ? <Nav /> : null} */}
-      {!hideNav &&!hideNav2 && <Nav />}
-      {hideNav &&!hideNav2 && <NavAdmin />}
+      {/* {!hideNav &&!hideNav2 && } */}
+      {/* {hideNav &&!hideNav2 && <NavAdmin />} */}
+      <Nav />
       
       {!hideNav2 &&
       <div className='chat-cnt'>
@@ -86,7 +87,7 @@ function App() {
           <Route index element={<Homepage />} />
 
         </Route>
-        <Route path="/prj" element={<Projects />} />
+        <Route path="/prj" element={<Work/>} />
         <Route path="/sgprj/:id" element={<SingleProjectPage />} />
         <Route path="/tm" element={<Teampage />} />
         <Route path="/cs" element={<Consultationpage />} />

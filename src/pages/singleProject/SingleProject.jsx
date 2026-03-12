@@ -75,7 +75,7 @@ const SingleProject = (prop) => {
 
 
     return (
-        loading !== false ? (<div className='singleproject'>
+        loading !== false ? (<div className='singleproject-clt main-cnt-div'>
             <div className='header' >
                 <div className='title' >
                     <h1>Nos Projet</h1>
@@ -141,7 +141,7 @@ const SingleProject = (prop) => {
 
                         
                         <div className='btn-cmp'>
-                        <a className='click-btn'>Voir model en 3D</a>
+                        <a className='click-btn2 main-btn'>Voir model en 3D</a>
                         </div>
                     </div>
 
@@ -149,10 +149,6 @@ const SingleProject = (prop) => {
                 </div>
 
             </div>
-
-            {/* <div className='footer-work'>
-                <button className='btn' onClick={handleClick}>Back home</button>
-            </div> */}
         </div>) : (<div>loading</div>)
     )
 }
