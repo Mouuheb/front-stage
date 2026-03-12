@@ -8,11 +8,11 @@ import Contact from '../contact/Contact'
 import Footer from '../footer/Footer'
 import About from '../about/About'
 import HomeWork from '../work/HomeWork'
+import Nav from '../nav/Nav'
 
 const Homepage = () => {
   return (
     <>
-    
         <Home/>
         <Ads/>
         <About/>
