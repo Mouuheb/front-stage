@@ -63,9 +63,12 @@ const Login = () => {
 
   return (
     <div className='main-auth-cnt'>
+      <div className='black-p2' >
+        
     <div className='login-page'>
-      <h2>{data.auth.titleLogin}</h2>
+      
       {error && <p style={{ color: 'red' }}>{error}</p>}
+      <h1>{data.auth.titleLogin}</h1>
       <form onSubmit={handleSubmit}>
         <div className='cnt'>
           <input
@@ -89,7 +92,7 @@ const Login = () => {
             style={{ width: '100%', padding: '8px', marginTop: '5px' }}
           />
         </div>
-        <div>
+        <div >
             <Link to="/clt/cracc" ><label>{data.auth.create}</label></Link> 
             <label>  </label>
             <Link to="/clt/frgpwd" ><label>{data.auth.forgetpass}</label></Link>
@@ -99,6 +102,7 @@ const Login = () => {
         </button>
         
       </form>
+    </div>
     </div>
     <div className='model-cnt' >
         <div className='obj'><DroneCanvas/></div>

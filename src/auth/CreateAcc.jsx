@@ -77,8 +77,9 @@ const CreateAcc = () => {
 
   return (
     <div className='main-auth-cnt'>
+      <div className='black-p2' >
     <div className='login-page'>
-      <h2>{data.auth.title2}</h2>
+      <h1>{data.auth.title2}</h1>
       {error && <p style={{ color: 'red' }}>{error}</p>}
       <form onSubmit={handleSubmit}>
         <div>
@@ -182,6 +183,7 @@ const CreateAcc = () => {
       <p>
         Already have an account? <Link to="/clt/login">Login</Link>
       </p>
+    </div>
     </div>
     <div className='model-cnt' >
       <div className='obj'><DroneCanvas/></div>

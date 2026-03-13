@@ -415,6 +415,7 @@ const data = {
         mess1:'Already have an account?',
         title2:'Create Account',
         title3:'My Profile',
+        welcome:'Bonjour ',
         logout:'logout'
     },
     conversation:{

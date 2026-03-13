@@ -62,18 +62,18 @@ const Profile = () => {
   }
 
   return (
-    <div className='profile-main-cnt'>
+    <div className='profile-main-cnt main-cnt-div'>
       <div className='p1'>
         <div className='profile-cnt'>
-          <h2>{data.auth.title3}</h2>
-          <div>
-            <p><strong>{data.auth.username}</strong> {user.username}</p>
-            <p><strong>{data.auth.email}</strong> {user.email}</p>
-            <p><strong>{data.auth.fname}</strong> {user.first_name || '—'}</p>
-            <p><strong>{data.auth.lname}</strong> {user.last_name || '—'}</p>
-            <p><strong>{data.auth.tel}</strong> {user.phone_number || '—'}</p>
+          <h1>{data.auth.welcome} {user.username}</h1>
+          <div className='data'>
+            <p><strong>{data.auth.username} : </strong> {user.username}</p>
+            <p><strong>{data.auth.email} : </strong> {user.email}</p>
+            <p><strong>{data.auth.fname} : </strong> {user.first_name || '—'}</p>
+            <p><strong>{data.auth.lname} : </strong> {user.last_name || '—'}</p>
+            <p><strong>{data.auth.tel} : </strong> {user.phone_number || '—'}</p>
           </div>
-          <button className='click-btn' onClick={handleLogout}>
+          <button className='click-btn2' onClick={handleLogout}>
             {data.auth.logout}
           </button>
         </div>

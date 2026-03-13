@@ -94,8 +94,7 @@ function App() {
         <Route path="/prj/sgprj/:id" element={<SingleProjectPage />} />
 
         {/* admin */}
-        <Route path="/admin" element={<MainAdminPage />}>
-        </Route>
+        <Route path="/admin" element={<MainAdminPage />}/>
         {/* project */}
         <Route path="/admin/prj" element={<Project />} />
         <Route path="/admin/sgprj/:id" element={<SingleProjectPageAdmin />} />

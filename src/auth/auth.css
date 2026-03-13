@@ -2,19 +2,32 @@
     /* background-color: aqua; */
     /* max-width: 35rem; */
     width: 25rem;
-    margin:10rem auto ;
+    margin:7rem auto  ;
     padding: 2.5rem;
     border: .1rem solid var(--color-dark);
     border-radius: 1rem;
     background-color: var(--color-white);
+    /* align-items: center; */
     /* left: 0; */
     /* gap: 5rem; */
 
 }
-
-.login-page h2{
-    margin-left: 1.5rem;
+.main-auth-cnt{
+    height: 100%;
+    width: 100%;
 }
+
+.black-p2{
+    background-color: var(--color-text);
+    width: 40%;
+    height: 100%;
+    /* height: 100rem; */
+    padding-bottom: 5rem;
+}
+
+/* .login-page h1{
+    margin-left: 1.5rem;
+} */
 
 .login-page form{
     gap: 1.5rem;
@@ -41,19 +54,30 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    background-color: var(--color-text);
+    /* background-color: var(--color-text); */
 }
 
 .main-auth-cnt .model-cnt{
-    background-color: var(--color-white);
+    background-color: transparent;
     width: 60%;
     /* position: fixed; */
     /* right: 0; */
 }
 
 .main-auth-cnt .model-cnt .obj{
-    background-color: var(--color-white);
+    background-color: transparent;
     width: 60%;
     position: fixed;
     right: 0;
+}
+
+.main-auth-cnt a{
+    color: var(--color-dark);
+}
+
+.main-auth-cnt h1{
+    /* text-align: center; */
+    /* align-items: center; */
+    color: var(--color-text);
+    margin-bottom: 1rem;
 }
