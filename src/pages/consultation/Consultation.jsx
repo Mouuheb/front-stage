@@ -112,7 +112,7 @@ const Consultation = () => {
     };
 
     return (
-        <div className='cs'>
+        <div className='cs main-cnt-div'>
             <div className='header'>
                 <div className='title'>
                     <h1>{data?.consultation?.title}</h1>
@@ -165,7 +165,7 @@ const Consultation = () => {
                             </div>
                         </div>
 
-                        <p>Name</p>
+                        {/* <p>Name</p> */}
                         <input
                             value={name}
                             onChange={(e) => setName(e.target.value)}
@@ -174,7 +174,7 @@ const Consultation = () => {
                             required
                         />
 
-                        <p>Email</p>
+                        {/* <p>Email</p> */}
                         <input
                             type="email"
                             value={email}
@@ -184,7 +184,7 @@ const Consultation = () => {
 
                         />
 
-                        <p>Tel (Optional)</p>
+                        {/* <p>Tel (Optional)</p> */}
                         <input
                             type="tel"
                             value={tel === null ? '' : tel}
@@ -195,7 +195,7 @@ const Consultation = () => {
                             inputMode="numeric"
                             required
                         />
-                        {tel === null && (
+                        {/* {tel === null && (
                             <small style={{ color: '#666', display: 'block', marginTop: '5px' }}>
                                 No number provided (optional)
                             </small>
@@ -204,9 +204,9 @@ const Consultation = () => {
                             <small style={{ color: '#4CAF50', display: 'block', marginTop: '5px' }}>
                                 Number: {tel}
                             </small>
-                        )}
+                        )} */}
 
-                        <p>Message</p>
+                        {/* <p>Message</p> */}
                         <textarea
                             value={mess}
                             onChange={(e) => setMess(e.target.value)}
@@ -215,6 +215,7 @@ const Consultation = () => {
 
                         <p>Document (Optional)</p>
                         <input
+
                             onChange={handleFileChange}
                             type="file"
                             className='doc'
@@ -232,6 +233,7 @@ const Consultation = () => {
                             }}>
                                 <span>📎 {doc.name}</span>
                                 <button
+                                
                                     type="button"
                                     onClick={() => {
                                         setDoc(null);
@@ -264,7 +266,7 @@ const Consultation = () => {
                         {data?.Contact?.btn?.vzbl && (
                             <button
                                 type="submit"
-                                className='btn click-btn'
+                                className='btn click-btn2 main-btn'
                                 disabled={loading}
                                 style={{ opacity: loading ? 0.7 : 1 }}
                             >
