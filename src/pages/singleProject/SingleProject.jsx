@@ -4,14 +4,16 @@ import { TiPlus, TiMinus } from "react-icons/ti";
 import data from '../../data/data'
 import { useNavigate } from 'react-router-dom';
 import MapWithLeaflet from '../map/MapWithLeaflet';
+// import axios from "axios";
 
 const SingleProject = (prop) => {
-    console.log("second id : "+prop.id)
+    // console.log("second id : "+prop.id)
     const [proj, setproject] = useState(prop.id)
     const [project, setProject] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [cat, setCat] = useState([]);
+    const [model, setModel] = useState([]);
 
 
 
@@ -50,13 +52,53 @@ const SingleProject = (prop) => {
                     })
                     .then(data => {
                         setCat(data);
-                        setLoading(false);
-                        console.log(cat)
+                        // setLoading(false);
+                        // console.log(cat)
                     })
                     .catch(error => {
                         setError(error.message);
                         setLoading(false);
                     });}
+
+
+                // filemodel
+                if (data.filemodel){
+                    console.log("starrrt")
+                fetch(`http://localhost:8000/folder/files/${data.filemodel[0]}/`)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        setModel(data);
+                        setLoading(false);
+                        console.log(data)
+                    })
+                    .catch(error => {
+                        setError(error.message);
+                        setLoading(false);
+                    });}
+                    else{
+                        setError(false)
+                        console.log("endddddddddddddddddddddddddddddddddddddddddddddddddd")
+                    }
+
+                
+
+
+
+                // console.log("hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh")
+                // try {
+                //     const res = axios.get();
+                //     setModel(res.data);
+                //     console.log(res.data)
+                // } catch (err) {
+                //     console.error("Failed to fetch single file:", err);
+                //     alert("Failed to fetch file");
+                // }
+
             })
             .catch(error => {
                 setError(error.message);
@@ -64,8 +106,9 @@ const SingleProject = (prop) => {
             });
     }, []);
     console.log("3333")
-    console.log(project);
 
+    console.log(model);
+    
 
 
 
@@ -75,7 +118,7 @@ const SingleProject = (prop) => {
 
 
     return (
-        loading !== false ? (<div className='singleproject-clt main-cnt-div'>
+        loading === false ? (<div className='singleproject-clt main-cnt-div'>
             <div className='header' >
                 <div className='title' >
                     <h1>Nos Projet</h1>
@@ -85,7 +128,7 @@ const SingleProject = (prop) => {
 
             <div className='element'>
 
-                {console.log(project.length)}
+                {/* {console.log(project.length)} */}
                 <div className='card'>
                     <div className='img-cmp'>
                         <img src={project.project_image} />
@@ -141,7 +184,10 @@ const SingleProject = (prop) => {
 
                         
                         <div className='btn-cmp'>
-                        <a className='click-btn2 main-btn'>Voir model en 3D</a>
+                        <a
+                         href={`http://localhost:8000/media/${model.file_unzip}`
+                        }
+                        className='click-btn2 main-btn'>Voir model en 3D</a>
                         </div>
                     </div>
 
