@@ -419,7 +419,7 @@ const data = {
         logout:'logout'
     },
     conversation:{
-        title:'your converstatoins',
+        title:'Vos conversations',
         loadmessage:'Loading conversations...',
         noCnvMess:'You have no conversations yet',
         startCnv:'Start a Conversation',

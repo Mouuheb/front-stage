@@ -84,7 +84,7 @@ const ConversationList = () => {
 
   return (
     <div className='conversation-main-page'>
-      <h2>{data.conversation.title}</h2>
+      {/* <h2>{data.conversation.title}</h2> */}
 
       {error && <p style={{ color: 'red' }}>{error}</p>}
 
@@ -104,7 +104,7 @@ const ConversationList = () => {
       ) : (
         <ul style={{ listStyle: 'none', padding: 0 }}>
           {conversations.map((conv) => (
-            <li key={conv.id} className='click-btn' >
+            <li key={conv.id} className='click-btn2' >
               <Link to={`/conversations/${conv.id}`} >
                 <strong>{data.conversation.cnvId} : {conv.id}</strong>
                 <br />

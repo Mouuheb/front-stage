@@ -1,7 +1,5 @@
 .conversation-main-page{
     width: 100%;
-    /* text-align: center; */
-    /* background-color: aqua; */
     padding: 3rem;
     
 
@@ -10,7 +8,6 @@
 .conversation-main-page ul{
     display: flex;
     flex-direction: column;
-    /* background-color: aqua; */
 }
     
 
@@ -30,13 +27,14 @@
     padding: .5rem;
     margin: .5rem 0;
     border-radius: 1rem;
-    background-color: var(--color-white);
-    color: var(--color-text);
+    background-color: var(--color-text);
+    /* color: var(--color-white); */
+    width: 100%;
 
 }
 .conversation-main-page a{
     text-decoration: none;
-    color: var(--color-text);
+    color: var(--color-white);
 }
 
 
@@ -58,9 +56,10 @@
 
 .conversationDetail-main-page .p2 .messages-cnt{
     margin: 2rem;
-    border: solid .15rem var(--color-text);
+    border: solid .15rem var(--color-white);
     padding: 1rem;
     border-radius: 1rem;
+    background-color: var(--color-text);
 }
 
 .conversationDetail-main-page .p2 .messages-cnt .messages{
@@ -88,6 +87,6 @@
     border-radius: 1rem;
     font-size: medium;
     font-weight: bold;
+    /* display: none; */
+    border: solid .1rem;
 }
-/* style={{ border: 'none', borderRadius: '3px', cursor: sending ? 'not-allowed' : 'pointer' }} */
-/* style={{ height: '400px', overflowY: 'auto', border: '1px solid #ddd', padding: '10px', marginBottom: '20px' }} */

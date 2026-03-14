@@ -136,7 +136,7 @@ const ConversationDetail = () => {
   if (error) return <div style={{ textAlign: 'center', marginTop: '50px', color: 'red' }}>Error: {error}</div>;
 
   return (
-    <div className='conversationDetail-main-page'>
+    <div className='conversationDetail-main-page main-cnt-div'>
       <div className='p1' >
         <ConversationList />
 
@@ -144,7 +144,7 @@ const ConversationDetail = () => {
       <hr />
       <div className='p2' >
         <div className='messages-cnt'>
-          <h2>{data.conversation.cnvId} : {id}</h2>
+          <h1>{data.conversation.cnvId} : {id}</h1>
           <div className='messages' >
             {messages.map((msg) => (
               <div key={msg.id} style={{ marginBottom: '10px', textAlign: isMyMessage(msg) ? 'right' : 'left' }}>
