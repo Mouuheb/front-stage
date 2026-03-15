@@ -4,6 +4,7 @@ import './profile.css';
 import data from '../data/data';
 import ConversationList from '../Messages/Conversation';
 import { fetchWithAuth } from './api';  // adjust path
+import Nav from '../pages/nav/Nav';
 
 const API_BASE_URL = 'http://localhost:8000/auth';
 
@@ -62,6 +63,10 @@ const Profile = () => {
   }
 
   return (
+    <>
+    <Nav/>
+    <div className='box-margin'></div>
+    
     <div className='profile-main-cnt main-cnt-div'>
       <div className='p1'>
         <div className='profile-cnt'>
@@ -82,6 +87,7 @@ const Profile = () => {
         <ConversationList />
       </div>
     </div>
+    </>
   );
 };
 

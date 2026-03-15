@@ -5,6 +5,7 @@ import data from '../../data/data'
 import { Link, useNavigate } from 'react-router-dom';
 import MapWithLeaflet from '../map/MapWithLeaflet';
 import MapwithLeafletMulti from '../map/MapwithLeafletMulti';
+import Nav from '../nav/Nav';
 
 const Work = () => {
     const [project, setProject] = useState([]);
@@ -74,6 +75,9 @@ const Work = () => {
 
     return (
         loading === false ? (
+            <>
+            <Nav/>
+            <div className='box-margin'></div>
             <div className='work main-cnt-div'>
                 <div className='header'>
                     <div className='title'>
@@ -122,6 +126,7 @@ const Work = () => {
 
                 
             </div>
+            </>
         ) : (
             <div>loading...</div>
         )

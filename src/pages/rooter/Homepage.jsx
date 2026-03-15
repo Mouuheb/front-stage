@@ -13,6 +13,7 @@ import Nav from '../nav/Nav'
 const Homepage = () => {
   return (
     <>
+      <Nav/>
         <Home/>
         <Ads/>
         <About/>

@@ -154,7 +154,11 @@ p{
   filter: invert(1);
 }
 
-
+.box-margin{
+  height: 5rem;
+  width: 100%;
+  background-color: transparent;
+}
 
 
 

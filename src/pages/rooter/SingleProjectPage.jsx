@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import SingleProject from '../singleProject/SingleProject'
 import { useParams } from 'react-router-dom';
+import Nav from '../nav/Nav';
 
 const SingleProjectPage = () => {
   const { id } = useParams(); // id = the value from URL
@@ -10,6 +11,8 @@ const SingleProjectPage = () => {
   // console.log("2:"+ proj)
   return (
     <>
+    <Nav/>
+    <div className='box-margin'></div>
     <SingleProject id={proj}/>
     </>
   )

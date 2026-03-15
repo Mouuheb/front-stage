@@ -4,6 +4,7 @@ import './conversation.css'
 import ConversationList from './Conversation';
 import data from '../data/data';
 import { fetchWithAuth } from '../auth/api';
+import Nav from '../pages/nav/Nav';
 const API_BASE_URL = 'http://localhost:8000/api';
 
 const ConversationDetail = () => {
@@ -136,6 +137,10 @@ const ConversationDetail = () => {
   if (error) return <div style={{ textAlign: 'center', marginTop: '50px', color: 'red' }}>Error: {error}</div>;
 
   return (
+    <>
+    <Nav/>
+    <div className='box-margin'></div>
+    
     <div className='conversationDetail-main-page main-cnt-div'>
       <div className='p1' >
         <ConversationList />
@@ -183,6 +188,7 @@ const ConversationDetail = () => {
       </div>
 
     </div>
+    </>
 
   );
 };

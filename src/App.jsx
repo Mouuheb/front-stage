@@ -70,7 +70,7 @@ function App() {
       {/* {!hideNav.includes(location.pathname) ? <Nav /> : null} */}
       {/* {!hideNav &&!hideNav2 && } */}
       {/* {hideNav &&!hideNav2 && <NavAdmin />} */}
-      <Nav />
+      {/* <Nav/> */}
       
       {!hideNav2 &&
       <div className='chat-cnt'>

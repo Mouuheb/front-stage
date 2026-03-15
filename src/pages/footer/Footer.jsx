@@ -22,6 +22,7 @@ const Footer = () => {
                         <a key={index} href={link.path} >{link.name}</a>
                     )
                 } )}
+                <a href='/admin' >admin</a>
             </div>
             
             <div className='social' >

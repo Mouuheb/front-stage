@@ -53,7 +53,7 @@ const Login = () => {
       }
 
       // 3. Redirect to dashboard (or any protected route)
-      navigate('/');
+      navigate('/authset');
     } catch (err) {
       setError(err.message);
     } finally {
