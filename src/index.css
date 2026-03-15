@@ -163,7 +163,25 @@ p{
 
 
 
+.admin-main-bg{
+    background-color: #515257;
+    background-image: url("/bg/14.jpg");
+    background-size: 200px auto;
+    height: fit-content;
+    /* 
+    background-repeat: repeat; */
+    width: 100%;
+    min-height: 50rem;
+    margin: 0;
+    overflow: hidden;
+}
 
+.admin-main-div{
+  background-color: var(--color-white);
+  border-radius: 0.5rem;
+  border: solid var(--color-text) .1rem;
+  padding: 1rem;
+}
 
 
 

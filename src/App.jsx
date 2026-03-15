@@ -84,8 +84,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Homepage />}>
-          <Route index element={<Homepage />} />
-
+        <Route index element={<Homepage />} />
         </Route>
         <Route path="/prj" element={<Work/>} />
         <Route path="/sgprj/:id" element={<SingleProjectPage />} />
@@ -150,7 +149,7 @@ function App() {
 
 
       </Routes>
-      {!hideNav2 &&<Footer />}
+      {/* {!hideNav2 &&<Footer />} */}
     </>
   )
 }

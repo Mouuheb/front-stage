@@ -5,18 +5,20 @@ import TeamAdmin from '../team/TeamAdmin'
 import Consult from '../consult/Consult'
 import EquipAdmin from '../equipment/EquipAdmin'
 import '../admin.css'
-// import LocationFinder from '../../client/map/LocationFinder'
+import NavAdmin from '../nav/NavAdmin'
 
 const MainAdminPage = () => {
   return (
     <div>
-      MainAdminPage
-      {/* <LocationFinder/> */}
-      <Project/>
-      <Cat/>
-      <TeamAdmin/>
-      <Consult/>
-      <EquipAdmin/>
+      <NavAdmin/>
+      
+      <div className='admin-main-bg'>
+        {/* <Project/> */}
+        {/* <Cat/> */}
+        {/* <TeamAdmin/> */}
+        {/* <Consult/> */}
+        {/* <EquipAdmin/> */}
+      </div>
     </div>
   )
 }
