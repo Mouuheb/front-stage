@@ -1,17 +1,17 @@
 .create-equ-admin{
     /* background-color: aqua; */
     height: fit-content;
-    width: 90%;
+    width: 60%;
     margin: 5rem 5%;
 }
 
 .create-equ-admin form{
-    width: 60%;
-    margin: 0 10%;
+    width: 100%;
+    margin: 0;
     /* background-color: aqua; */
     padding: 2rem;
     border-radius: 1rem;
-    border: solid var(--color-2) ;
+    /* border: solid var(--color-2) ; */
     
 }
 
@@ -44,10 +44,10 @@
 }
 
 .create-equ-admin form button{
-    background-color: var(--color-2);
+    /* background-color: var(--color-2); */
     padding: 0.5rem;
     border-radius: 0.5rem;
-    color: var(--color-light);
+    /* color: var(--color-light); */
 }
 /*  */
 
@@ -55,17 +55,17 @@
 .update-eq-admin{
     /* background-color: aqua; */
     height: fit-content;
-    width: 90%;
+    width: 60%;
     margin: 5rem 5%;
 }
 
 .update-eq-admin form{
-    width: 60%;
-    margin: 0 10%;
+    width: 100%;
+    margin: 0;
     /* background-color: aqua; */
     padding: 2rem;
     border-radius: 1rem;
-    border: solid var(--color-2) ;
+    /* border: solid var(--color-2) ; */
     
 }
 
@@ -98,10 +98,10 @@
 }
 
 .update-eq-admin form button{
-    background-color: var(--color-2);
+    /* background-color: var(--color-2); */
     padding: 0.5rem;
     border-radius: 0.5rem;
-    color: var(--color-light);
+    /* color: var(--color-light); */
 }
 
 
@@ -110,13 +110,13 @@
 .equipment-admin{
     /* background-color: aqua; */
     width: 90%;
-    margin: 7rem 5%;
+    margin: 5rem 5%;
 }
 
 .equipment-admin .card{
     /* background-color: blue; */
     border: solid var(--color-2);
-    border-radius: 2rem;
+    border-radius: 1rem;
     padding: 2rem 1rem;
     margin:  1rem 0;
 }
@@ -127,7 +127,7 @@
     padding: .6rem;
     border-radius: 1rem;
     width: fit-content;
-    background-color: var(--color-2);
+    /* background-color: var(--color-2); */
     /* color: ; */
 }
 .equipment-admin label,
@@ -136,6 +136,9 @@
     font-style: normal;  
     text-decoration: none; 
 }
+.equipment-admin p{
+    color: var(--color-2);
+}
 
 
 /* ----------------------------------------------- */
@@ -143,7 +146,7 @@
 .single-equipment-admin{
     /* background-color: aqua; */
     width: 90%;
-    margin: 7rem 5%;
+    margin: 5rem 5%;
     padding: 2rem;
 }
 
@@ -153,12 +156,12 @@
     padding: .6rem;
     border-radius: 1rem;
     width: fit-content;
-    background-color: var(--color-2);
+    /* background-color: var(--color-2); */
     /* color: ; */
 }
 .single-equipment-admin label,
 .single-equipment-admin a{
-    color: var(--color-light);
+    /* color: var(--color-light); */
     font-style: normal;  
     text-decoration: none; 
 }
@@ -174,4 +177,9 @@
 
 .single-equipment-admin .lik{
     color: var(--color-2);
+}
+
+.single-equipment-admin p{
+    color: var(--color-2);
+    margin-bottom: 1rem;
 }

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import '../admin.css'
 import './equ.css'
+import NavAdmin from '../nav/NavAdmin';
 const UpdateEquipAdmin = () => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -105,7 +106,10 @@ const UpdateEquipAdmin = () => {
   if (loading) return <p>Loading...</p>;
 
   return (
-    <div className='update-eq-admin'>
+    <div className='admin-main-bg'>
+          <NavAdmin/>
+          <div className='box-margin' ></div>
+    <div className='update-eq-admin admin-main-div'>
       <h2>Update Equipment</h2>
       {message && <p>{message}</p>}
 
@@ -177,8 +181,9 @@ const UpdateEquipAdmin = () => {
         </div>
 
         <br />
-        <button className='click-btn' type="submit" >Update Equipment</button>
+        <button className='click-btn2 main-btn' type="submit" >Update Equipment</button>
       </form>
+    </div>
     </div>
   );
 };

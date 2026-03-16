@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import '../admin.css'
 import './equ.css'
 import data from '../data/data';
+import NavAdmin from '../nav/NavAdmin';
 
 const EquipAdmin = () => {
   const [equipment, setEquipment] = useState([]);
@@ -32,11 +33,14 @@ const EquipAdmin = () => {
   if (error) return <p>Error: {error}</p>;
 
   return (
-    <div className='equipment-admin'>
+    <div className='admin-main-bg'>
+                          <NavAdmin/>
+                          <div className='box-margin ' ></div>
+    <div className='equipment-admin admin-main-div'>
       <h2>{data.eq.title}</h2>
-      <div className='btn-cnt click-btn'>
+      <div className='btn-cnt'>
         <Link to="/admin/creq/" >
-      <label >
+      <label className='click-btn2 main-btn'>
         {data.eq.btn}
         </label>
       </Link>
@@ -47,15 +51,12 @@ const EquipAdmin = () => {
           <div className='card'>
             {equipment.map((item) => (
               <div key={item.id}>
-                {/* <td>{item.id}</td> */}
-                
                 <p>{data.eq.name} : {item.name}</p>
-                
                 <p>{data.eq.num} : {item.number}</p>
                 <p>{item.status_display}</p>
-                <div className='btn-cnt click-btn'>
+                <div className='btn-cnt'>
                 <Link to={`/admin/sgeq/${item.id}`} >
-                <label>{data.eq.details}</label>
+                <label className='click-btn2 main-btn'>{data.eq.details}</label>
                 </Link>
                 </div>
               </div>
@@ -65,6 +66,7 @@ const EquipAdmin = () => {
 
       )}
       
+    </div>
     </div>
   );
 };

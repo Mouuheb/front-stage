@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import '../admin.css'
 import data from '../data/data';
+import NavAdmin from '../nav/NavAdmin';
 
 const SingleEquipAdmin = () => {
   const { id } = useParams();
@@ -70,9 +71,10 @@ const SingleEquipAdmin = () => {
   const assignedName = members.find((m) => m.id === equipment.assigned_to)?.name || 'N/A';
 
   return (
-    <div className='single-equipment-admin'>
-
-
+    <div className='admin-main-bg'>
+      <NavAdmin/>
+      <div className='box-margin' ></div>
+    <div className='single-equipment-admin admin-main-div'>
       <p><strong>{data.eq.name} :</strong> {equipment.name}</p>
       <p><strong>{data.eq.num} :</strong> {equipment.number}</p>
       <p><strong></strong> {equipment.status_display}</p>
@@ -93,20 +95,21 @@ const SingleEquipAdmin = () => {
 
       <div className='btns-cnt' >
 
-      <div className='btn-cnt click-btn'
+      <div className='btn-cnt'
         onClick={handleDelete}
 
       >
-        <label>{data.eq.btnDelete}</label>
+        <label className='main-btn click-btn2'>{data.eq.btnDelete}</label>
       </div>
-      <div className='btn-cnt click-btn'>
+      <div className='btn-cnt '>
       <Link
         to={`/admin/upsgeq/${id}`}
       >
-        <label>{data.eq.btnUpdate}</label>
+        <label className='main-btn click-btn2'>{data.eq.btnUpdate}</label>
       </Link>
       </div>
       </div>
+    </div>
     </div>
   );
 };
