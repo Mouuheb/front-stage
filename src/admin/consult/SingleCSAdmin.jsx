@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import '../admin.css'
 import data from '../data/data';
+import NavAdmin from '../nav/NavAdmin';
 
 const SingleCSAdmin = () => {
   const { id } = useParams();
@@ -72,7 +73,10 @@ const SingleCSAdmin = () => {
   if (!consultation) return <p>No data found</p>;
 
   return (
-    <div className='single-consultation-admin'>
+    <div className='admin-main-bg'>
+                          <NavAdmin/>
+                          <div className='box-margin ' ></div>
+    <div className='single-consultation-admin admin-main-div'>
       <h2>{data.consult.sngl}</h2>
       <div className='cnt' >
       <p><strong>{data.consult.name} :</strong> {consultation.nom}</p>
@@ -95,22 +99,23 @@ const SingleCSAdmin = () => {
       <div className='btns-cnt' >
 
       <div
-      className='btn-cnt click-btn'
+      className='btn-cnt'
         onClick={handleDelete}
       >
-        <label>{data.consult.btnDelete}</label>
+        <label className='main-btn click-btn2'>{data.consult.btnDelete}</label>
         
       </div>
 
-      <div className='btn-cnt click-btn'>
+      <div className='btn-cnt'>
       <Link to={`/admin/upsgcs/${id}`}>
-      <label>
+      <label className='main-btn click-btn2'>
       {data.consult.btnUpdate}
       </label>
       </Link>
       </div>
       </div>
       </div>
+    </div>
     </div>
   );
 };

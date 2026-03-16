@@ -1,18 +1,17 @@
-
 .update-const-admin{
     /* background-color: aqua; */
     height: fit-content;
-    width: 90%;
+    width: 60%;
     margin: 5rem 5%;
 }
 
 .update-const-admin form{
-    width: 60%;
-    margin: 0 10%;
+    width: 100%;
+    margin: 0;
     /* background-color: aqua; */
     padding: 2rem;
     border-radius: 1rem;
-    border: solid var(--color-2) ;
+    /* border: solid var(--color-2) ; */
     
 }
 
@@ -45,10 +44,10 @@
 }
 
 .update-const-admin form button{
-    background-color: var(--color-2);
+    /* background-color: var(--color-2); */
     padding: 0.5rem;
     border-radius: 0.5rem;
-    color: var(--color-light);
+    /* color: var(--color-light); */
 }
 
 
@@ -59,17 +58,17 @@
 .create-consult-admin{
     /* background-color: aqua; */
     height: fit-content;
-    width: 90%;
+    width: 60%;
     margin: 5rem 5%;
 }
 
 .create-consult-admin form{
-    width: 60%;
-    margin: 0 10%;
+    width: 100%;
+    margin: 0;
     /* background-color: aqua; */
     padding: 2rem;
     border-radius: 1rem;
-    border: solid var(--color-2) ;
+    /* border: solid var(--color-2) ; */
     
 }
 
@@ -102,8 +101,8 @@
 }
 
 .create-consult-admin form button{
-    background-color: var(--color-2);
+    /* background-color: var(--color-2); */
     padding: 0.5rem;
     border-radius: 0.5rem;
-    color: var(--color-light);
+    /* color: var(--color-light); */
 }

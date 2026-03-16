@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import '../admin.css'
 import './consult.css'
+import NavAdmin from '../nav/NavAdmin';
 
 const UpdateCsAdmin = () => {
   const { id } = useParams();
@@ -102,7 +103,10 @@ const UpdateCsAdmin = () => {
   if (loading) return <p>Loading...</p>;
 
   return (
-    <div className='update-const-admin'>
+    <div className='admin-main-bg'>
+                              <NavAdmin/>
+                              <div className='box-margin' ></div>
+    <div className='update-const-admin admin-main-div'>
       <h2>Update Consultation</h2>
       {message && <p>{message}</p>}
 
@@ -161,8 +165,9 @@ const UpdateCsAdmin = () => {
         </div>
 
         <br />
-        <button type="submit" className='click-btn' >Update Consultation</button>
+        <button type="submit" className='click-btn2 main-btn' >Update Consultation</button>
       </form>
+    </div>
     </div>
   );
 };

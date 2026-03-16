@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import '../admin.css'
 import './consul.css'
 import data from '../data/data';
+import NavAdmin from '../nav/NavAdmin';
 
 const Consult = () => {
   const [consultations, setConsultations] = useState([]);
@@ -46,11 +47,14 @@ const Consult = () => {
   if (loading) return <p>Loading...</p>;
 
   return (
-    <div className='admin-cnsultation' >
+    <div className='admin-main-bg'>
+                      <NavAdmin/>
+                      <div className='box-margin ' ></div>
+    <div className='admin-cnsultation admin-main-div' >
       <h2>{data.consult.title} :</h2>
-      <div className='btn-cnt click-btn' >
+      <div className='btn-cnt' >
         <Link to="/admin/crtcs/" >
-        <label>create consultaion</label>
+        <label className='click-btn2 main-btn'>create consultaion</label>
       
       </Link>
 
@@ -74,13 +78,14 @@ const Consult = () => {
             </p>
 
           )}
-          <div className='btn-cnt click-btn2'>
+          <div className='btn-cnt'>
             <Link to={`/admin/sgcs/${consult.id}`}>
-          <label>{data.consult.btn}</label>
+          <label className='click-btn2 main-btn'>{data.consult.btn}</label>
           </Link></div>
         </div>
         // 
       ))}
+    </div>
     </div>
   );
 };

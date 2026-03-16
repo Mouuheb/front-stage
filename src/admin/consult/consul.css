@@ -14,12 +14,12 @@
     padding: .6rem;
     border-radius: 1rem;
     width: fit-content;
-    background-color: var(--color-2);
+    /* background-color: var(--color-2); */
     /* color: ; */
 }
 .admin-cnsultation  label,
 .admin-cnsultation  a{
-    color: var(--color-light);
+    /* color: var(--color-light); */
     font-style: normal;  
     text-decoration: none; 
 }
@@ -28,11 +28,16 @@
     padding: 3rem 2rem;
     margin: 1rem 2rem;
     border: solid var(--color-2);
-    border-radius: 2rem;
+    border-radius: 1rem;
 }
 
 .admin-cnsultation .lik{
     color: var(--color-2);
+}
+
+.admin-cnsultation .card p, .admin-cnsultation .card h3 {
+    color: var(--color-2);
+    margin-bottom: 1rem;
 }
 
 /* -------------------------------------------------- */
@@ -40,12 +45,12 @@
 .single-consultation-admin{
     /* background-color: aqua ; */
     width: 80%;
-    margin: 7rem 10%;
+    margin: 5rem 10%;
     
 }
 
 .single-consultation-admin .cnt{
-    padding: 1rem 5rem;
+    /* padding: 1rem 2rem; */
 }
 
 .single-consultation-admin .lik{
@@ -69,12 +74,18 @@
     padding: .6rem;
     border-radius: 1rem;
     width: fit-content;
-    background-color: var(--color-2);
+    /* background-color: var(--color-2); */
     /* color: ; */
 }
 .single-consultation-admin .btns-cnt label,
 .single-consultation-admin .btns-cnt a{
-    color: var(--color-light);
+    /* color: var(--color-2); */
     font-style: normal;  
     text-decoration: none; 
+}
+
+.single-consultation-admin .cnt p{
+    color: var(--color-2);
+    margin-top: 1rem;
+    margin-left: 2rem;
 }
