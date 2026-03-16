@@ -1,14 +1,12 @@
 @media screen and (min-width: 1200px) {
     .singleproject {
         width: 90%;
-        margin: 7rem 5%;
-        background-color: var(--color-white);
-        /* background-color: aqua; */
+        margin: var(--margin-tb) var(--margin-lr);
 
     }
 
     .singleproject .header {
-        margin: 5rem 0;
+        margin: 0;
         display: flex;
         flex-direction: row;
         width: 60%;
@@ -39,19 +37,18 @@
         
         width: 100%;
         padding: 0rem;
-        margin: 1rem 0;
+        margin: var(--margin-tb-div-cnt) 0 0 0;
         display: flex;
         flex-direction: column;
-        /* background-color: rgb(255, 187, 0); */
+        gap: var(--margin-tb-div-cnt);
     }
     .singleproject .card .img-cmp{
         width: 100%;
         height: fit-content;
-        /* max-height: 60vh ; */
-        /* background-color: rgb(183, 0, 255); */
         overflow: hidden;
-        border-radius: 0.6rem;
+        border-radius: 1rem;
         overflow: hidden;
+        /* background-color: aqua; */
     }
     
 
@@ -63,13 +60,17 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        /* background-color: aqua; */
+     }
+     .singleproject .card .txt-cmp h1{
+        color: var(--color-text);
      }
 
 
      .singleproject .card .img-cmp img{
         width: 100%;
         height: 100%;
-        border-radius: 2rem;
+        border-radius: 1rem;
     }
 
      .singleproject .card .txt-cmp p{
@@ -78,7 +79,7 @@
 
      .singleproject .card .txt-cmp a{
         text-align: right;
-        background-color: var(--color-dark);
+        /* background-color: var(--color-dark); */
         margin: 0rem 1rem 0 0rem;
         padding: 1rem;
         text-align: center;
@@ -106,7 +107,7 @@
      .singleproject .map-cnt{
         width: 50%;
         margin: 0;
-        border-radius: 2rem;
+        border-radius: 1rem;
         overflow: hidden;
      }
      .singleproject .imgs-cnt{

@@ -78,8 +78,8 @@ const SingleProjectAdmin = (prop) => {
     console.log(project);
 
     return (
-        loading === false ? (
-            <div className='singleproject'>
+        loading !== false ? (
+            <div className='singleproject admin-main-div'>
                 <div className='header'>
                     <div className='title'>
                         <h1>Nos Projet</h1>
@@ -99,9 +99,9 @@ const SingleProjectAdmin = (prop) => {
                             <div className='txt-a-cmp'>
                                 <h2>{data.project.adrs} : {project.address}</h2>
                                 <h2>{data.project.gvr} : {project.state}</h2>
-                                <h2>{data.project.ctgr} : {cat.name}</h2>
-                                <h2>{data.project.prc} : {cat.price}</h2>
-                                <h2>{data.project.stts} : {cat.status}</h2>
+                                <h2>{data.project.ctgr} : {project.type}</h2>
+                                <h2>{data.project.prc} : {project.price}</h2>
+                                <h2>{data.project.stts} : {project.status}</h2>
                             </div>
                             <div className='imgs-cnt'>
                                 {project.folder && (
@@ -151,29 +151,25 @@ const SingleProjectAdmin = (prop) => {
 
                             {/* Delete Button */}
                             <div className='btn-cmp'>
-                                <a className='click-btn' onClick={handleDelete}>
+                                <a className='click-btn2 main-btn' onClick={handleDelete}>
                                     Delete
                                 </a>
                             </div>
 
                             {/* Update Button */}
                             <div className='btn-cmp'>
-                                <Link to={`/admin/upsgprj/${prop.id}`} className='click-btn'>
+                                <Link to={`/admin/upsgprj/${prop.id}`} className='click-btn2 main-btn'>
                                     Update
                                 </Link>
                             </div>
 
                             {/* 3D Model Button */}
                             <div className='btn-cmp'>
-                                <a className='click-btn'>Voir model en 3D</a>
+                                <a className='click-btn2 main-btn'>Voir model en 3D</a>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                {/* <div className='footer-work'>
-                    <button className='btn' onClick={handleClick}>Back home</button>
-                </div> */}
             </div>
         ) : (
             <div>loading</div>
