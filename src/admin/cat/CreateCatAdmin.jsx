@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../admin.css'
 import './cat.css'
+import NavAdmin from '../nav/NavAdmin';
 
 const CreateCatAdmin = () => {
   const [formData, setFormData] = useState({
@@ -58,7 +59,10 @@ const CreateCatAdmin = () => {
   };
 
   return (
-    <div className='create-cat-admin'>
+    <div className='admin-main-bg'>
+              <NavAdmin/>
+              <div className='box-margin' ></div>
+    <div className='create-cat-admin admin-main-div'>
       <h2>Create Category</h2>
 
       {message && <p>{message}</p>}
@@ -100,10 +104,11 @@ const CreateCatAdmin = () => {
 
         <br />
 
-        <button type="submit" disabled={loading} className='click-btn' >
+        <button type="submit" disabled={loading} className='click-btn2 main-btn' >
           {loading ? 'Creating...' : 'Create Category'}
         </button>
       </form>
+    </div>
     </div>
   );
 };

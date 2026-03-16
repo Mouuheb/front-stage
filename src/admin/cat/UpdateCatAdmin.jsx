@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import '../admin.css'
 import './cat.css'
+import NavAdmin from '../nav/NavAdmin';
 
 const UpdateCatAdmin = () => {
   const { id } = useParams();
@@ -81,7 +82,10 @@ const UpdateCatAdmin = () => {
   if (loading) return <p>Loading...</p>;
 
   return (
-    <div className='update-cat-admin'>
+    <div className='admin-main-bg'>
+              <NavAdmin/>
+              <div className='box-margin' ></div>
+    <div className='update-cat-admin admin-main-div'>
       <h2>Update Category</h2>
 
       {message && <p>{message}</p>}
@@ -123,10 +127,11 @@ const UpdateCatAdmin = () => {
 
         <br />
 
-        <button type="submit" className='click-btn'>
+        <button type="submit" className='click-btn2 main-btn'>
           Update Category
         </button>
       </form>
+    </div>
     </div>
   );
 };

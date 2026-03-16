@@ -4,6 +4,7 @@ import '../admin.css'
 import data from '../data/data';
 
 import './cat.css'
+import NavAdmin from '../nav/NavAdmin';
 
 const Cat = () => {
   const [categories, setCategories] = useState([]);
@@ -57,12 +58,15 @@ const Cat = () => {
   if (error) return <p>Error: {error}</p>;
 
   return (
-    <div className='category-admin'>
+    <div className='admin-main-bg'>
+          <NavAdmin/>
+          <div className='box-margin' ></div>
+    <div className='category-admin admin-main-div'>
       <h2>{data.cat.name}</h2>
 
       <div className='btn-cnt'>
-        <Link to="/admin/crtcat" className='click-btn'>
-          <a>{data.cat.btn}</a>
+        <Link to="/admin/crtcat">
+          <a className='click-btn2 main-btn'>{data.cat.btn}</a>
         </Link>
       </div>
 
@@ -79,16 +83,16 @@ const Cat = () => {
           />
           <div className='btns-cnt'>
 
-          <div className='btn-cnt click-btn'
+          <div className='btn-cnt '
             onClick={() => handleDelete(cat.id)}
             
           >
-            <label>{data.cat.btnDelete}</label>
+            <label className='click-btn2 main-btn'>{data.cat.btnDelete}</label>
             
           </div>
-          <div className='btn-cnt click-btn '>
+          <div className='btn-cnt'>
             <Link to={`/admin/upsgcat/${cat.id}`} className=''>
-              <label className='admin-btn' >{data.cat.btnUpdate}</label>
+              <label className='admin-btn click-btn2 main-btn' >{data.cat.btnUpdate}</label>
             </Link>
           </div>
           </div>
@@ -97,6 +101,7 @@ const Cat = () => {
 
         </div>
       ))}
+    </div>
     </div>
   );
 };
