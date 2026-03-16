@@ -1,17 +1,17 @@
 .single-project-up-admin{
     /* background-color: aqua; */
     height: fit-content;
-    width: 90%;
-    margin: 5rem 5%;
+    width: 60%;
+    margin: var(--margin-tb) var(--margin-lr);
 }
 
 .single-project-up-admin form{
-    width: 60%;
-    margin: 0 10%;
+    width: 100%;
+    margin: 0;
     /* background-color: aqua; */
-    padding: 2rem;
+    /* padding: 2rem; */
     border-radius: 1rem;
-    border: solid var(--color-2) ;
+    /* border: solid var(--color-2) ; */
     
 }
 
@@ -44,8 +44,9 @@
 }
 
 .single-project-up-admin form button{
-    background-color: var(--color-2);
+    /* background-color: var(--color-2); */
     padding: 0.5rem;
     border-radius: 0.5rem;
-    color: var(--color-light);
+    /* color: var(--color-light); */
+    margin-top: 2rem;
 }

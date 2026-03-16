@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import './singleProjectUpAdmin.css';
 import '../admin.css'
+import NavAdmin from '../nav/NavAdmin';
 
 const SingleProjectUpAdmin = () => {
   const { id } = useParams();
@@ -203,8 +204,10 @@ const SingleProjectUpAdmin = () => {
   if (error) return <div>Error: {error}</div>;
 
   return (
-
-    <div className="single-project-up-admin">
+    <div className='admin-main-bg'>
+      <NavAdmin/>
+      <div className='box-margin' ></div>
+      <div className="single-project-up-admin admin-main-div">
       <h2>Update Project</h2>
       <form onSubmit={handleSubmit} encType="multipart/form-data">
         {/* Basic fields */}
@@ -457,13 +460,16 @@ const SingleProjectUpAdmin = () => {
           {/* <small>Hold Ctrl (Cmd) to select multiple</small> */}
         </div>
 
-        <button type="submit" disabled={submitting} className='click-btn'>
+        <button type="submit" disabled={submitting} className='click-btn2 main-btn'>
           {submitting ? 'Updating...' : 'Update Project'}
         </button>
 
         {error && <div className="error">{error}</div>}
       </form>
     </div>
+    </div>
+
+    
   );
 };
 

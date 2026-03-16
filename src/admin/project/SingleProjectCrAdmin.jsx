@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './singleProjectCrAdmin.css';
 import '../admin.css'
+import NavAdmin from '../nav/NavAdmin';
 
 const SingleProjectCrAdmin = () => {
   const navigate = useNavigate();
@@ -161,7 +162,10 @@ const SingleProjectCrAdmin = () => {
   if (error && !submitting) return <div>Error: {error}</div>;
 
   return (
-    <div className="single-project-cr-admin">
+    <div className='admin-main-bg'>
+          <NavAdmin/>
+          <div className='box-margin' ></div>
+    <div className="single-project-cr-admin admin-main-div">
       <h2>Create New Project</h2>
       <form onSubmit={handleSubmit} encType="multipart/form-data">
         {/* Basic fields */}
@@ -379,12 +383,13 @@ const SingleProjectCrAdmin = () => {
           {/* <small>Hold Ctrl (Cmd) to select multiple</small> */}
         </div>
 
-        <button type="submit" disabled={submitting} className='click-btn'>
+        <button type="submit" disabled={submitting} className='click-btn2 main-btn'>
           {submitting ? 'Creating...' : 'Create Project'}
         </button>
 
         {error && <div className="error">{error}</div>}
       </form>
+    </div>
     </div>
   );
 };
