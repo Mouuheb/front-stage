@@ -3,7 +3,9 @@
     flex-direction: column;
     width: 90%;
     margin:  5% ;
+    /* filter: invert(); */
     /* background-color: black; */
+    /* display: none; */
 
 }
 

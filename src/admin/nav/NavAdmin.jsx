@@ -12,7 +12,7 @@ const NavAdmin = () => {
                 <div className='img-cnt' >
                     <img src={data.logo} />
                 </div>
-                <h1>Drone Discovery Admin</h1>
+                <h1>Admin</h1>
             </div>
             
             <div className='p2'>

@@ -5,6 +5,7 @@ import data from '../data/data';
 import ConversationList from '../Messages/Conversation';
 import { fetchWithAuth } from './api';  // adjust path
 import Nav from '../pages/nav/Nav';
+import NavAdmin from '../admin/nav/NavAdmin';
 
 const API_BASE_URL = 'http://localhost:8000/auth';
 
@@ -61,10 +62,12 @@ const Profile = () => {
   if (!user) {
     return null;
   }
+  console.log(user)
 
   return (
     <>
-    <Nav/>
+    {user.role==='normal'?(<Nav/>):(<NavAdmin/>)}
+    
     <div className='box-margin'></div>
     
     <div className='profile-main-cnt main-cnt-div'>
