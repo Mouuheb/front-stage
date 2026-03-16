@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import '../admin.css'
+import NavAdmin from '../nav/NavAdmin';
 
 const UpdateSingleTeamAdmin = () => {
   const { id } = useParams();
@@ -101,7 +102,10 @@ const UpdateSingleTeamAdmin = () => {
   if (loading) return <p>Loading...</p>;
 
   return (
-    <div className='update-Single-Team'>
+    <div className='admin-main-bg'>
+                      <NavAdmin/>
+                      <div className='box-margin ' ></div>
+    <div className='update-Single-Team admin-main-div'>
       <h2>Update Team Member</h2>
 
       {message && <p>{message}</p>}
@@ -202,11 +206,12 @@ const UpdateSingleTeamAdmin = () => {
 
         <br />
 
-        <button type="submit" className='click-btn'>
+        <button type="submit" className='click-btn2 main-btn'>
           Update Member
         </button>
 
       </form>
+    </div>
     </div>
   );
 };

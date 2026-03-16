@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../admin.css'
+import NavAdmin from '../nav/NavAdmin';
 
 const CreateTeamAdmin = () => {
   const navigate = useNavigate();
@@ -66,7 +67,10 @@ const CreateTeamAdmin = () => {
   };
 
   return (
-    <div className='team-create'>
+    <div className='admin-main-bg'>
+                      <NavAdmin/>
+                      <div className='box-margin ' ></div>
+    <div className='team-create admin-main-div'>
       <h2>Create Team Member</h2>
 
       {message && <p>{message}</p>}
@@ -121,11 +125,12 @@ const CreateTeamAdmin = () => {
 
         <br />
 
-        <button type="submit" disabled={loading} className='click-btn'>
+        <button type="submit" disabled={loading} className='click-btn2 main-btn'>
           {loading ? 'Creating...' : 'Create Member'}
         </button>
 
       </form>
+    </div>
     </div>
   );
 };

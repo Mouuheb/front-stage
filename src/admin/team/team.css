@@ -1,17 +1,17 @@
 .update-Single-Team{
     /* background-color: aqua; */
     height: fit-content;
-    width: 90%;
+    width: 60%;
     margin: 5rem 5%;
 }
 
 .update-Single-Team form{
-    width: 60%;
-    margin: 0 10%;
+    width: 100%;
+    margin: 0;
     /* background-color: aqua; */
     padding: 2rem;
     border-radius: 1rem;
-    border: solid var(--color-2) ;
+    /* border: solid var(--color-2) ; */
     
 }
 
@@ -44,10 +44,10 @@
 }
 
 .update-Single-Team form button{
-    background-color: var(--color-2);
+    /* background-color: var(--color-2); */
     padding: 0.5rem;
     border-radius: 0.5rem;
-    color: var(--color-light);
+    /* color: var(--color-light); */
 }
 
 
@@ -58,17 +58,17 @@
 .team-create{
     /* background-color: aqua; */
     height: fit-content;
-    width: 90%;
+    width: 60%;
     margin: 5rem 5%;
 }
 
 .team-create form{
-    width: 60%;
-    margin: 0 10%;
+    width: 100%;
+    margin: 0;
     /* background-color: aqua; */
     padding: 2rem;
     border-radius: 1rem;
-    border: solid var(--color-2) ;
+    /* border: solid var(--color-2) ; */
     
 }
 
@@ -101,18 +101,18 @@
 }
 
 .team-create form button{
-    background-color: var(--color-2);
+    /* background-color: var(--color-2); */
     padding: 0.5rem;
     border-radius: 0.5rem;
-    color: var(--color-light);
+    /* color: var(--color-light); */
 }
 
 .team .btn-cnt{
-    margin: 3rem 1rem;
+    margin: 1rem;
     padding: .6rem;
     border-radius: 1rem;
     width: fit-content;
-    background-color: var(--color-2);
+    /* background-color: var(--color-2); */
     /* color: ; */
 }
 .team .btn-cnt label, .team .btn-cnt a{
@@ -140,6 +140,7 @@
 .single-team-admin .p2{
     /* background-color: blue; */
     width: 50%;
+    color: var(--color-text);
     
 }
 
@@ -165,17 +166,22 @@
     padding: 0 10%;
 }
 
+.single-team-admin .p2 p, .single-team-admin .p2 h3{
+    color: var(--color-text);
+    margin-bottom: 1rem;
+}
+
 .single-team-admin .p2 .btns-cnt .btn-cnt{
     margin: 3rem 1rem;
     padding: .6rem;
     border-radius: 1rem;
     width: fit-content;
-    background-color: var(--color-2);
+    /* background-color: var(--color-2); */
     /* color: ; */
 }
 .single-team-admin .p2 .btns-cnt label,
 .single-team-admin .p2 .btns-cnt a{
-    color: var(--color-light);
+    /* color: var(--color-te); */
     font-style: normal;  
     text-decoration: none; 
 }

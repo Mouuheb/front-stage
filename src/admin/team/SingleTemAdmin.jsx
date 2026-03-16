@@ -3,6 +3,7 @@ import { useParams, useNavigate, Link } from 'react-router-dom';
 import '../admin.css'
 import './team.css'
 import data from '../data/data';
+import NavAdmin from '../nav/NavAdmin';
 
 const SingleTemAdmin = () => {
   const { id } = useParams();
@@ -59,7 +60,10 @@ const SingleTemAdmin = () => {
   if (error) return <p>Error: {error}</p>;
 
   return (
-    <div className='single-team-admin'>
+    <div className='admin-main-bg'>
+                  <NavAdmin/>
+                  <div className='box-margin ' ></div>
+    <div className='single-team-admin admin-main-div'>
       <div className='p1'>
       
       <div className='img-cnt' >
@@ -89,17 +93,17 @@ const SingleTemAdmin = () => {
       <br />
 
       <div className='btns-cnt'>
-        <div className='click-btn btn-cnt' onClick={handleDelete}>
-        <label
+        <div className='btn-cnt' onClick={handleDelete}>
+        <label className='main-btn click-btn2'
         
         
       >
         {data.team.btnDelete}
       </label>
       </div>
-      <div className='click-btn btn-cnt'>
+      <div className='btn-cnt'>
         <Link to={`/admin/upsgtm/${id}`}>
-        <label>{data.team.btnUpdate}</label>
+        <label className='main-btn click-btn2'>{data.team.btnUpdate}</label>
         
         </Link>
       </div>
@@ -107,6 +111,7 @@ const SingleTemAdmin = () => {
       </div>
       
       </div>
+    </div>
     </div>
   );
 };

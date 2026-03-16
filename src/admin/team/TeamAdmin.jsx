@@ -4,6 +4,7 @@ import data from '../data/data'
 import { FaLinkedinIn } from "react-icons/fa6";
 import { Link, useNavigate } from 'react-router-dom';
 import '../admin.css';
+import NavAdmin from '../nav/NavAdmin';
 
 const TeamAdmin = () => {
   const [team, setTeam] = useState([]);
@@ -36,16 +37,20 @@ const TeamAdmin = () => {
   // console.log("eee")
   // console.log(team)
   return (
-    loading === false ? (<div className='team'>
+    loading === false ? (
+      <div className='admin-main-bg'>
+              <NavAdmin/>
+              <div className='box-margin' ></div>
+    <div className='team admin-main-div'>
       <div className='header' >
         <div className='title' >
           <h2>{data.team.title}</h2>
         </div>
         <p>{data.team.p}</p>
       </div>
-      <div className='btn-cnt click-btn'>
+      <div className='btn-cnt'>
         <Link to="/admin/crttm/">
-        <label className=''>{data.team.btn}</label>
+        <label className='click-btn2 main-btn'>{data.team.btn}</label>
       
         </Link>
 
@@ -79,6 +84,7 @@ const TeamAdmin = () => {
               <hr />
               <div className='p2' >
                 <p>{item.description}</p>
+                <div className='box-margin' ></div>
                 <div className='admin-btn click-btn2'>
                   <Link to={`/admin/sgtm/${item.id}`}><label>{data.team.btn2}</label></Link>
                 </div>
@@ -95,7 +101,9 @@ const TeamAdmin = () => {
           {data.team.btn.txt}
         </button>} */}
       </div>
-    </div>) : (<div>loading</div>)
+    </div>
+    </div>
+    ) : (<div>loading</div>)
   )
 }
 
