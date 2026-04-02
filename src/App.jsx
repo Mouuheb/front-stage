@@ -51,9 +51,17 @@ import './App.css'
 import NavAuth from './auth/NavAuth'
 import { Stars } from '@react-three/drei'
 import StarsCanvas from './3d/stars'
+import UserAdmin from './admin/users/UserAdmin'
+import SingleUserAdmin from './admin/users/SingleUserAdmin'
+import UpdateUserAdmin from './admin/users/UpdateUserAdmin'
+import AllFile from './admin/3dmodel/AllFile'
+// import SingleFileAdmin from './admin/3dmodel/SingleFileAdmin'
+import UploadFileAdmin from './admin/3dmodel/UploadFile'
+// import UpdateFileAdmin from './admin/3dmodel/UpdateFileAdmin'
+
 
 function App() {
-  const[open,setOpen]=useState(false);
+  const [open, setOpen] = useState(false);
   const location = useLocation();
   const hideNavPaths = ['/register', '/sgprj/'];
   // const hideNav = location.pathname.includes('/admin') || hideNavPaths.some(path => location.pathname.startsWith(path));
@@ -64,36 +72,36 @@ function App() {
 
   return (
     <>
-    <StarsCanvas/>
-    
-    
+      <StarsCanvas />
+
+
       {/* {!hideNav.includes(location.pathname) ? <Nav /> : null} */}
       {/* {!hideNav &&!hideNav2 && } */}
       {/* {hideNav &&!hideNav2 && <NavAdmin />} */}
       {/* <Nav/> */}
-      
-      {!hideNav2 &&
-      <div className='chat-cnt'>
-        {open && <div className='chat-bx'><Chat/></div>}
-        <p className='chat-btn-op click-btn2' onClick={()=>(setOpen(!open))}>Chat</p>
-        
-        
-        
 
-      </div>}
+      {!hideNav2 &&
+        <div className='chat-cnt'>
+          {open && <div className='chat-bx'><Chat /></div>}
+          <p className='chat-btn-op click-btn2' onClick={() => (setOpen(!open))}>Chat</p>
+
+
+
+
+        </div>}
 
       <Routes>
         <Route path="/" element={<Homepage />}>
-        <Route index element={<Homepage />} />
+          <Route index element={<Homepage />} />
         </Route>
-        <Route path="/prj" element={<Work/>} />
+        <Route path="/prj" element={<Work />} />
         <Route path="/sgprj/:id" element={<SingleProjectPage />} />
         <Route path="/tm" element={<Teampage />} />
         <Route path="/cs" element={<Consultationpage />} />
         <Route path="/prj/sgprj/:id" element={<SingleProjectPage />} />
 
         {/* admin */}
-        <Route path="/admin" element={<MainAdminPage />}/>
+        <Route path="/admin" element={<MainAdminPage />} />
         {/* project */}
         <Route path="/admin/prj" element={<Project />} />
         <Route path="/admin/sgprj/:id" element={<SingleProjectPageAdmin />} />
@@ -132,24 +140,31 @@ function App() {
         {/* auth */}
         <Route path="/clt/login" element={<Login />} />
         <Route path="/clt/cracc" element={<CreateAcc />} />
-        <Route path="/prfl" element={<Profile/>} />
-        <Route path="/authset" element={<NavAuth/>} />
+        <Route path="/prfl" element={<Profile />} />
+        <Route path="/authset" element={<NavAuth />} />
 
         {/* message */}
-        <Route path="/allcnv" element={<ConversationList/>} />
+        <Route path="/allcnv" element={<ConversationList />} />
         <Route path="/conversations/:id" element={<ConversationDetail />} />
 
 
         {/* potree */}
-        <Route path="/uppotr" element={<UploadZip/>} />
-        <Route path="/potr" element={<FileList/>} />
+        {/* <Route path="/uppotr" element={<UploadZip />} /> */}
+        {/* <Route path="/potr" element={<FileList />} /> */}
 
-        
-    
+
+        {/* user */}
+        <Route path="/admin/users" element={<UserAdmin />} />
+        <Route path="/admin/user/:id" element={<SingleUserAdmin />} />
+        <Route path="/admin/userup/:id" element={<UpdateUserAdmin />} />
+        <Route path="/admin/cruser/" element={<CreateAcc />} />
+
+        {/* file */}
+        <Route path="/admin/allfile" element={<AllFile />} />
+        <Route path="/admin/upladfile" element={<UploadFileAdmin />} />
 
 
       </Routes>
-      {/* {!hideNav2 &&<Footer />} */}
     </>
   )
 }

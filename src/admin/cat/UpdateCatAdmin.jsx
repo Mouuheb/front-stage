@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import '../admin.css'
 import './cat.css'
 import NavAdmin from '../nav/NavAdmin';
+import Footer from '../../pages/footer/FooterAdmin';
 
 const UpdateCatAdmin = () => {
   const { id } = useParams();
@@ -132,6 +133,7 @@ const UpdateCatAdmin = () => {
         </button>
       </form>
     </div>
+    <Footer/>
     </div>
   );
 };

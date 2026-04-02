@@ -1,0 +1,35 @@
+.user-project-page{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    height: fit-content;
+    margin: 2rem 0;
+}
+
+.user-project-page h2, .user-project-page h4{
+    color: var(--color-white);
+
+}
+
+.user-project-page .card{
+    background-color: var(--color-text);
+    border-radius: 1rem ;
+    padding: 1rem;
+    margin: 1rem 0;
+    border: solid .2rem var(--color-white);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    
+}
+
+.user-project-page label{
+    color: var(--color-text);
+    background-color: var(--color-white);
+    padding: 1rem;
+    margin:  1rem;
+    border-radius: 1rem;
+    /* border: .2rem solid var(--color-text); */
+    font-weight: bold;
+}

@@ -39,65 +39,54 @@ const SingleProject = (prop) => {
 
                 // setLoading(false);
                 for (let i = 0; i < data.categories.length; i++) {
-                    
-                    
-                
 
-                fetch(`http://localhost:8000/api/categories/${data.categories[i]}/`)
-                    .then(response => {
-                        if (!response.ok) {
-                            throw new Error('Network response was not ok');
-                        }
-                        return response.json();
-                    })
-                    .then(data => {
-                        setCat(data);
-                        // setLoading(false);
-                        // console.log(cat)
-                    })
-                    .catch(error => {
-                        setError(error.message);
-                        setLoading(false);
-                    });}
+
+
+
+                    fetch(`http://localhost:8000/api/categories/${data.categories[i]}/`)
+                        .then(response => {
+                            if (!response.ok) {
+                                throw new Error('Network response was not ok');
+                            }
+                            return response.json();
+                        })
+                        .then(data => {
+                            setCat(data);
+                            // setLoading(false);
+                            // console.log(cat)
+                        })
+                        .catch(error => {
+                            setError(error.message);
+                            setLoading(false);
+                        });
+                }
 
 
                 // filemodel
-                if (data.filemodel){
+                if (data.filemodel) {
                     console.log("starrrt")
-                fetch(`http://localhost:8000/folder/files/${data.filemodel[0]}/`)
-                    .then(response => {
-                        if (!response.ok) {
-                            throw new Error('Network response was not ok');
-                        }
-                        return response.json();
-                    })
-                    .then(data => {
-                        setModel(data);
-                        setLoading(false);
-                        console.log(data)
-                    })
-                    .catch(error => {
-                        setError(error.message);
-                        setLoading(false);
-                    });}
-                    else{
-                        setError(false)
-                        console.log("endddddddddddddddddddddddddddddddddddddddddddddddddd")
-                    }
+                    fetch(`http://localhost:8000/folder/files/${data.filemodel[0]}/`)
+                        .then(response => {
+                            if (!response.ok) {
+                                throw new Error('Network response was not ok');
+                            }
+                            return response.json();
+                        })
+                        .then(data => {
+                            setModel(data);
+                            setLoading(false);
+                            console.log(data)
+                        })
+                        .catch(error => {
+                            setError(error.message);
+                            setLoading(false);
+                        });
+                }
+                else {
+                    setError(false)
+                    console.log("endddddddddddddddddddddddddddddddddddddddddddddddddd")
+                }
 
-                
-
-
-
-                // console.log("hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh")
-                // try {
-                //     const res = axios.get();
-                //     setModel(res.data);
-                //     console.log(res.data)
-                // } catch (err) {
-                //     console.error("Failed to fetch single file:", err);
-                //     alert("Failed to fetch file");
-                // }
 
             })
             .catch(error => {
@@ -108,12 +97,12 @@ const SingleProject = (prop) => {
     console.log("3333")
 
     console.log(model);
-    
 
 
 
 
-    
+
+
 
 
 
@@ -135,33 +124,33 @@ const SingleProject = (prop) => {
                     </div>
                     <div className='txt-cmp'>
                         <h1>{project.name}</h1>
-                        
+
                         <div className='txt-a-cmp' >
                             <h2>Adresse :  {project.address}</h2>
                             <h2>gaverner : {project.state} </h2>
                             <h2>categorie : {cat.name}</h2>
                         </div>
                         <div className='imgs-cnt'>
-                            
-                            {project.folder &&<div className='sng-img'><iframe 
-                            width="560" 
-                            height="315" 
-                            src="https://www.youtube.com/embed/jv0YAVI7DbQ"
-                            // src="https://www.youtube.com/embed/jv0YAVI7DbQ?autoplay=1&mute=1"
-                            title="YouTube video player" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen
+
+                            {project.folder && <div className='sng-img'><iframe
+                                width="560"
+                                height="315"
+                                src="https://www.youtube.com/embed/jv0YAVI7DbQ"
+                                // src="https://www.youtube.com/embed/jv0YAVI7DbQ?autoplay=1&mute=1"
+                                title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen
                             >
-                            
-                        </iframe></div>}
-                        {project.image_a &&<div className='sng-img'><img src={project.image_a} /></div>}
-                            {project.image_b &&<div className='sng-img'><img src={project.image_b} /></div>}
-                            {project.image_c &&<div className='sng-img'><img src={project.image_c} /></div>}
-                            {project.image_c &&<div className='sng-img'><img src={project.image_d} /></div>}
+
+                            </iframe></div>}
+                            {project.image_a && <div className='sng-img'><img src={project.image_a} /></div>}
+                            {project.image_b && <div className='sng-img'><img src={project.image_b} /></div>}
+                            {project.image_c && <div className='sng-img'><img src={project.image_c} /></div>}
+                            {project.image_c && <div className='sng-img'><img src={project.image_d} /></div>}
 
                         </div>
-                        
+
                         <div className='txt-b-cmp' >
                             <div className='map-cnt' >
                                 <MapWithLeaflet location={project.location} />
@@ -173,21 +162,21 @@ const SingleProject = (prop) => {
                                 </p>
 
                             </div>
-                            
+
 
 
                         </div>
-                        
 
 
 
 
-                        
+
+
                         <div className='btn-cmp'>
-                        <a
-                         href={`http://localhost:8000/media/${model.file_unzip}`
-                        }
-                        className='click-btn2 main-btn'>Voir model en 3D</a>
+                            <a
+                                href={`http://localhost:8000/media/${model.file_unzip}`
+                                }
+                                className='click-btn2 main-btn'>Voir model en 3D</a>
                         </div>
                     </div>
 

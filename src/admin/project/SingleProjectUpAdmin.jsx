@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import './singleProjectUpAdmin.css';
 import '../admin.css'
 import NavAdmin from '../nav/NavAdmin';
+import Footer from '../../pages/footer/FooterAdmin';
 
 const SingleProjectUpAdmin = () => {
   const { id } = useParams();
@@ -24,6 +25,7 @@ const SingleProjectUpAdmin = () => {
     location: '',
     categories: [],
     assigned_members: [],
+    filemodel:[],
   });
 
   // Separate state for files (new uploads)
@@ -33,6 +35,7 @@ const SingleProjectUpAdmin = () => {
     image_b: null,
     image_c: null,
     image_d: null,
+    filemodel: null,
   });
 
   // Store existing image URLs for preview
@@ -42,6 +45,7 @@ const SingleProjectUpAdmin = () => {
     image_b: '',
     image_c: '',
     image_d: '',
+    // filermodel: '',
   });
 
   const [loading, setLoading] = useState(true);
@@ -51,6 +55,8 @@ const SingleProjectUpAdmin = () => {
   // Options for dropdowns
   const [categories, setCategories] = useState([]);
   const [members, setMembers] = useState([]);
+  const [model, setModel] = useState([]);
+
 
   // Type choices from the model
   const typeChoices = [
@@ -66,10 +72,15 @@ const SingleProjectUpAdmin = () => {
 
   // Status choices from the model
   const statusChoices = [
-    { value: 'complete', label: 'Complete' },
+    { value: 'idea', label: 'Idea' },
+    { value: 'nonvalider', label: 'Non valider' },
+    { value: 'valider', label: 'Valider' },
+    
     { value: 'not_complete', label: 'Not Complete' },
     { value: 'in_process', label: 'In Process' },
-    { value: 'idea', label: 'Idea' },
+
+    { value: 'complete', label: 'Complete' },
+    
   ];
 
   // Fetch project data, categories, members
@@ -85,6 +96,11 @@ const SingleProjectUpAdmin = () => {
         const categoriesRes = await fetch('http://localhost:8000/api/categories/');
         if (!categoriesRes.ok) throw new Error('Failed to fetch categories');
         const categoriesData = await categoriesRes.json();
+
+        // Fetch all files
+        const fileRes = await fetch('http://localhost:8000/folder/files/');
+        if (!fileRes.ok) throw new Error('Failed to fetch files');
+        const filesData = await fileRes.json();
 
         // Fetch all members
         const membersRes = await fetch('http://localhost:8000/api/members/');
@@ -107,6 +123,7 @@ const SingleProjectUpAdmin = () => {
           location: projectData.location || '',
           categories: projectData.categories || [],
           assigned_members: projectData.assigned_members || [],
+          filermodel: projectData.filemodel || [],
         });
 
         // Store existing image URLs for preview
@@ -120,6 +137,7 @@ const SingleProjectUpAdmin = () => {
 
         setCategories(categoriesData);
         setMembers(membersData);
+        setModel(filesData)
         setLoading(false);
       } catch (err) {
         setError(err.message);
@@ -167,7 +185,7 @@ const SingleProjectUpAdmin = () => {
       if (Array.isArray(value)) {
         // For many-to-many, append each id individually
         value.forEach(item => formDataToSend.append(key, item));
-      } else if (value !== '') {
+      } else if (value !== '' && value !== null) {
         formDataToSend.append(key, value);
       }
     });
@@ -181,9 +199,7 @@ const SingleProjectUpAdmin = () => {
 
     try {
       const response = await fetch(`http://localhost:8000/api/projects/${id}/update/`, {
-        method: 'PUT', // or 'PATCH' if your API supports partial updates
-        // Do NOT set Content-Type header; browser sets it with boundary
-        // credentials: 'include', // uncomment if needed
+        method: 'PUT',
         body: formDataToSend,
       });
 
@@ -221,6 +237,8 @@ const SingleProjectUpAdmin = () => {
             required
           />
         </div>
+
+        
 
         <div className='row'>
           <label>Type</label>
@@ -460,13 +478,25 @@ const SingleProjectUpAdmin = () => {
           {/* <small>Hold Ctrl (Cmd) to select multiple</small> */}
         </div>
 
+        <div className='row'>
+          <label>Model</label>
+          <select name="filemodel" value={formData.filemodel} onChange={handleChange}>
+            <option value="">-- Select Type --</option>
+            {model.map(choice => (
+              <option key={choice.id} value={choice.id}>{choice.name}</option>
+            ))}
+          </select>
+        </div>
+
         <button type="submit" disabled={submitting} className='click-btn2 main-btn'>
           {submitting ? 'Updating...' : 'Update Project'}
         </button>
 
         {error && <div className="error">{error}</div>}
       </form>
-    </div>
+      </div>
+      <Footer/>
+
     </div>
 
     

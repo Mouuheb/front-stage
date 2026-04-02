@@ -3,6 +3,7 @@ import SingleProjectAdmin from './SingleProjectAdmin';
 import { useParams } from 'react-router-dom';
 import '../admin.css'
 import NavAdmin from '../nav/NavAdmin';
+import Footer from '../../pages/footer/FooterAdmin';
 
 const SingleProjectPageAdmin = () => {
   const { id } = useParams();
@@ -12,6 +13,7 @@ const SingleProjectPageAdmin = () => {
       <NavAdmin/>
       <div className='box-margin' ></div>
       <SingleProjectAdmin id={proj}/>
+      <Footer/>
     </div>
   )
 }

@@ -560,3 +560,8 @@
 }
 
 /* .footer-page{padding-top: 5rem ;} */
+
+.footer-bg{
+    padding-top: 5rem;
+    background-color: var(--color-white);
+}

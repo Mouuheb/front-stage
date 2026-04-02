@@ -5,6 +5,7 @@ import ConversationList from './Conversation';
 import data from '../data/data';
 import { fetchWithAuth } from '../auth/api';
 import Nav from '../pages/nav/Nav';
+import Footer from '../pages/footer/Footer';
 const API_BASE_URL = 'http://localhost:8000/api';
 
 const ConversationDetail = () => {
@@ -188,6 +189,7 @@ const ConversationDetail = () => {
       </div>
 
     </div>
+    <Footer/>
     </>
 
   );

@@ -1,0 +1,15 @@
+.map-admin-page{
+    width: 100%;
+    height: fit-content;
+    background-color: var(--color-white);
+    padding: 5rem 1rem;
+}
+
+.map-admin-page .map-cnt{
+    width: 100%;
+    margin:0%;
+    
+    border-radius: 0.75rem;
+    overflow: hidden;
+    background-color: aqua;
+}

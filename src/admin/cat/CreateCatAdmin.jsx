@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import '../admin.css'
 import './cat.css'
 import NavAdmin from '../nav/NavAdmin';
+import Footer from '../../pages/footer/FooterAdmin';
 
 const CreateCatAdmin = () => {
   const [formData, setFormData] = useState({
@@ -109,6 +110,7 @@ const CreateCatAdmin = () => {
         </button>
       </form>
     </div>
+    <Footer/>
     </div>
   );
 };

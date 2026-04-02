@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import '../admin.css'
 import './equ.css'
 import NavAdmin from '../nav/NavAdmin';
+import Footer from '../../pages/footer/FooterAdmin';
 const UpdateEquipAdmin = () => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -184,6 +185,7 @@ const UpdateEquipAdmin = () => {
         <button className='click-btn2 main-btn' type="submit" >Update Equipment</button>
       </form>
     </div>
+    <Footer/>
     </div>
   );
 };

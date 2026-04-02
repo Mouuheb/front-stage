@@ -1,0 +1,84 @@
+.chart-cnt-page{
+    width: 100%;
+    background-color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    /* background-color: aquamarine; */
+}
+
+.chart-cnt-page .row{
+    display: flex;
+    flex-direction: row;
+    /* width: 100%; */
+    /* background-color: rgb(255, 230, 0); */
+    align-items: end;
+    gap: 0%;
+}
+.allwidth{
+    width: 100%;
+    /* background-color: aqua; */
+}
+
+.chart-cnt-page .column{
+    display: flex;
+    flex-direction: column;
+    /* width: 100%; */
+    /* background-color: rgb(255, 230, 0); */
+    align-items: end;
+    gap: 0rem;
+    /* width: 100%; */
+}
+
+.chart-cnt-page .chart-line-cnt{
+    width: 100%;
+    /* background-color: aqua; */
+    height: 100%;
+    padding: 1rem;
+}
+
+.chart-cnt-page .chart-donat-cnt{
+    /* background-color: blueviolet; */
+    width: 100%;
+    padding: 1rem;
+
+}
+
+.chart-cnt-page .chart-matrix-cnt{
+    /* background-color: blueviolet; */
+    width: 100%;
+    padding: 1rem;
+
+}
+
+.chart-cnt-page .chart-bar-cnt{
+    /* background-color: rgb(226, 183, 43); */
+    width: 100%;
+    padding: 1rem;
+
+}
+
+.chart-cnt-page .box-cnt{
+    /* background-color: aqua; */
+    width: 100%;
+    padding: 1rem 1.5rem;
+    justify-content: space-between;
+}
+
+.chart-cnt-page .box-cnt .box{
+    background-color: var(--color-5);
+    padding: 2rem 1rem ;
+    border-radius: .75rem;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    min-width: 30%;
+    /* text-align: center; */
+
+
+}
+
+
+.chart-cnt-page h1{
+    color: var(--color-2);
+}

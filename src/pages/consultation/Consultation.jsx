@@ -20,18 +20,38 @@ const Consultation = () => {
 
     const [dis, setDis] = useState(null);
     const [area, setArea] = useState(null);
+    const [loc, setLoc] = useState(null);
     const [showMap, setShowMap] = useState(false);
 
-    const [note, setNote] = useState('');
 
-    const handleAreaDisChange = (prarea,prdis,point) =>{
+    const [note, setNote] = useState('');
+    const token = localStorage.getItem("access_token") || null;
+    const [locationDetais, setLocationDetais] = useState(null);
+    const [address, setAddress] = useState('');
+    const [state, setState] = useState('');
+
+
+    
+
+    const handleAreaDisChange = (prarea, prdis, point,deta) => {
+        console.log(deta)
+        setAddress('');
+        setState('');
+
+        if (deta.address && deta.state){
+            setAddress(deta.address) || '';
+            setState(deta.state) || '';
+
+        }
+        
         setArea(prarea);
         setDis(prdis);
-        console.log('parent'+prarea+' '+prdis+' ',point)
-        setNote('location ~= '+point+' , area ~= '+prarea+'m², distance ~= '+prdis+'km, price ~= '+((prarea/10000*2000)+(prdis/100*60))+' dt');
+        setLoc(point)
+        // console.log('parent' + prarea + ' ' + prdis + ' ', point)
+        setNote('adress = '+ address +' state = '+ state +' location ~= ' + point + ' , area ~= ' + prarea + 'm², distance ~= ' + prdis + 'km, price ~= ' + ((prarea / 10000 * 2000) + (prdis / 100 * 60)) + ' dt');
+        // setNote(' location ~= ' + point + ' , area ~= ' + prarea + 'm², distance ~= ' + prdis + 'km, price ~= ' + ((prarea / 10000 * 2000) + (prdis / 100 * 60)) + ' dt');
     };
 
-        
 
     const handleFileChange = (e) => {
         const file = e.target.files?.[0] || null;
@@ -58,6 +78,7 @@ const Consultation = () => {
 
         // Create FormData for file upload
         const formData = new FormData();
+
         formData.append('nom', name);
         formData.append('sujet', mess);
         formData.append('notes', note);
@@ -89,6 +110,44 @@ const Consultation = () => {
             const responseData = await response.json();
             console.log('Success:', responseData);
 
+            if (token && showMap){
+                console.log(token)
+                try {
+                    const formDataToSend = new FormData();
+
+                    formDataToSend.append('name', `proposition project de ${name} contact ${tel}`);
+                    // formDataToSend.append('description', mess);
+                    console.log(area+' '+dis+' '+((area / 5) + (dis / 1.6)).toFixed(2))
+                    formDataToSend.append('price', `${((area / 5) + (dis / 1.6)).toFixed(2)}`) ;
+                    // formDataToSend.append('price', 20.50) ;
+                    formDataToSend.append('status', 'idea');
+                    formDataToSend.append('description', `project ${dis} m away area of ${area} cote ${((area / 5) + (dis / 1.6)).toFixed(2)}`);
+                    // console.log(loc)
+                    formDataToSend.append('location', `${[loc[1],loc[0]]}`);
+                    formDataToSend.append('address', `${address}`);
+                    formDataToSend.append('state', `${state}`);
+
+                    const response = await fetch('http://localhost:8000/api/projects/create/', {
+                        method: 'POST',
+                        headers: {
+                            // "Content-Type": "application/json",
+                            Authorization: `Bearer ${token}`, // or your auth type
+                        },
+                        body: formDataToSend,
+                    });
+
+                    if (!response.ok) {
+                        console.log("BACKEND ERROR 👉", response);
+                        throw new Error(JSON.stringify(response));
+                    }
+
+                    console.log("project created ✅");
+
+                } catch (err) {
+                    console.error(err);
+                    setError(err.message);
+                }
+            }
             setSuccess(true);
 
             // Reset form
@@ -99,12 +158,14 @@ const Consultation = () => {
             setMess('');
             setArea(0);
             setDis(0);
+            setArea(null)
+            setDis(null)
 
             // Reset file input
             e.target.reset();
 
         } catch (error) {
-            console.error('Error:', error);
+            // console.error('Error:', error);
             setError(error.message);
         } finally {
             setLoading(false);
@@ -155,12 +216,12 @@ const Consultation = () => {
                     <div className='p1'>
                         <div className='radios'>
                             <div className='radio'>
-                                <input type='radio' name='r1' className='custom-radio' onClick={()=>(setShowMap(false))} /><label>formation</label>
+                                <input type='radio' name='r1' className='custom-radio' onClick={() => (setShowMap(false))} /><label>formation</label>
                             </div>
                             <div>
                                 {/* <input type='radio' name='r1' className='custom-radio' /><label>Consultation</label> */}
                                 <div>
-                                    <input type='radio' name='r1' className='custom-radio' onClick={()=>(setShowMap(true))} /><label>Musure</label>
+                                    <input type='radio' name='r1' className='custom-radio' onClick={() => (setShowMap(true))} /><label>Musure</label>
                                 </div>
                             </div>
                         </div>
@@ -233,7 +294,7 @@ const Consultation = () => {
                             }}>
                                 <span>📎 {doc.name}</span>
                                 <button
-                                
+
                                     type="button"
                                     onClick={() => {
                                         setDoc(null);
@@ -274,13 +335,13 @@ const Consultation = () => {
                             </button>
                         )}
                     </div>
-                    {showMap&&<div className='p2'>
+                    {showMap && <div className='p2'>
                         <div>
                             <p>choisie votre area :</p>
-                            <br/>
+                            <br />
                         </div>
                         <div className='map-cnt'>
-                        <LocationFinder setinfo={handleAreaDisChange}/>
+                            <LocationFinder setinfo={handleAreaDisChange} />
                         </div>
                     </div>}
                 </div>

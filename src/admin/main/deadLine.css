@@ -1,0 +1,21 @@
+.today-dead-line-page{
+    width: 100%;
+    background-color: var(--color-white);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: var(--margin-tb) 0 ;
+}
+
+.today-dead-line-page .left-part,
+.today-dead-line-page .right-part{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: 0 5% ;
+    gap: 2rem;
+}
+
+.today-dead-line-page label{
+    width: 100%;
+}

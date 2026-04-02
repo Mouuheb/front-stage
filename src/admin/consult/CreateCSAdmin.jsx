@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../admin.css'
 import NavAdmin from '../nav/NavAdmin';
+import Footer from '../../pages/footer/FooterAdmin';
 
 const CreateCSAdmin = () => {
   const navigate = useNavigate();
@@ -135,6 +136,7 @@ const CreateCSAdmin = () => {
         <button type="submit" className='click-btn2 main-btn'>Create Consultation</button>
       </form>
     </div>
+    <Footer/>
     </div>
   );
 };

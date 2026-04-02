@@ -1,0 +1,108 @@
+.update-file-admin{
+    /* background-color: aqua; */
+    height: fit-content;
+    width: 60%;
+    margin: 5rem 5%;
+}
+
+.update-file-admin form{
+    width: 100%;
+    margin: 0;
+    /* background-color: aqua; */
+    padding: 2rem;
+    border-radius: 1rem;
+    /* border: solid var(--color-2) ; */
+    
+}
+
+.update-file-admin form .row{
+    
+    /* background-color: blue; */
+    /* width: 60%; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1rem 0;
+
+}
+
+.update-file-admin form .row input,
+.update-file-admin form .row select,
+.update-file-admin form .row textarea
+{
+    width: 15rem;
+    background-color: var(--color-light);
+    color: var(--color-2);
+    border-radius: .5rem;
+    height: 2rem;
+    padding: 0.2rem;
+}
+
+.update-file-admin form .row textarea{
+    height: 4rem;
+    
+}
+
+.update-file-admin form button{
+    /* background-color: var(--color-2); */
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    /* color: var(--color-light); */
+}
+
+
+/* create-file-admin */
+
+
+
+.create-file-admin{
+    /* background-color: aqua; */
+    height: fit-content;
+    width: 60%;
+    margin: 5rem 5%;
+}
+
+.create-file-admin form{
+    width: 100%;
+    margin: 0;
+    /* background-color: aqua; */
+    padding: 2rem;
+    border-radius: 1rem;
+    /* border: solid var(--color-2) ; */
+    
+}
+
+.create-file-admin form .row{
+    
+    /* background-color: blue; */
+    /* width: 60%; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1rem 0;
+
+}
+
+.create-file-admin form .row input,
+.create-file-admin form .row select,
+.create-file-admin form .row textarea
+{
+    width: 15rem;
+    background-color: var(--color-light);
+    color: var(--color-2);
+    border-radius: .5rem;
+    height: 2rem;
+    padding: 0.2rem;
+}
+
+.create-file-admin form .row textarea{
+    height: 4rem;
+    
+}
+
+.create-file-admin form button{
+    /* background-color: var(--color-2); */
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    /* color: var(--color-light); */
+}

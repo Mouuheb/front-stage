@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import '../admin.css'
 import NavAdmin from '../nav/NavAdmin';
+import Footer from '../../pages/footer/FooterAdmin';
 
 const UpdateSingleTeamAdmin = () => {
   const { id } = useParams();
@@ -212,6 +213,7 @@ const UpdateSingleTeamAdmin = () => {
 
       </form>
     </div>
+    <Footer/>
     </div>
   );
 };

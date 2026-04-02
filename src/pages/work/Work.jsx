@@ -6,6 +6,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import MapWithLeaflet from '../map/MapWithLeaflet';
 import MapwithLeafletMulti from '../map/MapwithLeafletMulti';
 import Nav from '../nav/Nav';
+import Footer from '../footer/Footer';
 
 const Work = () => {
     const [project, setProject] = useState([]);
@@ -126,6 +127,7 @@ const Work = () => {
 
                 
             </div>
+            <Footer/>
             </>
         ) : (
             <div>loading...</div>

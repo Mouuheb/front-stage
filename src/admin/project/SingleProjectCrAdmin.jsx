@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import './singleProjectCrAdmin.css';
 import '../admin.css'
 import NavAdmin from '../nav/NavAdmin';
+import Footer from '../../pages/footer/FooterAdmin';
 
 const SingleProjectCrAdmin = () => {
   const navigate = useNavigate();
@@ -23,6 +24,7 @@ const SingleProjectCrAdmin = () => {
     folder: '',
     categories: [],
     assigned_members: [],
+    filemodel:[],
   });
 
   // Separate state for files
@@ -41,6 +43,7 @@ const SingleProjectCrAdmin = () => {
   // Options for dropdowns
   const [categories, setCategories] = useState([]);
   const [members, setMembers] = useState([]);
+  const [model, setModel] = useState([]);
 
   // Type choices from the model (hardcoded)
   const typeChoices = [
@@ -66,19 +69,23 @@ const SingleProjectCrAdmin = () => {
   useEffect(() => {
     const fetchOptions = async () => {
       try {
-        const [categoriesRes, membersRes] = await Promise.all([
+        const [categoriesRes, membersRes, fileRes] = await Promise.all([
           fetch('http://localhost:8000/api/categories/'),
           fetch('http://localhost:8000/api/members/'),
+          fetch('http://localhost:8000/folder/files/')
         ]);
 
         if (!categoriesRes.ok) throw new Error('Failed to fetch categories');
         if (!membersRes.ok) throw new Error('Failed to fetch members');
+        if (!fileRes.ok) throw new Error('Failed to fetch files');
 
         const categoriesData = await categoriesRes.json();
         const membersData = await membersRes.json();
+        const filesData = await fileRes.json();
 
         setCategories(categoriesData);
         setMembers(membersData);
+        setModel(filesData)
         setLoading(false);
       } catch (err) {
         setError(err.message);
@@ -383,6 +390,16 @@ const SingleProjectCrAdmin = () => {
           {/* <small>Hold Ctrl (Cmd) to select multiple</small> */}
         </div>
 
+        <div className='row'>
+          <label>Model</label>
+          <select name="filemodel" value={formData.filemodel} onChange={handleChange}>
+            <option value="">-- Select Type --</option>
+            {model.map(choice => (
+              <option key={choice.id} value={choice.id}>{choice.name}</option>
+            ))}
+          </select>
+        </div>
+
         <button type="submit" disabled={submitting} className='click-btn2 main-btn'>
           {submitting ? 'Creating...' : 'Create Project'}
         </button>
@@ -390,6 +407,7 @@ const SingleProjectCrAdmin = () => {
         {error && <div className="error">{error}</div>}
       </form>
     </div>
+    <Footer/>
     </div>
   );
 };

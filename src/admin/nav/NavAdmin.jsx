@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const NavAdmin = () => {
   return (
-    <div className='nav'>
+    <div className='nav invNav'>
         <div className='p1'>
             <div className='logo'>
                 <div className='img-cnt' >
@@ -20,12 +20,12 @@ const NavAdmin = () => {
                     return (
                         link.out === true ? (
                             <Link to={link.path} key={index} className='links'
-                            // className={({ isActive }) => isActive ? 'links active' : 'links'}
+                            
 >
-                            {/* <a className='links'> */}
+                            
                                 <label>{link.name}</label>
                                 
-                                {/* </a> */}
+                                
                             </Link>
                         ) : (
                             <a className='/links' key={index} href={link.path}>

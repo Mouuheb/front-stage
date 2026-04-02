@@ -14,6 +14,7 @@
 }
 .chat-page .top{
     height: 25rem;
+    overflow-y: auto;
 
 }
 .chat-page .top .message{

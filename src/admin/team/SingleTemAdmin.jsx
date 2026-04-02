@@ -4,6 +4,7 @@ import '../admin.css'
 import './team.css'
 import data from '../data/data';
 import NavAdmin from '../nav/NavAdmin';
+import Footer from '../../pages/footer/FooterAdmin';
 
 const SingleTemAdmin = () => {
   const { id } = useParams();
@@ -112,6 +113,7 @@ const SingleTemAdmin = () => {
       
       </div>
     </div>
+    <Footer/>
     </div>
   );
 };

@@ -6,13 +6,25 @@ import Consult from '../consult/Consult'
 import EquipAdmin from '../equipment/EquipAdmin'
 import '../admin.css'
 import NavAdmin from '../nav/NavAdmin'
+import News from '../news/News'
+import SimpleLineChart from '../../chart/Chart'
+import TodayDeadline from './TodayDeadline'
+import ProjectMap from './ProjectMap'
+import Footer from '../../pages/footer/FooterAdmin'
 
 const MainAdminPage = () => {
   return (
     <div>
       <NavAdmin/>
+      <div className='box-margin'></div>
       
       <div className='admin-main-bg'>
+        <News/>
+        <TodayDeadline/>
+        <SimpleLineChart/>
+        <ProjectMap/>
+        <Footer/>
+        
         {/* <Project/> */}
         {/* <Cat/> */}
         {/* <TeamAdmin/> */}

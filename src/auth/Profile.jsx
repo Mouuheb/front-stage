@@ -6,6 +6,9 @@ import ConversationList from '../Messages/Conversation';
 import { fetchWithAuth } from './api';  // adjust path
 import Nav from '../pages/nav/Nav';
 import NavAdmin from '../admin/nav/NavAdmin';
+import Footer from '../pages/footer/Footer';
+import UserProjects from './UserProjects';
+
 
 const API_BASE_URL = 'http://localhost:8000/auth';
 
@@ -81,6 +84,9 @@ const Profile = () => {
             <p><strong>{data.auth.lname} : </strong> {user.last_name || '—'}</p>
             <p><strong>{data.auth.tel} : </strong> {user.phone_number || '—'}</p>
           </div>
+          <div className=''>
+            <UserProjects/>
+          </div>
           <button className='click-btn2' onClick={handleLogout}>
             {data.auth.logout}
           </button>
@@ -88,8 +94,11 @@ const Profile = () => {
       </div>
       <div className='p2'>
         <ConversationList />
+        
       </div>
     </div>
+    <Footer/>
+    
     </>
   );
 };

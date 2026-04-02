@@ -4,6 +4,7 @@ import '../admin.css'
 import './equ.css'
 import data from '../data/data';
 import NavAdmin from '../nav/NavAdmin';
+import Footer from '../../pages/footer/FooterAdmin';
 
 const EquipAdmin = () => {
   const [equipment, setEquipment] = useState([]);
@@ -67,6 +68,7 @@ const EquipAdmin = () => {
       )}
       
     </div>
+    <Footer/>
     </div>
   );
 };

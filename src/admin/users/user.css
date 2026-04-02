@@ -1,0 +1,185 @@
+.create-equ-admin{
+    /* background-color: aqua; */
+    height: fit-content;
+    width: 60%;
+    margin: 5rem 5%;
+}
+
+.create-equ-admin form{
+    width: 100%;
+    margin: 0;
+    /* background-color: aqua; */
+    padding: 2rem;
+    border-radius: 1rem;
+    /* border: solid var(--color-2) ; */
+    
+}
+
+.create-equ-admin form .row{
+    
+    /* background-color: blue; */
+    /* width: 60%; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1rem 0;
+
+}
+
+.create-equ-admin form .row input,
+.create-equ-admin form .row select,
+.create-equ-admin form .row textarea
+{
+    width: 15rem;
+    background-color: var(--color-light);
+    color: var(--color-2);
+    border-radius: .5rem;
+    height: 2rem;
+    padding: 0.2rem;
+}
+
+.create-equ-admin form .row textarea{
+    height: 4rem;
+    
+}
+
+.create-equ-admin form button{
+    /* background-color: var(--color-2); */
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    /* color: var(--color-light); */
+}
+/*  */
+
+
+.update-users-admin{
+    /* background-color: aqua; */
+    height: fit-content;
+    width: 60%;
+    margin: 5rem 5%;
+}
+
+.update-users-admin form{
+    width: 100%;
+    margin: 0;
+    /* background-color: aqua; */
+    padding: 2rem;
+    border-radius: 1rem;
+    /* border: solid var(--color-2) ; */
+    
+}
+
+.update-users-admin form .row{
+    
+    /* background-color: blue; */
+    /* width: 60%; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1rem 0;
+
+}
+
+.update-users-admin form .row input,
+.update-users-admin form .row select,
+.update-users-admin form .row textarea
+{
+    width: 15rem;
+    background-color: var(--color-light);
+    color: var(--color-2);
+    border-radius: .5rem;
+    height: 2rem;
+    padding: 0.2rem;
+}
+
+.update-users-admin form .row textarea{
+    height: 4rem;
+    
+}
+
+.update-users-admin form button{
+    /* background-color: var(--color-2); */
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    /* color: var(--color-light); */
+}
+
+
+
+/* -------------------------------------------------------------- */
+.users-admin{
+    /* background-color: aqua; */
+    width: 90%;
+    margin: 5rem 5%;
+}
+
+.users-admin .card{
+    /* background-color: blue; */
+    border: solid var(--color-2);
+    border-radius: 1rem;
+    padding: 2rem 1rem;
+    margin:  1rem 0;
+}
+
+
+.users-admin .btn-cnt{
+    /* margin: 3rem 1rem; */
+    padding: .6rem;
+    border-radius: 1rem;
+    width: fit-content;
+    /* background-color: var(--color-2); */
+    /* color: ; */
+}
+.users-admin label,
+.users-admin a{
+    color: var(--color-light);
+    font-style: normal;  
+    text-decoration: none; 
+}
+.users-admin p{
+    color: var(--color-2);
+}
+
+
+/* ----------------------------------------------- */
+
+.single-users-admin{
+    /* background-color: aqua; */
+    width: 90%;
+    margin: 5rem 5%;
+    padding: 2rem;
+}
+
+
+.single-users-admin .btn-cnt{
+    /* margin: 3rem 1rem; */
+    padding: .6rem;
+    border-radius: 1rem;
+    width: fit-content;
+    /* background-color: var(--color-2); */
+    /* color: ; */
+}
+.single-users-admin label,
+.single-users-admin a{
+    /* color: var(--color-light); */
+    font-style: normal;  
+    text-decoration: none; 
+}
+
+.single-users-admin .btns-cnt{
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    gap: 1rem;
+    /* background-color: burlywood; */
+    justify-content: space-between;
+}
+
+.single-users-admin .lik{
+    color: var(--color-2);
+}
+
+.single-users-admin p{
+    color: var(--color-2);
+    margin-bottom: 1rem;
+}

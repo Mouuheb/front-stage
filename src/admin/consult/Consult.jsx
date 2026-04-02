@@ -4,6 +4,7 @@ import '../admin.css'
 import './consul.css'
 import data from '../data/data';
 import NavAdmin from '../nav/NavAdmin';
+import Footer from '../../pages/footer/FooterAdmin';
 
 const Consult = () => {
   const [consultations, setConsultations] = useState([]);
@@ -86,6 +87,7 @@ const Consult = () => {
         // 
       ))}
     </div>
+    <Footer/>
     </div>
   );
 };

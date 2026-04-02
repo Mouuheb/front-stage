@@ -5,6 +5,7 @@ import data from '../data/data';
 
 import './cat.css'
 import NavAdmin from '../nav/NavAdmin';
+import Footer from '../../pages/footer/FooterAdmin';
 
 const Cat = () => {
   const [categories, setCategories] = useState([]);
@@ -61,7 +62,7 @@ const Cat = () => {
     <div className='admin-main-bg'>
           <NavAdmin/>
           <div className='box-margin' ></div>
-    <div className='category-admin admin-main-div'>
+          <div className='category-admin admin-main-div'>
       <h2>{data.cat.name}</h2>
 
       <div className='btn-cnt'>
@@ -101,7 +102,8 @@ const Cat = () => {
 
         </div>
       ))}
-    </div>
+          </div>
+    <Footer/>
     </div>
   );
 };

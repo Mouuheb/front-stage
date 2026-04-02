@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../admin.css'
 import NavAdmin from '../nav/NavAdmin';
+import Footer from '../../pages/footer/FooterAdmin';
 
 const CreateTeamAdmin = () => {
   const navigate = useNavigate();
@@ -131,6 +132,7 @@ const CreateTeamAdmin = () => {
 
       </form>
     </div>
+    <Footer/>
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import React from 'react'
 import Consultation from '../consultation/Consultation'
 import Nav from '../nav/Nav'
+import Footer from '../footer/Footer'
 
 
 const Consultationpage = () => {
@@ -10,6 +11,7 @@ const Consultationpage = () => {
     <Nav/>
     <div className='box-margin'></div>
     <Consultation/>
+    <Footer/>
     </>
     
   )

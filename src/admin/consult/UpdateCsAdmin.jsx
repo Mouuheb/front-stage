@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import '../admin.css'
 import './consult.css'
 import NavAdmin from '../nav/NavAdmin';
+import Footer from '../../pages/footer/FooterAdmin';
 
 const UpdateCsAdmin = () => {
   const { id } = useParams();
@@ -168,6 +169,7 @@ const UpdateCsAdmin = () => {
         <button type="submit" className='click-btn2 main-btn' >Update Consultation</button>
       </form>
     </div>
+    <Footer/>
     </div>
   );
 };

@@ -7,6 +7,8 @@ import './style.css'
 
 const LocationFinder = ({setinfo}) => {
   const [space, setSpace] = useState(null);
+  const [locDetais, setLocDetais] = useState(null);
+  
   const [lineLength, setLineLength] = useState(null);
   const [perimeter, setPerimeter] = useState(null);
   const [landType, setLandType] = useState('');
@@ -35,17 +37,58 @@ const LocationFinder = ({setinfo}) => {
   useEffect(() => { drawingActiveRef.current = drawingActive; }, [drawingActive]);
   useEffect(() => { shapeTypeRef.current = shapeType; }, [shapeType]);
 
+
+
   const locationX = [36.763351, 10.245811]; // 36.763351, 10.245811
   const[org,setOrg]=useState(null);
+
+const getLocationDetails = async (acrd) => {
+  try {
+    const response = await fetch(
+      `https://nominatim.openstreetmap.org/reverse?format=json&lat=${acrd[1]}&lon=${acrd[0]}`
+    );
+
+    if (!response.ok) {
+      throw new Error("Failed to fetch location data");
+    }
+
+    const data = await response.json();
+
+    return {
+      state: data.address.state || data.address.region || "",
+      address: data.display_name || ""
+    };
+  } catch (error) {
+    console.error("Error getting location details:", error);
+    return {
+      state: "",
+      address: ""
+    };
+  }
+};
+
+  useEffect(() => {
+    if(org){
+    console.log(org)
+
+    const fetchLocation = async () => {
+      const result = await getLocationDetails(org); // Example: Tunis
+      setLocDetais(result);
+      console.log(result)
+    };
+
+    fetchLocation();
+  }
+  }, [org]);
 
   // Get user location
   useEffect(() => {
     if (!navigator.geolocation) return;
     navigator.geolocation.getCurrentPosition(
       (position) => {
-        setUserLocation([position.coords.latitude, position.coords.longitude]);
+        setUserLocation([position.coords.latitude,position.coords.longitude]);
       },
-      (error) => console.error('Geolocation error:', error)
+      // (error) => console.error('Geolocation error:', error)
     );
   }, []);
 
@@ -62,12 +105,28 @@ const LocationFinder = ({setinfo}) => {
         setLineLength(null);
         perimeterM = turf.length(geoJson, { units: 'meters' });
         setPerimeter(perimeterM.toFixed(2) + ' m');
+        //
+        // console.log("----------------------------------------------------------------") 
+              const firstPoint =
+        type === 'polygon'
+          ? geoJson.geometry.coordinates[0][0]
+          : geoJson.geometry.coordinates[0];
+
+      const [lng, lat] = firstPoint;
+      
+      setUserLocation([firstPoint[0],firstPoint[1]])
+      
+
+      // Create Google Maps link
+      const googleMapsUrl = `https://www.google.com/maps?q=${lat},${lng}`;
+        // 
       } else if (type === 'line' && layer instanceof L.Polyline) {
         geoJson = layer.toGeoJSON();
         const lengthKm = turf.length(geoJson, { units: 'kilometers' });
         setSpace(null);
         setLineLength(lengthKm.toFixed(2) + ' km');
         setPerimeter(null);
+
         
 
       } else {
@@ -102,7 +161,7 @@ const LocationFinder = ({setinfo}) => {
         setLandType('N/A (lines)');
       }
     } catch (error) {
-      console.error('Error processing layer:', error);
+      // console.error('Error processing layer:', error);
       setDistanceFromX('Error');
       setLandType('Error');
     }
@@ -215,7 +274,7 @@ const LocationFinder = ({setinfo}) => {
       }
       return dominant;
     } catch (error) {
-      console.error('Overpass error:', error);
+      // console.error('Overpass error:', error);
       return 'error fetching data';
     }
   };
@@ -326,8 +385,16 @@ const LocationFinder = ({setinfo}) => {
 
     return null;
   };
-console.log('child:'+distanceFromX+' '+space+' '+org)
-setinfo(space,distanceFromX,org);
+// console.log('child:'+distanceFromX+' '+space+' '+org)
+// setinfo(space,distanceFromX,org,locDetais);
+  useEffect(() => {
+  if (setinfo && typeof setinfo === 'function') {
+    if (locDetais && locDetais.address) {
+    setinfo(space, distanceFromX, org, locDetais);
+  }
+    // setinfo(space, distanceFromX, org, locDetais);
+  }
+}, [space, distanceFromX, org, locDetais, setinfo]);
   return (
     <div>
       {/* <h1>bonjour</h1>

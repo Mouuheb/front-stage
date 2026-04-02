@@ -4,6 +4,16 @@ const data = {
     
     pageLink:[
         {
+            name:'3d',
+            path:'/admin/allfile',
+            out:false,
+        },
+        {
+            name:'Utilisateurs',
+            path:'/admin/users',
+            out:true
+        },
+        {
             name:'Home',
             path:'/admin',
             out:true
@@ -38,7 +48,8 @@ const data = {
             name:'profile',
             path:'/authset',
             out:false,
-        }
+        },
+        
         
 
     ],
@@ -91,6 +102,40 @@ const data = {
         name:'nom',
 
         
+    },
+    user:{
+        title:'votre utilisateur',
+        btn:'Add utilisateur',
+        btnDelete:'delete utilisateur',
+        btnUpdate:'updeate utilisateur',
+        noEq:'No utilisateur found',
+        details:'details',
+        num:'nombre',
+        fname:'nom',
+        lname:'prenom',
+        uname:'nom utilisateur',
+        email:'email',
+        phone:'phone',
+        role:'role',
+        email:'email',
+        fname:"nom et prenom",
+    },
+
+    model:{
+        title:'model',
+        btn:'voir plus',
+        crt:'create consultaion',
+        ph:'phone',
+        eml:'Email',
+        prj:'Project',
+
+        sngl:'Consultation Details',
+        name:'name',
+        date:'date',
+        note:'notes',
+        btnDelete:'delete consultation',
+        btnUpdate:'updeate consultation',
+
     },
 
 };

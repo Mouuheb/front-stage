@@ -125,6 +125,27 @@
         text-align: center;
      }
 
+     .admin-project .status-list{
+        /* background-color: aqua; */
+        width: 100%;
+        padding: 3rem 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+     }
+     .admin-project .status-list label{
+        border: solid var(--color-text) .15rem;
+        padding: 1rem;
+        border-radius: 2rem;
+     }
+     .admin-project .status-list label:hover{
+        border: solid var(--color-text) .15rem;
+        padding: 1rem;
+        border-radius: 2rem;
+        color: var(--color-white);
+        background-color: var(--color-text);
+     }
+
 
      /* .admin-project .footer-work .btn:hover{
         background-color: var(--color-4);

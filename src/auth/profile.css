@@ -4,6 +4,7 @@
     display: flex;
     flex-direction: row;
     width: 90%;
+    min-height: 50rem ;
 
 }
 
@@ -15,7 +16,7 @@
 }
 .profile-main-cnt .p2{
     width: 50%;
-    min-height: 20rem;
+    min-height: 40rem;
     /* background-color: rgb(4, 124, 58); */
 }
 

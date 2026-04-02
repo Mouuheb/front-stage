@@ -3,6 +3,7 @@ import { useParams, useNavigate, Link } from 'react-router-dom';
 import '../admin.css'
 import data from '../data/data';
 import NavAdmin from '../nav/NavAdmin';
+import Footer from '../../pages/footer/FooterAdmin';
 
 const SingleCSAdmin = () => {
   const { id } = useParams();
@@ -116,6 +117,7 @@ const SingleCSAdmin = () => {
       </div>
       </div>
     </div>
+    <Footer/>
     </div>
   );
 };

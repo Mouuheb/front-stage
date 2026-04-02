@@ -11,6 +11,7 @@ const SingleProjectAdmin = (prop) => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [cat, setCat] = useState([]);
+    const [model, setModel] = useState([]);
 
     const navigate = useNavigate();
 
@@ -68,6 +69,27 @@ const SingleProjectAdmin = (prop) => {
                             setLoading(false);
                         });
                 }
+
+                // filemodel
+                if (data.filemodel) {
+                    console.log("starrrt")
+                    fetch(`http://localhost:8000/folder/files/${data.filemodel[0]}/`)
+                        .then(response => {
+                            if (!response.ok) {
+                                throw new Error('Network response was not ok');
+                            }
+                            return response.json();
+                        })
+                        .then(data => {
+                            setModel(data);
+                            setLoading(false);
+                            console.log(data)
+                        })
+                        .catch(error => {
+                            setError(error.message);
+                            setLoading(false);
+                        });
+                }
             })
             .catch(error => {
                 setError(error.message);
@@ -78,7 +100,7 @@ const SingleProjectAdmin = (prop) => {
     console.log(project);
 
     return (
-        loading !== false ? (
+        loading === false ? (
             <div className='singleproject admin-main-div'>
                 <div className='header'>
                     <div className='title'>
@@ -90,20 +112,20 @@ const SingleProjectAdmin = (prop) => {
                 <div className='element'>
                     {console.log(project.length)}
                     <div className='card'>
-                        <div className='img-cmp'>
+                        {project.project_image &&<div className='img-cmp'>
                             <img src={project.project_image} alt='Project' />
-                        </div>
+                        </div>}
                         <div className='txt-cmp'>
                             <h1>{project.name}</h1>
 
                             <div className='txt-a-cmp'>
-                                <h2>{data.project.adrs} : {project.address}</h2>
-                                <h2>{data.project.gvr} : {project.state}</h2>
-                                <h2>{data.project.ctgr} : {project.type}</h2>
+                                {project.address && <h2>{data.project.adrs} : {project.address}</h2>}
+                                {project.state && <h2>{data.project.gvr} : {project.state}</h2>}
+                                {project.type && <h2>{data.project.ctgr} : {project.type}</h2>}
                                 <h2>{data.project.prc} : {project.price}</h2>
                                 <h2>{data.project.stts} : {project.status}</h2>
                             </div>
-                            <div className='imgs-cnt'>
+                            {(project.folder || project.image_a || project.image_b || project.image_c || project.image_d )&&(<div className='imgs-cnt'>
                                 {project.folder && (
                                     <div className='sng-img'>
                                         <iframe
@@ -137,7 +159,7 @@ const SingleProjectAdmin = (prop) => {
                                         <img src={project.image_d} alt='' />
                                     </div>
                                 )}
-                            </div>
+                            </div>)}
 
                             <div className='txt-b-cmp'>
                                 <div className='map-cnt'>
@@ -165,7 +187,10 @@ const SingleProjectAdmin = (prop) => {
 
                             {/* 3D Model Button */}
                             <div className='btn-cmp'>
-                                <a className='click-btn2 main-btn'>Voir model en 3D</a>
+                                <a
+                                href={`http://localhost:8000/media/${model.file_unzip}`
+                                }
+                                className='click-btn2 main-btn'>Voir model en 3D</a>
                             </div>
                         </div>
                     </div>

@@ -7,6 +7,7 @@ import MapwithLeafletMulti from '../../pages/map/MapwithLeafletMulti';
 import './project.css'
 import '../admin.css'
 import NavAdmin from '../nav/NavAdmin';
+import Footer from '../../pages/footer/FooterAdmin';
 
 const Project = ({ page }) => {
     const [project, setProject] = useState([]);
@@ -14,6 +15,7 @@ const Project = ({ page }) => {
     const [error, setError] = useState(null);
     const [projects, setProjects] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');   // new state for search input
+    const [urls, setUrls] = useState('http://localhost:8000/api/projects/');
 
     const navigate = useNavigate();
 
@@ -26,11 +28,26 @@ const Project = ({ page }) => {
     // Fetch projects (optionally with search term)
     const fetchProjects = (search = '') => {
         setLoading(true);
-        let url = 'http://localhost:8000/api/projects/';
+        // let url = 'http://localhost:8000/api/projects/';
         if (search.trim() !== '') {
-            url += `?search=${encodeURIComponent(search)}`;
+            // url += `?search=${encodeURIComponent(search)}`;
+            fetch(`${urls}?search=${encodeURIComponent(search)}`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                setProject(data);
+                setLoading(false);
+            })
+            .catch(error => {
+                setError(error.message);
+                setLoading(false);
+            });
         }
-        fetch(url)
+        fetch(urls)
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
@@ -50,7 +67,7 @@ const Project = ({ page }) => {
     // Initial fetch on mount
     useEffect(() => {
         fetchProjects();
-    }, []);
+    }, [urls]);
 
 
     // Handle search button click
@@ -78,6 +95,24 @@ const Project = ({ page }) => {
         })
         .filter(loc => loc !== null);
 
+    const updateStatus = async (stat) => {
+        if (stat ==="idea") {
+            setUrls('http://localhost:8000/api/projects/idea/')
+        }else if (stat ==="nonvld") {
+            setUrls('http://localhost:8000/api/projects/nonvld/')
+        }else if (stat ==="vld") {
+            setUrls('http://localhost:8000/api/projects/vld/')
+        }else if (stat ==="progress") {
+            setUrls('http://localhost:8000/api/projects/progress/')
+        }else if (stat ==="cmp") {
+            setUrls('http://localhost:8000/api/projects/cmp/')
+        }else if (stat ==="ncmp") {
+            setUrls('http://localhost:8000/api/projects/ncmp/')
+        }else {
+            setUrls('http://localhost:8000/api/projects/')
+        }
+    }
+
     return (
         loading === false ? (
             <div className='admin-main-bg'>
@@ -88,7 +123,6 @@ const Project = ({ page }) => {
                     <div className='btn-cnt'>
                         <Link to="/admin/crtprj/" className='click-btvn'>
                             <label className="click-btn2 main-btn">Create project</label>
-
                         </Link>
                     </div>
 
@@ -105,7 +139,33 @@ const Project = ({ page }) => {
                         </div>
                     </div>
 
-                    <div className='split-page' >
+                    <div className='status-list'>
+                        <div>
+                            <label onClick={() => updateStatus("all")} >all</label>
+                        </div>
+                        <div>
+                            <label onClick={() => updateStatus("idea")}>idea</label>
+                        </div>
+
+                        <div>
+                            <label onClick={() => updateStatus("nonvld")}>non valider</label>
+                        </div>
+                        <div>
+                            <label onClick={() => updateStatus("vld")}>valider</label>
+                        </div>
+                        <div>
+                            <label onClick={() => updateStatus("progress")}>in Progress</label>
+                        </div>
+                        <div>
+                            <label onClick={() => updateStatus("cmp")}>non complete</label>
+                        </div>
+                        <div>
+                            <label onClick={() => updateStatus("ncmp")}>complete</label>
+                        </div>
+                        
+                    </div>
+
+                    {project.length>0 &&<div className='split-page' >
                         <div className='map-cnt'>
                             <MapwithLeafletMulti projects={project} />
 
@@ -113,7 +173,7 @@ const Project = ({ page }) => {
                         <div className='project-list' >
 
                             <div className='element'>
-                                {project.slice(0, 3).map((item) => {
+                                {project.map((item) => {
                                     { console.log(project.length) }
                                     return (
                                         <div className='card'>
@@ -139,8 +199,9 @@ const Project = ({ page }) => {
                                 })}
                             </div>
                         </div>
-                    </div>
+                    </div>}
                 </div>
+                <Footer/>
             </div>
 
         ) : (<div>loading</div>)

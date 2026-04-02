@@ -22,6 +22,7 @@ const Homepage = () => {
         <HomeWork/>
         <HomeTeam/>
         <Contact/>
+        <Footer/>
         
     </>
   )

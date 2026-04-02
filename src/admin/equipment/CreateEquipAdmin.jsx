@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import '../admin.css'
 import './equ.css'
 import NavAdmin from '../nav/NavAdmin';
+import Footer from '../../pages/footer/FooterAdmin';
 
 const CreateEquipAdmin = () => {
   const navigate = useNavigate();
@@ -158,6 +159,7 @@ const CreateEquipAdmin = () => {
         <button type="submit" className='click-btn2 main-btn'>Create Equipment</button>
       </form>
     </div>
+    <Footer/>
     </div>
   );
 };

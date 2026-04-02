@@ -6,7 +6,7 @@ import { FaLinkedinIn, FaFacebook, FaInstagram } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    
+    // <div className='footer-bg'>
     <div className='footer-page main-cnt-div' >
         <div className='p1' >
             <div className='logo'>
@@ -56,6 +56,7 @@ const Footer = () => {
             <label>{data.footer.privecy}</label>
         </div>
     </div>
+    // </div>
   )
 }
 
