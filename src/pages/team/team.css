@@ -2,6 +2,7 @@
     .team {
         width: 90%;
         margin: var(--margin-tb) var(--margin-lr);
+        /* padding-bottom: 5rem; */
         
 
     }

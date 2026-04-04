@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './consultation.css';
 import data from '../../data/data';
 import { redirect, useNavigate } from 'react-router-dom';
@@ -26,9 +26,44 @@ const Consultation = () => {
 
     const [note, setNote] = useState('');
     const token = localStorage.getItem("access_token") || null;
+    const user = localStorage.getItem("user") || null;
     const [locationDetais, setLocationDetais] = useState(null);
     const [address, setAddress] = useState('');
     const [state, setState] = useState('');
+    const [crUser, setCrUser] = useState();
+
+    useEffect(() => {
+    // Side effect code here
+    if (user) {
+            try {
+                const parsedUser = JSON.parse(user);
+                setCrUser(parsedUser);
+                console.log("Parsed user:", parsedUser);
+            } catch (error) {
+                console.error("Error parsing user:", error);
+            }
+        }
+    }, [user]);
+
+
+    useEffect(() => {
+        if (crUser) {
+            console.log("Setting form fields for:", crUser.username);
+            console.log("User full_name:", crUser.full_name);
+            console.log("User email:", crUser.email);
+            console.log("User phone:", crUser.phone_number);
+            
+            // Set form fields with user data
+            setName(crUser.full_name || '');     // ✅ Use variable, not string
+            setEmail(crUser.email || '');
+            setTel(crUser.phone_number || '');
+            
+            console.log("After setting - Name:", crUser.full_name);
+        }
+    }, [crUser]); // Runs when crUser changes
+    
+    
+    
 
 
     
@@ -116,10 +151,10 @@ const Consultation = () => {
                     const formDataToSend = new FormData();
 
                     formDataToSend.append('name', `proposition project de ${name} contact ${tel}`);
-                    // formDataToSend.append('description', mess);
                     console.log(area+' '+dis+' '+((area / 5) + (dis / 1.6)).toFixed(2))
-                    formDataToSend.append('price', `${((area / 5) + (dis / 1.6)).toFixed(2)}`) ;
-                    // formDataToSend.append('price', 20.50) ;
+                    // formDataToSend.append('price', `${((area / 5) + (dis / 1.6)).toFixed(2)}`) ;
+                    formDataToSend.append('area', area) ;
+                    formDataToSend.append('distance', dis) ;
                     formDataToSend.append('status', 'idea');
                     formDataToSend.append('description', `project ${dis} m away area of ${area} cote ${((area / 5) + (dis / 1.6)).toFixed(2)}`);
                     // console.log(loc)
@@ -127,7 +162,7 @@ const Consultation = () => {
                     formDataToSend.append('address', `${address}`);
                     formDataToSend.append('state', `${state}`);
 
-                    const response = await fetch('http://localhost:8000/api/projects/create/', {
+                    const response = await fetch('http://localhost:8000/api/projects/cs/create/', {
                         method: 'POST',
                         headers: {
                             // "Content-Type": "application/json",
@@ -230,6 +265,7 @@ const Consultation = () => {
                         <input
                             value={name}
                             onChange={(e) => setName(e.target.value)}
+
                             placeholder='Name'
                             className='txt'
                             required

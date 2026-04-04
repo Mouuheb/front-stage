@@ -24,7 +24,7 @@ const Team = () => {
         return response.json();
       })
       .then(data => {
-        setTeam(data);
+        setTeam(data.reverse());
         setLoading(false);
       })
       .catch(error => {

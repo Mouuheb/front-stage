@@ -57,6 +57,8 @@ import UpdateUserAdmin from './admin/users/UpdateUserAdmin'
 import AllFile from './admin/3dmodel/AllFile'
 // import SingleFileAdmin from './admin/3dmodel/SingleFileAdmin'
 import UploadFileAdmin from './admin/3dmodel/UploadFile'
+import SingleProjectUpAdminVld from './admin/project/SingleProjectUpAdminVld'
+import SingleProjectUpAdminAcp from './admin/project/SingleProjectUpAdminAcp'
 // import UpdateFileAdmin from './admin/3dmodel/UpdateFileAdmin'
 
 
@@ -107,6 +109,8 @@ function App() {
         <Route path="/admin/sgprj/:id" element={<SingleProjectPageAdmin />} />
         <Route path="/admin/upsgprj/:id" element={<SingleProjectUpAdmin />} />
         <Route path="/admin/crtprj/" element={<SingleProjectCrAdmin />} />
+        <Route path="/admin/upsgprjAcp/:id" element={<SingleProjectUpAdminAcp />} />
+        <Route path="/admin/upsgprjVld/:id" element={<SingleProjectUpAdminVld />} />
 
         {/* cat */}
         <Route path="/admin/cat" element={<Cat />} />

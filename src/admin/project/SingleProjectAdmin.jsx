@@ -99,6 +99,42 @@ const SingleProjectAdmin = (prop) => {
 
     console.log(project);
 
+
+    const updateStatus = async (newStatus, id) => {
+        try {
+
+            const formData = new FormData();
+            formData.append("status", newStatus);
+            if (newStatus === "complete") {
+                const res = await fetch(
+                    `http://localhost:8000/api/projects/cs/cmp/${id}/`,
+                    {
+                        method: "PATCH",
+                        body: formData,
+                    }
+                );
+
+            } else {
+                const res = await fetch(
+                    `http://localhost:8000/api/projects/${id}/update/`,
+                    {
+                        method: "PATCH",
+                        body: formData,
+                    }
+                );
+
+            }
+
+            if (!res.ok) throw new Error("Failed to update");
+        } catch (err) {
+            console.error(err);
+        }
+    };
+
+
+
+
+
     return (
         loading === false ? (
             <div className='singleproject admin-main-div'>
@@ -112,7 +148,7 @@ const SingleProjectAdmin = (prop) => {
                 <div className='element'>
                     {console.log(project.length)}
                     <div className='card'>
-                        {project.project_image &&<div className='img-cmp'>
+                        {project.project_image && <div className='img-cmp'>
                             <img src={project.project_image} alt='Project' />
                         </div>}
                         <div className='txt-cmp'>
@@ -125,7 +161,7 @@ const SingleProjectAdmin = (prop) => {
                                 <h2>{data.project.prc} : {project.price}</h2>
                                 <h2>{data.project.stts} : {project.status}</h2>
                             </div>
-                            {(project.folder || project.image_a || project.image_b || project.image_c || project.image_d )&&(<div className='imgs-cnt'>
+                            {(project.folder || project.image_a || project.image_b || project.image_c || project.image_d) && (<div className='imgs-cnt'>
                                 {project.folder && (
                                     <div className='sng-img'>
                                         <iframe
@@ -171,27 +207,91 @@ const SingleProjectAdmin = (prop) => {
                                 </div>
                             </div>
 
-                            {/* Delete Button */}
-                            <div className='btn-cmp'>
-                                <a className='click-btn2 main-btn' onClick={handleDelete}>
-                                    Delete
-                                </a>
-                            </div>
+                            {project.status === "idea" ? (
+                                <>
+                                    <div className='btn-cmp'>
+                                        <a className='click-btn2 main-btn' onClick={() => updateStatus("not_complete", project.id)}>
+                                            refuser
+                                        </a>
+                                    </div>
 
-                            {/* Update Button */}
-                            <div className='btn-cmp'>
-                                <Link to={`/admin/upsgprj/${prop.id}`} className='click-btn2 main-btn'>
-                                    Update
-                                </Link>
-                            </div>
+                                    {/* Update Button */}
+                                    <div className='btn-cmp'>
+                                        <Link to={`/admin/upsgprjAcp/${prop.id}`} className='click-btn2 main-btn'>
+                                            edit et valider
+                                        </Link>
+                                    </div>
+                                </>
 
-                            {/* 3D Model Button */}
-                            <div className='btn-cmp'>
-                                <a
-                                href={`http://localhost:8000/media/${model.file_unzip}`
-                                }
-                                className='click-btn2 main-btn'>Voir model en 3D</a>
-                            </div>
+
+                            ) : project.status == 'valider' ? (
+                                <>
+
+                                    {/* Delete Button */}
+                                    <div className='btn-cmp'>
+                                        <a className='click-btn2 main-btn' onClick={handleDelete}>
+                                            Delete
+                                        </a>
+                                    </div>
+
+                                    {/* Update Button */}
+                                    <div className='btn-cmp'>
+                                        <Link to={`/admin/upsgprjVld/${prop.id}`} className='click-btn2 main-btn'>
+                                            validier
+                                        </Link>
+                                    </div>
+                                </>
+                            )
+                                : project.status == 'in_process' ? (
+                                    <>
+
+                                        {/* Delete Button */}
+                                        <div className='btn-cmp'>
+                                            <a className='click-btn2 main-btn' onClick={handleDelete}>
+                                                Delete
+                                            </a>
+                                        </div>
+
+                                        {/* Update Button */}
+                                        <div className='btn-cmp'>
+                                            <Link to={`/admin/upsgprj/${prop.id}`} className='click-btn2 main-btn'>
+                                                Update
+                                            </Link>
+                                        </div>
+
+                                        {/* 3D Model Button */}
+                                        <div className='btn-cmp'>
+                                            <a
+                                                onClick={() => updateStatus("complete", project.id)}
+                                                className='click-btn2 main-btn'>Complete</a>
+                                        </div>
+                                    </>
+                                ) : (
+                                    <>
+
+                                        {/* Delete Button */}
+                                        <div className='btn-cmp'>
+                                            <a className='click-btn2 main-btn' onClick={handleDelete}>
+                                                Delete
+                                            </a>
+                                        </div>
+
+                                        {/* Update Button */}
+                                        <div className='btn-cmp'>
+                                            <Link to={`/admin/upsgprj/${prop.id}`} className='click-btn2 main-btn'>
+                                                Update
+                                            </Link>
+                                        </div>
+
+                                        {/* 3D Model Button */}
+                                        <div className='btn-cmp'>
+                                            <a
+                                                href={`http://localhost:8000/media/${model.file_unzip}`
+                                                }
+                                                className='click-btn2 main-btn'>Voir model en 3D</a>
+                                        </div>
+                                    </>
+                                )}
                         </div>
                     </div>
                 </div>

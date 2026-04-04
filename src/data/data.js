@@ -5,19 +5,19 @@ const data = {
     logo:'img/logo.png',
     pageLink:[
         {
-            name:'Home',
+            name:'Accueil',
             path:'/',
             out:true
         },
 
         {
-            name:'team',
+            name:"L'équipe",
             path:'/tm',
             out:true
         },
         {
-            name:'Project',
-            path:'prj',
+            name:'Projet',
+            path:'/prj',
             out:true
         },
         {
@@ -26,7 +26,7 @@ const data = {
             out:true
         },
         {
-            name:'profile',
+            name:'Profil',
             path:'/authset',
             out:false,
         }
@@ -35,7 +35,7 @@ const data = {
     ],
     navBtn:{
         vzbl:true,
-        btnText:'Request a quote',
+        btnText:'Demander un devis',
         path:''
             
     },
@@ -46,12 +46,12 @@ const data = {
         btn:[
             {
                 vzbl:true,
-                btnText:'Book a consultation',
+                btnText:'Réservez une consultation',
                 path:''
             },
             {
                 vzbl:true,
-                btnText:'Contact Us',
+                btnText:'Contactez-nous',
                 path:''
             }
             
@@ -104,8 +104,8 @@ const data = {
         ]
     },
     services:{
-        title:'services',
-        p:'At our digital marketing agency, we offer a range of services to help businesses grow and succeed online. These services include:',
+        title:'Services',
+        p:"Notre entreprise de topographie fournit des services précis de levés topographiques, de cartographie et de GPS pour soutenir les projets de construction et d'aménagement.",
         element:[
             {
                 id:1,
@@ -182,172 +182,18 @@ const data = {
     work:{
         title:'Nos Projets',
         p:'Découvrez nos projets réalisés qui illustrent notre expertise et notre engagement à fournir des solutions de haute qualité dans divers secteurs d’activité.',
-        element:[
-            {
-                id:1,
-                num:'01',
-                title:'Consultation',
-                p:'During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.',
-
-            },
-            {
-                id:2,
-                num:'02',
-                title:'Research and Strategy Development',
-                p:'During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.',
-
-            },
-            {
-                id:3,
-                num:'03',
-                title:'Implementation',
-                p:'During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.',
-
-            },
-            {
-                id:4,
-                num:'04',
-                title:'Monitoring and Optimization',
-                p:'During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.',
-
-            },
-            {
-                id:5,
-                num:'05',
-                title:'Reporting and Communication',
-                p:'During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.',
-
-            },
-            {
-                id:6,
-                num:'06',
-                title:'Continual Improvement',
-                p:'During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.',
-
-            }
-        ],
         footerBtn:'voir plus',
         searchBtn:'search',
         serchTxt:'Rechercher un projet...',
     },
     team:{
-        title:'Team',
-        p:'Meet the skilled and experienced team behind our successful digital marketing strategies',
-        element:[
-            {
-                id:1,
-                img:'img/p1.png',
-                name:'John Smith',
-                post:'CEO and Founder',
-                p:'10+ years of experience in digital marketing. Expertise in SEO, PPC, and content strategy',
-                social:[
-                    {
-                        // icon:`<FaLinkedinIn/>`,
-                        path:''
-
-                    }
-                ]
-            },
-            {
-                id:2,
-                img:'img/p2.png',
-                name:'Jane Doe',
-                post:'Director of Operations',
-                p:'7+ years of experience in project management and team leadership. Strong organizational and communication skills',
-                social:[
-                    {
-                        // icon:`<FaLinkedinIn/>`,
-                        path:''
-
-                    }
-                ]
-            },
-            {
-                id:3,
-                img:'img/p3.png',
-                name:'Michael Brown',
-                post:'Senior SEO Specialist',
-                p:'5+ years of experience in SEO and content creation. Proficient in keyword research and on-page optimization',
-                social:[
-                    {
-                        // icon:`<FaLinkedinIn/>`,
-                        path:''
-
-                    }
-                ]
-            },
-            {
-                id:4,
-                img:'img/p4.png',
-                name:'Emily Johnson',
-                post:'PPC Manager',
-                p:'3+ years of experience in paid search advertising. Skilled in campaign management and performance analysis',
-                social:[
-                    {
-                        // icon:`<FaLinkedinIn/>`,
-                        path:''
-
-                    }
-                ]
-            },
-            {
-                id:5,
-                img:'img/p5.png',
-                name:'Brian Williams',
-                post:'Social Media Specialist',
-                p:'4+ years of experience in social media marketing. Proficient in creating and scheduling content, analyzing metrics, and building engagement',
-                social:[
-                    {
-                        // icon:`<FaLinkedinIn/>`,
-                        path:''
-
-                    }
-                ]
-            },
-            {
-                id:6,
-                img:'img/p6.png',
-                name:'Sarah Kim',
-                post:'Content Creator',
-                p:'2+ years of experience in writing and editing Skilled in creating compelling, SEO-optimized content for various industries',
-                social:[
-                    {
-                        // icon:`<FaLinkedinIn/>`,
-                        path:''
-
-                    }
-                ]
-            }
-        ],
+        title:'Notre équipe',
+        p:"Découvrez l'équipe compétente et expérimentée qui est à l'origine de notre succès.",
         btn:{
-            txt:'See all Team',
+            txt:"Voir toute l'équipe",
             path:'',
             vzbl:true
         }
-    },
-    testimonials:{
-        title:'Testimonials',
-        p:'Hear from Our Satisfied Clients: Read Our Testimonials to Learn More about Our Digital Marketing Services',
-        comment:[
-            {
-                id:1,
-                txt:'"We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence."',
-                auther:'John Smith',
-                post:'Marketing Director at XYZ Corp',
-            },
-            {
-                id:2,
-                txt:'"We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence."',
-                auther:'John Smith',
-                post:'Marketing Director at XYZ Corp',
-            },
-            {
-                id:3,
-                txt:'"We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence."',
-                auther:'John Smith',
-                post:'Marketing Director at XYZ Corp',
-            },
-        ]
     },
     Contact:{
         img:'img/f2.png',
@@ -355,10 +201,10 @@ const data = {
         p:"N’hésitez pas à nous contacter pour toute question ou demande de renseignements. Notre équipe se tient à votre disposition pour vous aider et vous fournir des solutions adaptées à vos besoins.",
         btn:{
             vzbl:true,
-            txt:'send message'
+            txt:'Envoyer un message'
         },
-        stage:'stage',
-        rendivo:'render-vouez',
+        stage:'Demande de stage',
+        rendivo:'Render-vouez',
 
     },
     consultation:{
@@ -367,21 +213,21 @@ const data = {
         p:"N’hésitez pas à nous contacter pour toute question ou demande de renseignements. Notre équipe se tient à votre disposition pour vous aider et vous fournir des solutions adaptées à vos besoins.",
         btn:{
             vzbl:true,
-            txt:'send message'
+            txt:'Envoyer un message'
         }
     },
     footer:{
-        title:'Contact us:',
+        title:'Contactez-nous:',
         info:
         [
             'Email: info@drone-discovery.tn',
-            'Phone: +216 53 80 95 36 / +216 21 31 77 51',
+            'Téléphone: +216 53 80 95 36 / +216 21 31 77 51',
             'Address: 03 Rue des usines, Megrine'
 
         ],
-        copyRaight:'© 2026 Drone discovery. All Rights Reserved',
-        privecy:'Privacy Policy',
-        button:'Subscribe to news',
+        copyRaight:'© 2026 Drone discovery.Tous droits réservés',
+        privecy:'politique de confidentialité',
+        button:'Abonnez-vous aux actualités',
     },
     about:{
         titre:'À propos',
@@ -391,48 +237,45 @@ const data = {
     },
     chat:{
         btn1Txt:'chat',
-        title:'Ask a quation',
-        you:'you',
-        ai:'ai',
-        btn2Txt:'send',
-        placeholder:'Type your message'
+        title:'Poser une question',
+        you:'Vous',
+        ai:'IA',
+        btn2Txt:'Envoyer',
+        placeholder:'Saisissez votre message'
     },
     auth:{
-        btnLogin:'Log in',
-        titleLogin:'Log in',
-        username:'username',
-        password:'password',
-        btn2Txt:'send',
-        placeholder:'Type your message',
-        create:'create account',
-        forgetpass:'Forget password',
-        email:'email',
-        fname:'first name',
-        lname:'last name',
-        tel:'phone number',
-        cpwd:'Confirm Password',
-        sup:'create account',
-        mess1:'Already have an account?',
-        title2:'Create Account',
-        title3:'My Profile',
-        welcome:'Bonjour ',
-        logout:'logout'
+        btnLogin:'Se connecter',
+        titleLogin:'Se connecter',
+        username:"Nom d'utilisateur",
+        password:'Mot de passe',
+        btn2Txt:'Envoyer',
+        placeholder:'Tapez votre message',
+        create:'Créer un compte',
+        forgetpass:'Mot de passe oublié',
+        email:'Email',
+        fname:'Prénom',
+        lname:'Nom',
+        tel:'Numéro de téléphone',
+        cpwd:'Confirmez le mot de passe',
+        sup:'Créer un compte',
+        mess1:'Vous avez déjà un compte?',
+        title2:'Créer un compte',
+        title3:'Mon profil',
+        welcome:'Bonjour',
+        logout:'Déconnexion'
     },
     conversation:{
         title:'Vos conversations',
-        loadmessage:'Loading conversations...',
-        noCnvMess:'You have no conversations yet',
-        startCnv:'Start a Conversation',
-        creating:'Creating...',
+        loadmessage:'Chargement des conversations...',
+        noCnvMess:"Vous n'avez pas encore de conversations",
+        startCnv:'Commencer une conversation',
+        creating:'Création en cours...',
         cnvId:'Conversation',
         cnvParticipants:'Participants',
-        unknown:'Unknown',
-        placeholder:'type message...',
-        send:'send',
-        sending:'sending'
-
-
-
+        unknown:'Inconnu',
+        placeholder:'Tapez un message...',
+        send:'Envoyer',
+        sending:'Envoi en cours...'
     }
 
 };

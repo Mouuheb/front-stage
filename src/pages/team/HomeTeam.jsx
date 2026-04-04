@@ -24,7 +24,7 @@ const HomeTeam = () => {
         return response.json();
       })
       .then(data => {
-        setTeam(data);
+        setTeam(data.reverse());
         setLoading(false);
       })
       .catch(error => {
@@ -44,7 +44,7 @@ const HomeTeam = () => {
       </div>
 
       <div className='element' >
-        {team.map((item, index) => {
+        {team.slice(0, 3).map((item, index) => {
           return (
             <div className='card' key={item.id} >
               <div className='p1' >

@@ -28,112 +28,75 @@ function UserProjects() {
   }, [formData]);
 
 
-  // const updateStatus = async (newStatus, id) => {
-  //   try {
-  //     try {
-  //       const res = await fetch(`http://localhost:8000/api/min-member/`, {
-  //         method: "GET",
-  //       });
-  //       if (!res.ok) throw new Error("Failed to update status");
 
-  //       // const list_user = await res.json();
-  //       // const dataUsers = await res.json(); // ✅ get response مباشرة
-  //       // setListUser(dataUsers.ids);
-  //       // setListUser(await res.json().ids)
-
-  //       const dataUsers = await res.json();
-  //       setListUser(dataUsers.ids);
-  //       console.log(listUser +'55555555555555')
-
-
-  //       // formData.append("status", newStatus);
-  //       console.log(listUser)
-  //       formData.append("assigned_members", listUser);
-
-      
-      
-
-  //     const res2 = await fetch(`http://localhost:8000/api/projects/${id}/update/`, {
-  //       method: "PATCH",
-  //       headers: {
-  //         Authorization: `Bearer ${token}`,
-  //       },
-  //       body: formData,
-  //     });
-
-  //     if (!res.ok) throw new Error("Failed to update status");
-
-  //     const data = await res2.json();
-  //     console.log("Updated:", data);
-
-  //     // optional: update UI state
-  //     setFormData(prev => ({ ...prev, status: newStatus }));
-
-
-  //     } catch (err) {
-  //       console.error(err);
-  //     }
-  //     const token = localStorage.getItem("access_token");
-
-  //     const formData = new FormData();
-
-
-
-
-      
-
-  //   } catch (err) {
-  //     console.error(err);
-  //   }
-  // };
 
   const updateStatus = async (newStatus, id) => {
-  try {
-    const token = localStorage.getItem("access_token");
+    if (newStatus === 'valider') {
+      try {
+        const token = localStorage.getItem("access_token");
 
-    // 1. Fetch members
-    const resUsers = await fetch("http://localhost:8000/api/min-member/");
-    if (!resUsers.ok) throw new Error("Failed to fetch members");
+        const formData = new FormData();
+        formData.append("status", newStatus);
+        const res = await fetch(
+          `http://localhost:8000/api/projects/cs/vld/${id}/`,
+          {
+            method: "PATCH",
+            headers: {
+              // Authorization: `Bearer ${token}`,
+            },
+            // body: formData,
+          }
+        );
+        if (!res.ok) throw new Error("Failed to update");
 
-    const dataUsers = await resUsers.json();
-    const usersIds = dataUsers.ids;
+        const data = await res.json();
+        console.log("Updated:", data);
 
-    // 2. Prepare FormData
-    const formData = new FormData();
-    formData.append("status", newStatus);
+        // 4. Update UI (IMPORTANT)
+        setProjects((prev) =>
+          prev.map((p) =>
+            p.id === id ? { ...p, status: newStatus } : p
+          )
+        );
 
-    usersIds.forEach((userId) => {
-      formData.append("assigned_members", userId);
-    });
-
-    // 3. Send update
-    const res = await fetch(
-      `http://localhost:8000/api/projects/${id}/update/`,
-      {
-        method: "PATCH",
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-        body: formData,
+      } catch (err) {
+        console.error(err);
       }
-    );
 
-    if (!res.ok) throw new Error("Failed to update");
+    }
+    else {
+      try {
+        const token = localStorage.getItem("access_token");
+        const formData = new FormData();
+        formData.append("status", newStatus);
+        const res = await fetch(
+          `http://localhost:8000/api/projects/${id}/update/`,
+          {
+            method: "PATCH",
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+            body: formData,
+          }
+        );
 
-    const data = await res.json();
-    console.log("Updated:", data);
+        if (!res.ok) throw new Error("Failed to update");
 
-    // 4. Update UI (IMPORTANT)
-    setProjects((prev) =>
-      prev.map((p) =>
-        p.id === id ? { ...p, status: newStatus } : p
-      )
-    );
+        const data = await res.json();
+        console.log("Updated:", data);
 
-  } catch (err) {
-    console.error(err);
-  }
-};
+        // 4. Update UI (IMPORTANT)
+        setProjects((prev) =>
+          prev.map((p) =>
+            p.id === id ? { ...p, status: newStatus } : p
+          )
+        );
+
+      } catch (err) {
+        console.error(err);
+      }
+    }
+  };
   return (
     <div className="user-project-page">
       {projects.filter((p) => p.status === "nonvalider").length > 0 && (

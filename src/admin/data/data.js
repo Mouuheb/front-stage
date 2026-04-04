@@ -3,11 +3,11 @@ const data = {
     logo:'img/logo.png',
     
     pageLink:[
-        {
-            name:'3d',
-            path:'/admin/allfile',
-            out:false,
-        },
+        // {
+        //     name:'3d',
+        //     path:'/admin/allfile',
+        //     out:false,
+        // },
         {
             name:'Utilisateurs',
             path:'/admin/users',
@@ -25,7 +25,7 @@ const data = {
             out:true
         },
         {
-            name:'Project',
+            name:'Projet',
             path:'/admin/prj',
             out:true
         },

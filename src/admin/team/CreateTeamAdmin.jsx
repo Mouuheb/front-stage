@@ -95,6 +95,7 @@ const CreateTeamAdmin = () => {
             <option value="stageur">Stagiaire</option>
             <option value="ign-tp-geo">Ingénieur Géomètre Topographe</option>
             <option value="CEO">CEO</option>
+            <option value="DirecteurTechnique">Directeur Technique</option>
             <option value="other">Other</option>
           </select>
         </div>
