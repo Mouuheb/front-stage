@@ -24,7 +24,7 @@ const Work = () => {
     // Fetch projects (optionally with search term)
     const fetchProjects = (search = '') => {
         setLoading(true);
-        let url = 'http://localhost:8000/api/projects/';
+        let url = 'http://localhost:8000/api/projects/cmp/';
         if (search.trim() !== '') {
             url += `?search=${encodeURIComponent(search)}`;
         }
@@ -93,7 +93,7 @@ const Work = () => {
                             value={searchTerm}
                             onChange={(e) => setSearchTerm(e.target.value)}
                             onKeyPress={handleKeyPress}
-                            placeholder={data.work.placeholder}
+                            placeholder={data.work.serchTxt}
                         />
                         <button onClick={handleSearch}>{data.work.searchBtn}</button>
                     </div>

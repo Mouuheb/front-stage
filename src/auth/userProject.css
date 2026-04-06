@@ -33,3 +33,12 @@
     /* border: .2rem solid var(--color-text); */
     font-weight: bold;
 }
+
+.user-project-page small{
+    color: var(--color-text);
+    background-color: var(--color-white);
+    padding: 0.5rem;
+    border-radius: 5rem;
+    width: fit-content;
+    font-weight: bold;
+}

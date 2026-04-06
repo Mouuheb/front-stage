@@ -1,5 +1,9 @@
 import { useEffect, useState } from "react";
 import './userProject.css'
+import { MdLocationOn } from "react-icons/md";
+import { GiPoland } from "react-icons/gi";
+import { MdOutlineAttachMoney } from "react-icons/md";
+import { MdOutlineDateRange } from "react-icons/md";
 
 function UserProjects() {
   const [projects, setProjects] = useState([]);
@@ -26,9 +30,6 @@ function UserProjects() {
       .then((data) => setProjects(data))
       .catch((err) => setError(err.message));
   }, [formData]);
-
-
-
 
   const updateStatus = async (newStatus, id) => {
     if (newStatus === 'valider') {
@@ -101,20 +102,23 @@ function UserProjects() {
     <div className="user-project-page">
       {projects.filter((p) => p.status === "nonvalider").length > 0 && (
         <div>
-          <h2>Need validation</h2>
+          {/* <h2>Need validation</h2> */}
 
           {projects
             .filter((p) => p.status === "nonvalider")
             .map((p) => (
               <div key={p.id} className="card">
                 <h3>{p.name}</h3>
-                <p>{p.description}</p>
-                <h2>{p.price} dt</h2>
+                <p><MdLocationOn /> {p.address}</p>
+                <p><GiPoland /> {((p.area)/1000).toFixed(2)} ha</p>
+                {/* <small>en attente</small> */}
+                
+                <h2><MdOutlineAttachMoney /> {p.price}K Dt</h2>
+                <h3>Accepter pour validation</h3>
 
                 <div>
-                  <label onClick={() => updateStatus("not_complete", p.id)} className="click-btn2"> delete</label>
-                  <label onClick={() => updateStatus("valider", p.id)}
-                  >accept</label>
+                  <label onClick={() => updateStatus("not_complete", p.id)} className="click-btn2"> refuser</label>
+                  <label onClick={() => updateStatus("valider", p.id)} className="click-btn2">accept</label>
                 </div>
               </div>
             ))}
@@ -125,14 +129,17 @@ function UserProjects() {
 
       {projects.filter((p) => p.status === "idea").length > 0 && (
         <div>
-          <h2>My Projects idea</h2>
+          {/* <h2>My Projects idea</h2> */}
 
           {projects
             .filter((p) => p.status === "idea")
             .map((p) => (
               <div key={p.id} className="card">
                 <h4>{p.name}</h4>
-                <p>{p.description}</p>
+                <p><MdLocationOn /> {p.address}</p>
+                <p><GiPoland /> {((p.area)/1000).toFixed(2)} ha</p>
+                {/* <p>{p.description}</p> */}
+                <small>en attente</small>
               </div>
             ))}
         </div>
@@ -140,17 +147,21 @@ function UserProjects() {
 
       {/* ------------------------------------------------------------------------------------- */}
 
-      {projects.filter((p) => p.status === "valider").length > 0 && (
+      {projects.filter((p) => (p.status === "valider" || p.status === "in_process")).length > 0 && (
         <div>
-          <h2>In progress</h2>
-
           {projects
-            .filter((p) => p.status === "valider")
+            .filter((p) => (p.status === "valider" || p.status === "in_process"))
             .map((p) => (
               <div key={p.id} className="card">
                 <h3>{p.name}</h3>
-                <p>prix de {p.price}dt</p>
-                {p.start_date && p.end_date && <p>de {p.start_date} a {p.end_date}</p>}
+                <p><MdLocationOn /> {p.address}</p>
+                <p><GiPoland /> {((p.area)/1000).toFixed(2)} ha</p>
+                {p.date_terain&&(<p><MdOutlineDateRange /> Notre visite est le {p.date_terain}</p>)}
+                {(
+                  p.end_date && p.start_date) && (
+                  <p><MdOutlineDateRange /> {p.start_date} - {p.end_date}</p>
+                )}
+                <small>En cours</small>
               </div>
             ))}
         </div>
@@ -160,14 +171,14 @@ function UserProjects() {
 
       {projects.filter((p) => p.status === "complete").length > 0 && (
         <div>
-          <h2>Project terminer</h2>
 
           {projects
             .filter((p) => p.status === "complete")
             .map((p) => (
               <div key={p.id} className="card">
                 <h3>{p.name}</h3>
-                <p>{p.status}</p>
+                <p><MdLocationOn /> {p.address}</p>
+                <small>Terminé</small>
               </div>
             ))}
         </div>

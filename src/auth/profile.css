@@ -41,10 +41,12 @@
 
 .profile-main-cnt .profile-cnt button{
     background-color: var(--color-text);
-    width: 6rem;
-    height: 2.5rem;
+    width: fit-content;
+    height: 5.5rem;
     border-radius: 1rem;
     font-size: medium;
     font-weight: bold;
     color: var(--color-white);
+    /* background-color: aqua; */
+    padding: 1rem;
 }

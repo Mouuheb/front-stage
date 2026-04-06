@@ -59,6 +59,7 @@ import AllFile from './admin/3dmodel/AllFile'
 import UploadFileAdmin from './admin/3dmodel/UploadFile'
 import SingleProjectUpAdminVld from './admin/project/SingleProjectUpAdminVld'
 import SingleProjectUpAdminAcp from './admin/project/SingleProjectUpAdminAcp'
+import ProfileAdmin from './auth/ProfileAdmin'
 // import UpdateFileAdmin from './admin/3dmodel/UpdateFileAdmin'
 
 
@@ -166,6 +167,7 @@ function App() {
         {/* file */}
         <Route path="/admin/allfile" element={<AllFile />} />
         <Route path="/admin/upladfile" element={<UploadFileAdmin />} />
+        <Route path="/admin/ProfileAdmin" element={<ProfileAdmin />} />
 
 
       </Routes>

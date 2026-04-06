@@ -3,16 +3,6 @@ const data = {
     logo:'img/logo.png',
     
     pageLink:[
-        // {
-        //     name:'3d',
-        //     path:'/admin/allfile',
-        //     out:false,
-        // },
-        {
-            name:'Utilisateurs',
-            path:'/admin/users',
-            out:true
-        },
         {
             name:'Home',
             path:'/admin',
@@ -34,16 +24,7 @@ const data = {
             path:'/admin/cs',
             out:true
         },
-        {
-            name:'Category',
-            path:'/admin/cat',
-            out:false,
-        },
-        {
-            name:'Equipment',
-            path:'/admin/eq',
-            out:true
-        },
+
         {
             name:'profile',
             path:'/authset',
@@ -137,6 +118,57 @@ const data = {
         btnUpdate:'updeate consultation',
 
     },
+    profilepageLink:[
+        {
+            name:'3d',
+            path:'/admin/allfile',
+            out:false,
+        },
+        {
+            name:'Utilisateurs',
+            path:'/admin/users',
+            out:true
+        },
+        {
+            name:'Home',
+            path:'/admin',
+            out:true
+        },
+
+        {
+            name:'team',
+            path:'/admin/tm',
+            out:true
+        },
+        {
+            name:'Projet',
+            path:'/admin/prj',
+            out:true
+        },
+        {
+            name:'Consultation',
+            path:'/admin/cs',
+            out:true
+        },
+        {
+            name:'Category',
+            path:'/admin/cat',
+            out:false,
+        },
+        {
+            name:'Equipment',
+            path:'/admin/eq',
+            out:true
+        },
+        {
+            name:'profile',
+            path:'/authset',
+            out:false,
+        },
+        
+        
+
+    ],
 
 };
 export default data;

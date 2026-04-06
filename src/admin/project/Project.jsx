@@ -154,7 +154,7 @@ const Project = ({ page }) => {
                             <label onClick={() => updateStatus("vld")}>valider</label>
                         </div>
                         <div>
-                            <label onClick={() => updateStatus("progress")}>in Progress</label>
+                            <label onClick={() => updateStatus("in_process")}>in Progress</label>
                         </div>
                         <div>
                             <label onClick={() => updateStatus("cmp")}>non complete</label>
@@ -187,9 +187,24 @@ const Project = ({ page }) => {
                                                 </small>
                                                 {console.log("id : " + item.id)}
                                                 <div className='btn-cnt'>
-                                                    <Link to={`/admin/sgprj/${item.id}`} >
+                                                    {item.status ==="idea"?(<Link to={`/admin/upsgprjAcp/${item.id}`} >
+                                                        <a className='main-btn click-btn2'>Accept</a>
+                                                    </Link>)
+                                                    // :item.status ==="nonvalider"?(<Link to={`/admin/sgprj/${item.id}`} >
+                                                    //     <a className='main-btn click-btn2'>Voir Details</a>
+                                                    // </Link>)
+                                                    :item.status ==="valider"?(<Link to={`/admin/upsgprjVld/${item.id}`} >
+                                                        <a className='main-btn click-btn2'>Valider</a>
+                                                    </Link>)
+                                                    // :item.status ==="in_process"?(<Link to={`/admin/sgprj/${item.id}`} >
+                                                    //     <a className='main-btn click-btn2'>Voir Details</a>
+                                                    // </Link>)
+                                                    // :item.status ==="not_complete"?(<Link to={`/admin/sgprj/${item.id}`} >
+                                                    //     <a className='main-btn click-btn2'>Voir Details</a>
+                                                    // </Link>)
+                                                    :(<Link to={`/admin/sgprj/${item.id}`} >
                                                         <a className='main-btn click-btn2'>Voir Details</a>
-                                                    </Link>
+                                                    </Link>)}
                                                 </div>
                                             </div>
                                             <div className='img-cmp'>

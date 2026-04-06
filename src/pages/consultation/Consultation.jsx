@@ -308,6 +308,7 @@ const Consultation = () => {
                             value={mess}
                             onChange={(e) => setMess(e.target.value)}
                             placeholder='Message'
+                            required
                         />
 
                         <p>Document (Optional)</p>

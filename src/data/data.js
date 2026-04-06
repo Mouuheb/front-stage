@@ -276,7 +276,45 @@ const data = {
         placeholder:'Tapez un message...',
         send:'Envoyer',
         sending:'Envoi en cours...'
-    }
+    },
+    profilepageLink:[
+        {
+            name:'Model 3d',
+            path:'/admin/allfile',
+            out:false,
+        },
+        {
+            name:'Utilisateurs',
+            path:'/admin/users',
+            out:true
+        },
+
+        {
+            name:'Team',
+            path:'/admin/tm',
+            out:true
+        },
+        {
+            name:'Projet',
+            path:'/admin/prj',
+            out:true
+        },
+        {
+            name:'Consultation',
+            path:'/admin/cs',
+            out:true
+        },
+        {
+            name:'Category',
+            path:'/admin/cat',
+            out:false,
+        },
+        {
+            name:'Equipment',
+            path:'/admin/eq',
+            out:true
+        },
+    ],
 
 };
 

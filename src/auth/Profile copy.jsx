@@ -8,8 +8,6 @@ import Nav from '../pages/nav/Nav';
 import NavAdmin from '../admin/nav/NavAdmin';
 import Footer from '../pages/footer/Footer';
 import UserProjects from './UserProjects';
-import { MdEmail } from "react-icons/md";
-import { MdLocalPhone } from "react-icons/md";
 
 
 const API_BASE_URL = 'http://localhost:8000/auth';
@@ -78,16 +76,13 @@ const Profile = () => {
     <div className='profile-main-cnt main-cnt-div'>
       <div className='p1'>
         <div className='profile-cnt'>
+          <h1>{data.auth.welcome} {user.username}</h1>
           <div className='data'>
-            <h1>{data.auth.welcome} {user.username}</h1>
-            <p>
-              <strong><MdEmail />
-              {/* {data.auth.email} : */}
-              </strong> {user.email}</p>
-            {/* <p><strong>{data.auth.tel} : </strong> {user.phone_number || '—'}</p> */}
-            
-            <p><strong><MdLocalPhone /></strong> {user.phone_number || '—'}</p>
-
+            <p><strong>{data.auth.username} : </strong> {user.username}</p>
+            <p><strong>{data.auth.email} : </strong> {user.email}</p>
+            <p><strong>{data.auth.fname} : </strong> {user.first_name || '—'}</p>
+            <p><strong>{data.auth.lname} : </strong> {user.last_name || '—'}</p>
+            <p><strong>{data.auth.tel} : </strong> {user.phone_number || '—'}</p>
           </div>
           <div className=''>
             <UserProjects/>
