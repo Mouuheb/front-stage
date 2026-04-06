@@ -11,6 +11,7 @@ import SimpleLineChart from '../../chart/Chart'
 import TodayDeadline from './TodayDeadline'
 import ProjectMap from './ProjectMap'
 import Footer from '../../pages/footer/FooterAdmin'
+import Best from './Best'
 
 const MainAdminPage = () => {
   return (
@@ -21,6 +22,7 @@ const MainAdminPage = () => {
       <div className='admin-main-bg'>
         <News/>
         <TodayDeadline/>
+        <Best/>
         <SimpleLineChart/>
         <ProjectMap/>
         <Footer/>

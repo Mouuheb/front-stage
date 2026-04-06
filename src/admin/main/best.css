@@ -1,0 +1,27 @@
+.best-cnt {
+    /* background-color: aqua; */
+    padding: var(--margin-tb) var(--margin-lr);
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    /* min-height: 50rem ; */
+    /* height: 5rem; */
+    justify-content: space-between;
+    background-color: var(--color-white);
+    gap: 1rem;
+}
+.best-cnt .best-box{
+    width: 40%;
+    background-color: var(--color-4);
+    text-align: center;
+    align-items: center;
+    padding: 2rem;
+    border-radius: 1rem;
+
+
+}
+.best-cnt h1{
+    font-size: 3rem;
+    color: var(--color-text);
+    margin-top: 1rem;
+}
